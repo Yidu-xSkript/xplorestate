@@ -12,8 +12,6 @@
     <title>Xplorestate | Real Estate, Apartments & Home Values</title>
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
     <script src="{{ mix('/js/app.js') }}" defer></script>
-    <link rel="stylesheet" href="{{ asset('pre/css/style.css') }}">
-    <link rel="stylesheet" href="{{ asset('pre/css/color.css') }}">
     <link href="{{ asset('images/favicon.ico') }}" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
     <link href="{{ asset('images/favicon.ico') }}" sizes="128x128" rel="shortcut icon" />
 </head>
