@@ -1,4 +1,4 @@
-<p align="center"><a href="https://xplorestate.com" target="_blank"><img src="https://res.cloudinary.com/mediumskript/image/upload/v1610218270/xplorehomes-logo2_yt7blv.png" width="400"></a></p>
+<p align="center"><a href="https://xplorestate.com" target="_blank"><img src="https://res.cloudinary.com/mediumskript/image/upload/v1610389481/xplorehomes-logo3_4_xkkd1e.png" width="400"></a></p>
 
 <p align="center">
 <a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
