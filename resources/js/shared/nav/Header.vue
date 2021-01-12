@@ -100,15 +100,13 @@
                 <a href="#">Agents & Agencies</a>
                 <ul>
                   <li>
-                    <a href="#">Real Estate</a>
-                    <ul>
-                      <li>
-                        <a href="listings-list-with-sidebar.html">Agents</a>
-                      </li>
-                      <li>
-                        <a href="listings-list-with-map.html">Photographers</a>
-                      </li>
-                    </ul>
+                    <a href="#">Real Estates</a>
+                  </li>
+                  <li>
+                    <a href="#">Real Estate Agents</a>
+                  </li>
+                  <li>
+                    <a href="#">Real Estate Photographers</a>
                   </li>
                   <li>
                     <a href="#">Property Managers</a>

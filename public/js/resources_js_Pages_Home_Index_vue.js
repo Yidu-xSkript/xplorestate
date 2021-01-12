@@ -457,7 +457,7 @@ var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNo
 
 var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("All rental buildings");
 
-var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li><a href=\"#\">Agents &amp; Agencies</a><ul><li><a href=\"#\">Real Estate</a><ul><li><a href=\"listings-list-with-sidebar.html\">Agents</a></li><li><a href=\"listings-list-with-map.html\">Photographers</a></li></ul></li><li><a href=\"#\">Property Managers</a></li><li><a href=\"#\">Home Builders</a></li><li><a href=\"#\">Interior Designers</a></li></ul></li>", 1);
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li><a href=\"#\">Agents &amp; Agencies</a><ul><li><a href=\"#\">Real Estates</a></li><li><a href=\"#\">Real Estate Agents</a></li><li><a href=\"#\">Real Estate Photographers</a></li><li><a href=\"#\">Property Managers</a></li><li><a href=\"#\">Home Builders</a></li><li><a href=\"#\">Interior Designers</a></li></ul></li>", 1);
 
 var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("more");
 
