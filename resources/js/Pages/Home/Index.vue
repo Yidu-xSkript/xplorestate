@@ -169,6 +169,85 @@
       </div>
     </div>
   </div>
+  <section class="margin-top-0 margin-bottom-0">
+    <h3
+      class="text-center margin-top-40 margin-bottom-30"
+      style="
+        font-size: 18px !important;
+        font-weight: 700;
+        line-height: unset !important;
+        font-family: 'Playfair Display', serif;
+      "
+    >
+      Whether you’re buying, selling or renting, <br />we can help you move
+      forward.
+    </h3>
+    <hr style="margin-left: 45%; margin-right: 45%" />
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4">
+          <inertia-link class="home-card--">
+            <div class="home-card-img--">
+              <img
+                src="https://www.zillowstatic.com/s3/homepage/static/Buy_a_home.png"
+                alt=""
+              />
+            </div>
+            <div class="post-content">
+              <h3>Buy an estate</h3>
+              <p>
+                Find your home with an immersive photo, video & virtual tour
+                experience. we have listings you won't find anywhere else.
+              </p>
+              <div class="text-center">
+                <a href="#" class="button border read-more">Search Homes</a>
+              </div>
+            </div>
+          </inertia-link>
+        </div>
+        <div class="col-md-4">
+          <inertia-link class="home-card--">
+            <div class="home-card-img--">
+              <img
+                src="https://www.zillowstatic.com/s3/homepage/static/Sell_a_home.png"
+                alt=""
+              />
+            </div>
+            <div class="post-content">
+              <h3>Sell an estate</h3>
+              <p>
+                If you choose to sell your home, we can help you navigate to a
+                quick & successful sale
+              </p>
+              <div class="text-center">
+                <a href="#" class="button border read-more">See your options</a>
+              </div>
+            </div>
+          </inertia-link>
+        </div>
+        <div class="col-md-4">
+          <inertia-link class="home-card--">
+            <div class="home-card-img--">
+              <img
+                src="https://www.zillowstatic.com/s3/homepage/static/Rent_a_home.png"
+                alt=""
+              />
+            </div>
+            <div class="post-content">
+              <h3>Rent an estate</h3>
+              <p>
+                Have a seemless online experience, Find a rental that's perfect
+                for you. you'll find what you desire.
+              </p>
+              <div class="text-center">
+                <a href="#" class="button border read-more">Find Rentals</a>
+              </div>
+            </div>
+          </inertia-link>
+        </div>
+      </div>
+    </div>
+  </section>
   <partner></partner>
 </template>
 

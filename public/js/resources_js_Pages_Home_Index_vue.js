@@ -135,10 +135,142 @@ __webpack_require__.r(__webpack_exports__);
 
 var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"parallax\" data-background=\"images/home-parallax.jpg\" data-color=\"#274abb\" data-color-opacity=\"0\" data-img-width=\"2500\" data-img-height=\"1600\"><div class=\"parallax-content\"><div class=\"container\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"main-search-container\"><h2>Xplore Your Dream Estate</h2><form class=\"main-search-form\"><div class=\"search-type\"><label class=\"active\"><input class=\"first-tab\" name=\"tab\" checked=\"checked\" type=\"radio\">Any Status</label><label><input name=\"tab\" type=\"radio\">For Sale</label><label><input name=\"tab\" type=\"radio\">For Rent</label><div class=\"search-type-arrow\"></div></div><div class=\"main-search-box\"><div class=\"main-search-input larger-input\"><input type=\"text\" class=\"ico-01\" id=\"autocomplete-input\" placeholder=\"Enter address e.g. street, city and state or zip\" value=\"\"><button class=\"button\">Search</button></div><div class=\"row with-forms\"><div class=\"col-md-4\"><select data-placeholder=\"Any Type\" class=\"chosen-select-no-single\"><option>Any Type</option><option>Apartments</option><option>Houses</option><option>Commercial</option><option>Garages</option><option>Lots</option></select></div><div class=\"col-md-4\"><div class=\"select-input\"><input type=\"text\" placeholder=\"Min Price\" data-unit=\"USD\"></div></div><div class=\"col-md-4\"><div class=\"select-input\"><input type=\"text\" placeholder=\"Max Price\" data-unit=\"USD\"></div></div></div><a href=\"#\" class=\"more-search-options-trigger\" data-open-title=\"More Options\" data-close-title=\"Less Options\"></a><div class=\"more-search-options\"><div class=\"more-search-options-container\"><div class=\"row with-forms\"><div class=\"col-md-6\"><div class=\"select-input\"><input type=\"text\" placeholder=\"Min Area\" data-unit=\"Sq Ft\"></div></div><div class=\"col-md-6\"><div class=\"select-input\"><input type=\"text\" placeholder=\"Max Area\" data-unit=\"Sq Ft\"></div></div></div><div class=\"row with-forms\"><div class=\"col-md-6\"><select data-placeholder=\"Beds\" class=\"chosen-select-no-single\"><option label=\"blank\"></option><option>Beds (Any)</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class=\"col-md-6\"><select data-placeholder=\"Baths\" class=\"chosen-select-no-single\"><option label=\"blank\"></option><option>Baths (Any)</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div></div><div class=\"checkboxes in-row\"><input id=\"check-2\" type=\"checkbox\" name=\"check\"><label for=\"check-2\">Air Conditioning</label><input id=\"check-3\" type=\"checkbox\" name=\"check\"><label for=\"check-3\">Swimming Pool</label><input id=\"check-4\" type=\"checkbox\" name=\"check\"><label for=\"check-4\">Central Heating</label><input id=\"check-5\" type=\"checkbox\" name=\"check\"><label for=\"check-5\">Laundry Room</label><input id=\"check-6\" type=\"checkbox\" name=\"check\"><label for=\"check-6\">Gym</label><input id=\"check-7\" type=\"checkbox\" name=\"check\"><label for=\"check-7\">Alarm</label><input id=\"check-8\" type=\"checkbox\" name=\"check\"><label for=\"check-8\">Window Covering</label></div></div></div></div></form></div></div></div></div></div></div>", 1);
 
+var _hoisted_2 = {
+  "class": "margin-top-0 margin-bottom-0"
+};
+
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h3", {
+  "class": "text-center margin-top-40 margin-bottom-30",
+  style: {
+    "font-size": "18px !important",
+    "font-weight": "700",
+    "line-height": "unset !important",
+    "font-family": "'Playfair Display', serif"
+  }
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Whether you’re buying, selling or renting, "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("br"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("we can help you move forward. ")], -1
+/* HOISTED */
+);
+
+var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("hr", {
+  style: {
+    "margin-left": "45%",
+    "margin-right": "45%"
+  }
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_5 = {
+  "class": "container"
+};
+var _hoisted_6 = {
+  "class": "row"
+};
+var _hoisted_7 = {
+  "class": "col-md-4"
+};
+
+var _hoisted_8 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "home-card-img--"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  src: "https://www.zillowstatic.com/s3/homepage/static/Buy_a_home.png",
+  alt: ""
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "post-content"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h3", null, "Buy an estate"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " Find your home with an immersive photo, video & virtual tour experience. we have listings you won't find anywhere else. "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "text-center"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
+  href: "#",
+  "class": "button border read-more"
+}, "Search Homes")])], -1
+/* HOISTED */
+);
+
+var _hoisted_10 = {
+  "class": "col-md-4"
+};
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "home-card-img--"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  src: "https://www.zillowstatic.com/s3/homepage/static/Sell_a_home.png",
+  alt: ""
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "post-content"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h3", null, "Sell an estate"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " If you choose to sell your home, we can help you navigate to a quick & successful sale "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "text-center"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
+  href: "#",
+  "class": "button border read-more"
+}, "See your options")])], -1
+/* HOISTED */
+);
+
+var _hoisted_13 = {
+  "class": "col-md-4"
+};
+
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "home-card-img--"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+  src: "https://www.zillowstatic.com/s3/homepage/static/Rent_a_home.png",
+  alt: ""
+})], -1
+/* HOISTED */
+);
+
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "post-content"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h3", null, "Rent an estate"), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("p", null, " Have a seemless online experience, Find a rental that's perfect for you. you'll find what you desire. "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "text-center"
+}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
+  href: "#",
+  "class": "button border read-more"
+}, "Find Rentals")])], -1
+/* HOISTED */
+);
+
 function render(_ctx, _cache, $props, $setup, $data, $options) {
+  var _component_inertia_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("inertia-link");
+
   var _component_partner = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("partner");
 
-  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_partner)], 64
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [_hoisted_1, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("section", _hoisted_2, [_hoisted_3, _hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_5, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_6, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    "class": "home-card--"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_8, _hoisted_9];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    "class": "home-card--"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_11, _hoisted_12];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_13, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    "class": "home-card--"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_14, _hoisted_15];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_partner)], 64
   /* STABLE_FRAGMENT */
   );
 }
@@ -191,7 +323,7 @@ var _hoisted_2 = {
   "class": "container"
 };
 
-var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"row\"><div class=\"col-md-5 col-sm-6\"><img class=\"footer-logo\" src=\"images/logo.png\" alt=\"\"><br><br><p> Morbi convallis bibendum urna ut viverra. Maecenas quis consequat libero, a feugiat eros. Nunc ut lacinia tortor morbi ultricies laoreet ullamcorper phasellus semper. </p></div><div class=\"col-md-4 col-sm-6\"><h4>Helpful Links</h4><ul class=\"footer-links\"><li><a href=\"#\">Login</a></li><li><a href=\"#\">Sign Up</a></li><li><a href=\"#\">My Account</a></li><li><a href=\"#\">Add Property</a></li><li><a href=\"#\">Pricing</a></li><li><a href=\"#\">Privacy Policy</a></li></ul><ul class=\"footer-links\"><li><a href=\"#\">FAQ</a></li><li><a href=\"#\">Blog</a></li><li><a href=\"#\">Our Agents</a></li><li><a href=\"#\">How It Works</a></li><li><a href=\"#\">Contact</a></li></ul><div class=\"clearfix\"></div></div><div class=\"col-md-3 col-sm-12\"><h4>Contact Us</h4><div class=\"text-widget\"><span>12345 Little Lonsdale St, Melbourne</span> <br> Phone: <span>(123) 123-456 </span><br> E-Mail:<span><a href=\"#\">office@example.com</a></span><br></div><ul class=\"social-icons margin-top-20\"><li><a class=\"facebook\" href=\"#\"><i class=\"icon-facebook\"></i></a></li><li><a class=\"twitter\" href=\"#\"><i class=\"icon-twitter\"></i></a></li><li><a class=\"gplus\" href=\"#\"><i class=\"icon-gplus\"></i></a></li><li><a class=\"vimeo\" href=\"#\"><i class=\"icon-vimeo\"></i></a></li></ul></div></div>", 1);
+var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"row\"><div class=\"col-md-5 col-sm-6\"><img class=\"footer-logo\" src=\"images/logo.png\" alt=\"\"><br><br><p> Xplorestate is an Ethiopian online real estate marketplace founded in 2021. The leading and modern real estate marketplace with world reknown technology. Search millions of for-sale and rental listings, compare Xestimate home values and connect with local professionals. </p></div><div class=\"col-md-4 col-sm-6\"><h4>Helpful Links</h4><ul class=\"footer-links\"><li><a href=\"#\">Login</a></li><li><a href=\"#\">Sign Up</a></li><li><a href=\"#\">My Account</a></li><li><a href=\"#\">Add Property</a></li><li><a href=\"#\">Pricing</a></li><li><a href=\"#\">Privacy Policy</a></li></ul><ul class=\"footer-links\"><li><a href=\"#\">FAQ</a></li><li><a href=\"#\">Blog</a></li><li><a href=\"#\">Our Agents</a></li><li><a href=\"#\">How It Works</a></li><li><a href=\"#\">Contact</a></li></ul><div class=\"clearfix\"></div></div><div class=\"col-md-3 col-sm-12\"><h4>Contact Us</h4><div class=\"text-widget\"><span>12345 Little Lonsdale St, Melbourne</span> <br> Phone: <span>(123) 123-456 </span><br> E-Mail:<span><a href=\"#\">office@example.com</a></span><br></div><ul class=\"social-icons margin-top-20\"><li><a class=\"facebook\" href=\"#\"><i class=\"icon-facebook\"></i></a></li><li><a class=\"twitter\" href=\"#\"><i class=\"icon-twitter\"></i></a></li><li><a class=\"gplus\" href=\"#\"><i class=\"icon-gplus\"></i></a></li><li><a class=\"vimeo\" href=\"#\"><i class=\"icon-vimeo\"></i></a></li></ul></div></div>", 1);
 
 var _hoisted_4 = {
   "class": "row"
