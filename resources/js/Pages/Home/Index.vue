@@ -2,8 +2,8 @@
   <div
     class="parallax"
     data-background="images/home-parallax.jpg"
-    data-color="#274abb"
-    data-color-opacity="0"
+    data-color="#fff"
+    data-color-opacity="0.6"
     data-img-width="2500"
     data-img-height="1600"
   >
@@ -182,7 +182,7 @@
       Whether you’re buying, selling or renting, <br />we can help you move
       forward.
     </h3>
-    <hr style="margin-left: 45%; margin-right: 45%" />
+    <hr style="margin-left: 45%; margin-right: 45%;border-color:#006aff;" />
     <div class="container">
       <div class="row">
         <div class="col-md-4">

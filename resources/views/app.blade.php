@@ -12,12 +12,12 @@
     <title>Xplorestate | Real Estate, Apartments & Home Values</title>
     <link href="{{ mix('/css/app.css') }}" rel="stylesheet" />
     <script src="{{ mix('/js/app.js') }}" defer></script>
-    <link href="{{ asset('images/favicon.ico') }}" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
-    <link href="{{ asset('images/favicon.ico') }}" sizes="128x128" rel="shortcut icon" />
+    <link href="{{ asset('images/favicon.png') }}" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
+    <link href="{{ asset('images/favicon.png') }}" sizes="128x128" rel="shortcut icon" />
 </head>
 
 <body>
-    <div class="wrapper">
+    <div id="wrapper">
         <div class="preloader"></div>
         @inertia
         <div id="backtotop"><a href="#"></a></div>

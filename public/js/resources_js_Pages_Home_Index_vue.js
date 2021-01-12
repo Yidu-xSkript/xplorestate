@@ -133,7 +133,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"parallax\" data-background=\"images/home-parallax.jpg\" data-color=\"#274abb\" data-color-opacity=\"0\" data-img-width=\"2500\" data-img-height=\"1600\"><div class=\"parallax-content\"><div class=\"container\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"main-search-container\"><h2>Xplore Your Dream Estate</h2><form class=\"main-search-form\"><div class=\"search-type\"><label class=\"active\"><input class=\"first-tab\" name=\"tab\" checked=\"checked\" type=\"radio\">Any Status</label><label><input name=\"tab\" type=\"radio\">For Sale</label><label><input name=\"tab\" type=\"radio\">For Rent</label><div class=\"search-type-arrow\"></div></div><div class=\"main-search-box\"><div class=\"main-search-input larger-input\"><input type=\"text\" class=\"ico-01\" id=\"autocomplete-input\" placeholder=\"Enter address e.g. street, city and state or zip\" value=\"\"><button class=\"button\">Search</button></div><div class=\"row with-forms\"><div class=\"col-md-4\"><select data-placeholder=\"Any Type\" class=\"chosen-select-no-single\"><option>Any Type</option><option>Apartments</option><option>Houses</option><option>Commercial</option><option>Garages</option><option>Lots</option></select></div><div class=\"col-md-4\"><div class=\"select-input\"><input type=\"text\" placeholder=\"Min Price\" data-unit=\"USD\"></div></div><div class=\"col-md-4\"><div class=\"select-input\"><input type=\"text\" placeholder=\"Max Price\" data-unit=\"USD\"></div></div></div><a href=\"#\" class=\"more-search-options-trigger\" data-open-title=\"More Options\" data-close-title=\"Less Options\"></a><div class=\"more-search-options\"><div class=\"more-search-options-container\"><div class=\"row with-forms\"><div class=\"col-md-6\"><div class=\"select-input\"><input type=\"text\" placeholder=\"Min Area\" data-unit=\"Sq Ft\"></div></div><div class=\"col-md-6\"><div class=\"select-input\"><input type=\"text\" placeholder=\"Max Area\" data-unit=\"Sq Ft\"></div></div></div><div class=\"row with-forms\"><div class=\"col-md-6\"><select data-placeholder=\"Beds\" class=\"chosen-select-no-single\"><option label=\"blank\"></option><option>Beds (Any)</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class=\"col-md-6\"><select data-placeholder=\"Baths\" class=\"chosen-select-no-single\"><option label=\"blank\"></option><option>Baths (Any)</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div></div><div class=\"checkboxes in-row\"><input id=\"check-2\" type=\"checkbox\" name=\"check\"><label for=\"check-2\">Air Conditioning</label><input id=\"check-3\" type=\"checkbox\" name=\"check\"><label for=\"check-3\">Swimming Pool</label><input id=\"check-4\" type=\"checkbox\" name=\"check\"><label for=\"check-4\">Central Heating</label><input id=\"check-5\" type=\"checkbox\" name=\"check\"><label for=\"check-5\">Laundry Room</label><input id=\"check-6\" type=\"checkbox\" name=\"check\"><label for=\"check-6\">Gym</label><input id=\"check-7\" type=\"checkbox\" name=\"check\"><label for=\"check-7\">Alarm</label><input id=\"check-8\" type=\"checkbox\" name=\"check\"><label for=\"check-8\">Window Covering</label></div></div></div></div></form></div></div></div></div></div></div>", 1);
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"parallax\" data-background=\"images/home-parallax.jpg\" data-color=\"#fff\" data-color-opacity=\"0.6\" data-img-width=\"2500\" data-img-height=\"1600\"><div class=\"parallax-content\"><div class=\"container\"><div class=\"row\"><div class=\"col-md-12\"><div class=\"main-search-container\"><h2>Xplore Your Dream Estate</h2><form class=\"main-search-form\"><div class=\"search-type\"><label class=\"active\"><input class=\"first-tab\" name=\"tab\" checked=\"checked\" type=\"radio\">Any Status</label><label><input name=\"tab\" type=\"radio\">For Sale</label><label><input name=\"tab\" type=\"radio\">For Rent</label><div class=\"search-type-arrow\"></div></div><div class=\"main-search-box\"><div class=\"main-search-input larger-input\"><input type=\"text\" class=\"ico-01\" id=\"autocomplete-input\" placeholder=\"Enter address e.g. street, city and state or zip\" value=\"\"><button class=\"button\">Search</button></div><div class=\"row with-forms\"><div class=\"col-md-4\"><select data-placeholder=\"Any Type\" class=\"chosen-select-no-single\"><option>Any Type</option><option>Apartments</option><option>Houses</option><option>Commercial</option><option>Garages</option><option>Lots</option></select></div><div class=\"col-md-4\"><div class=\"select-input\"><input type=\"text\" placeholder=\"Min Price\" data-unit=\"USD\"></div></div><div class=\"col-md-4\"><div class=\"select-input\"><input type=\"text\" placeholder=\"Max Price\" data-unit=\"USD\"></div></div></div><a href=\"#\" class=\"more-search-options-trigger\" data-open-title=\"More Options\" data-close-title=\"Less Options\"></a><div class=\"more-search-options\"><div class=\"more-search-options-container\"><div class=\"row with-forms\"><div class=\"col-md-6\"><div class=\"select-input\"><input type=\"text\" placeholder=\"Min Area\" data-unit=\"Sq Ft\"></div></div><div class=\"col-md-6\"><div class=\"select-input\"><input type=\"text\" placeholder=\"Max Area\" data-unit=\"Sq Ft\"></div></div></div><div class=\"row with-forms\"><div class=\"col-md-6\"><select data-placeholder=\"Beds\" class=\"chosen-select-no-single\"><option label=\"blank\"></option><option>Beds (Any)</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div><div class=\"col-md-6\"><select data-placeholder=\"Baths\" class=\"chosen-select-no-single\"><option label=\"blank\"></option><option>Baths (Any)</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option></select></div></div><div class=\"checkboxes in-row\"><input id=\"check-2\" type=\"checkbox\" name=\"check\"><label for=\"check-2\">Air Conditioning</label><input id=\"check-3\" type=\"checkbox\" name=\"check\"><label for=\"check-3\">Swimming Pool</label><input id=\"check-4\" type=\"checkbox\" name=\"check\"><label for=\"check-4\">Central Heating</label><input id=\"check-5\" type=\"checkbox\" name=\"check\"><label for=\"check-5\">Laundry Room</label><input id=\"check-6\" type=\"checkbox\" name=\"check\"><label for=\"check-6\">Gym</label><input id=\"check-7\" type=\"checkbox\" name=\"check\"><label for=\"check-7\">Alarm</label><input id=\"check-8\" type=\"checkbox\" name=\"check\"><label for=\"check-8\">Window Covering</label></div></div></div></div></form></div></div></div></div></div></div>", 1);
 
 var _hoisted_2 = {
   "class": "margin-top-0 margin-bottom-0"
@@ -154,7 +154,8 @@ var _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("hr", {
   style: {
     "margin-left": "45%",
-    "margin-right": "45%"
+    "margin-right": "45%",
+    "border-color": "#006aff"
   }
 }, null, -1
 /* HOISTED */
@@ -405,11 +406,240 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
+var _hoisted_1 = {
+  id: "header-container"
+};
+var _hoisted_2 = {
+  id: "header"
+};
+var _hoisted_3 = {
+  "class": "container"
+};
+var _hoisted_4 = {
+  "class": "left-side"
+};
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<header id=\"header-container\"><div id=\"header\"><div class=\"container\"><div class=\"left-side\"><div id=\"logo\"><a href=\"index.html\"><img src=\"images/logo.png\" alt=\"\"></a></div><div class=\"mmenu-trigger\"><button class=\"hamburger hamburger--collapse\" type=\"button\"><span class=\"hamburger-box\"><span class=\"hamburger-inner\"></span></span></button></div><nav id=\"navigation\" class=\"style-1\"><ul id=\"responsive\"><li><a class=\"current\" href=\"#\">Home</a><ul><li><a href=\"index.html\">Home 1</a></li><li><a href=\"index-2.html\">Home 2</a></li><li><a href=\"index-3.html\">Home 3</a></li><li><a href=\"index-4.html\">Home 4</a></li></ul></li><li><a href=\"#\">Listings</a><ul><li><a href=\"#\">List Layout</a><ul><li><a href=\"listings-list-with-sidebar.html\">With Sidebar</a></li><li><a href=\"listings-list-with-map.html\">With Map</a></li><li><a href=\"listings-list-full-width.html\">Full Width</a></li></ul></li><li><a href=\"#\">Grid Layout</a><ul><li><a href=\"listings-grid-standard-with-sidebar.html\">Standard With Sidebar</a></li><li><a href=\"listings-grid-compact-with-sidebar.html\">Compact With Sidebar</a></li><li><a href=\"listings-grid-with-map.html\">With Map</a></li><li><a href=\"listings-grid-full-width.html\">Full Width</a></li></ul></li><li><a href=\"#\">Half Map</a><ul><li><a href=\"listings-half-map-list.html\">List Layout</a></li><li><a href=\"listings-half-map-grid-standard.html\">Grid Standard Layout</a></li><li><a href=\"listings-half-map-grid-compact.html\">Grid Compact Layout</a></li></ul></li></ul></li><li><a href=\"#\">Features</a><ul><li><a href=\"#\">Single Properties</a><ul><li><a href=\"single-property-page-1.html\">Property Style 1</a></li><li><a href=\"single-property-page-2.html\">Property Style 2</a></li><li><a href=\"single-property-page-3.html\">Property Style 3</a></li></ul></li><li><a href=\"#\">Search Styles</a><ul><li><a href=\"index.html\">Home Search 1</a></li><li><a href=\"index-2.html\">Home Search 2</a></li><li><a href=\"index-3.html\">Home Search 3</a></li><li><a href=\"listings-list-full-width.html\">Advanced Style</a></li><li><a href=\"listings-list-with-sidebar.html\">Sidebar Search</a></li></ul></li><li><a href=\"#\">My Account</a><ul><li><a href=\"my-profile.html\">My Profile</a></li><li><a href=\"my-bookmarks.html\">Bookmarked Listings</a></li><li><a href=\"my-properties.html\">My Properties</a></li><li><a href=\"change-password.html\">Change Password</a></li></ul></li><li><a href=\"#\">Agencies &amp; Agents</a><ul><li><a href=\"agencies-list.html\">Agencies List</a></li><li><a href=\"agency-page.html\">Agency Page</a></li><li><a href=\"agents-list.html\">Agents List</a></li><li><a href=\"agent-page.html\">Agent Page</a></li></ul></li><li><a href=\"compare-properties.html\">Compare Properties</a></li><li><a href=\"submit-property.html\">Submit Property</a></li></ul></li><li><a href=\"#\">Pages</a><ul><li><a href=\"blog.html\">Blog</a><ul><li><a href=\"blog.html\">Blog</a></li><li><a href=\"blog-post.html\">Blog Post</a></li></ul></li><li><a href=\"contact.html\">Contact</a></li><li><a href=\"elements.html\">Elements</a></li><li><a href=\"pricing-tables.html\">Pricing Tables</a></li><li><a href=\"typography.html\">Typography</a></li><li><a href=\"icons.html\">Icons</a></li></ul></li></ul></nav><div class=\"clearfix\"></div></div><div class=\"right-side\"><div class=\"header-widget\"><a href=\"login-register.html\" class=\"sign-in\"><i class=\"fa fa-user\"></i> Log In / Register</a><a href=\"submit-property.html\" class=\"button border\">Submit Property</a></div></div></div></div></header><div class=\"clearfix\"></div>", 2);
+var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div id=\"logo\"><a href=\"index.html\"><img src=\"images/logo.png\" alt=\"\"></a></div><div class=\"mmenu-trigger\"><button class=\"hamburger hamburger--collapse\" type=\"button\"><span class=\"hamburger-box\"><span class=\"hamburger-inner\"></span></span></button></div>", 2);
+
+var _hoisted_7 = {
+  id: "navigation",
+  "class": "style-1"
+};
+var _hoisted_8 = {
+  id: "responsive"
+};
+
+var _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Buy");
+
+var _hoisted_10 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("All Homes");
+
+var _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("New Construction");
+
+var _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Coming Soon");
+
+var _hoisted_13 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Sell");
+
+var _hoisted_14 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Post for sale");
+
+var _hoisted_15 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("See your home's estimate");
+
+var _hoisted_16 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Sellers guide");
+
+var _hoisted_17 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Rent");
+
+var _hoisted_18 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Rental Buildings");
+
+var _hoisted_19 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Apartments for Rent");
+
+var _hoisted_20 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Houses for Rent");
+
+var _hoisted_21 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("All rental listings");
+
+var _hoisted_22 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("All rental buildings");
+
+var _hoisted_23 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<li><a href=\"#\">Agents &amp; Agencies</a><ul><li><a href=\"#\">Real Estate</a><ul><li><a href=\"listings-list-with-sidebar.html\">Agents</a></li><li><a href=\"listings-list-with-map.html\">Photographers</a></li></ul></li><li><a href=\"#\">Property Managers</a></li><li><a href=\"#\">Home Builders</a></li><li><a href=\"#\">Interior Designers</a></li></ul></li>", 1);
+
+var _hoisted_24 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("more");
+
+var _hoisted_25 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<ul><li><a href=\"#\">Blog</a></li><li><a href=\"#\">Contact Us</a></li><li><a href=\"#\">Help</a></li><li><a href=\"#\">Advertise</a></li><li><a href=\"#\">FAQ</a></li><li><a href=\"#\">XplorEstate App</a></li></ul>", 1);
+
+var _hoisted_26 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Sign In");
+
+var _hoisted_27 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("List your Property");
+
+var _hoisted_28 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "clearfix"
+}, null, -1
+/* HOISTED */
+);
+
+var _hoisted_29 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+  "class": "clearfix"
+}, null, -1
+/* HOISTED */
+);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  return _hoisted_1;
+  var _component_inertia_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("inertia-link");
+
+  return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("header", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_3, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_4, [_hoisted_5, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("nav", _hoisted_7, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", _hoisted_8, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    "class": "current",
+    href: "#"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_9];
+    }),
+    _: 1
+    /* STABLE */
+
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "listings-grid-standard-with-sidebar.html"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_10];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "listings-grid-standard-with-sidebar.html"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_11];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "listings-grid-standard-with-sidebar.html"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_12];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "#"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_13];
+    }),
+    _: 1
+    /* STABLE */
+
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "listings-grid-standard-with-sidebar.html"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_14];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "listings-grid-standard-with-sidebar.html"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_15];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "listings-grid-standard-with-sidebar.html"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_16];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "#"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_17];
+    }),
+    _: 1
+    /* STABLE */
+
+  }), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "listings-grid-standard-with-sidebar.html"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_18];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "listings-grid-standard-with-sidebar.html"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_19];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "listings-grid-standard-with-sidebar.html"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_20];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "listings-grid-standard-with-sidebar.html"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_21];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "listings-grid-standard-with-sidebar.html"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_22];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])])]), _hoisted_23, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "#"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_24];
+    }),
+    _: 1
+    /* STABLE */
+
+  }), _hoisted_25]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "#"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_26];
+    }),
+    _: 1
+    /* STABLE */
+
+  })]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    href: "#",
+    "class": "button border"
+  }, {
+    "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
+      return [_hoisted_27];
+    }),
+    _: 1
+    /* STABLE */
+
+  })])])]), _hoisted_28])])])]), _hoisted_29], 64
+  /* STABLE_FRAGMENT */
+  );
 }
 
 /***/ }),

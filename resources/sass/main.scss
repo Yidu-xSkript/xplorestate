@@ -147,16 +147,22 @@ header.fullwidth .container {
 }
 .left-side {
 	float: left;
-	width: 65%;
-	display: inline-block;
+	width: 100%;
+    display: inline-block;
+    .button {
+        color: #006aff !important;
+        &:hover {
+            color: #fff !important;
+        }
+    }
 }
 .right-side {
 	float: right;
-	width: 35%;
+	width: 0%;
 	display: inline-block;
 }
-#logo,
-#navigation { float: left; }
+#logo{ float: left; }
+#navigation { float: right; }
 #logo { margin-right: 40px; }
 .header-widget { text-align: right; }
 #header-container.top-border {
@@ -723,7 +729,7 @@ button.widget-button {
 
 #navigation ul ul li {
 	float: none;
-	width: 208px;
+	width: 230px;
 }
 
 #navigation ul ul ul {
@@ -822,7 +828,7 @@ button.widget-button {
 ------------------------------------- */
 #navigation.style-1 .current {
 	background-color: transparent;
-	border: 1px solid #66676b;
+	// border: 1px solid #66676b;
 	color: #66676b;
 	padding: 5px 15px;
 	border-radius: 3px;
@@ -1965,7 +1971,7 @@ body .search-container button:before {
     color: #fff;
     font-weight: 700;
     font-size: 40px;
-    text-shadow: 2px 2px #25252583;
+    text-shadow:0px -1px 5px #22222244, 3px 3px 2px #36363686;
     font-family: 'Playfair Display', serif;
 }
 
@@ -2558,14 +2564,16 @@ span.like-icon {
 }
 
 .csm-content h4 {
-	font-size: 18px;
+	font-size: 24px;
 	display: block;
 	margin: 0 0 0 0;
 	padding: 30px;
 	position: relative;
 	background-color: #66676b;
 	color: #fff;
-	width: 100%;
+    width: 100%;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 
 .csm-content h4:before {
@@ -2896,6 +2904,7 @@ body #compare-list li div:last-child .clp-title,
     background-repeat: no-repeat;
     background-position: 50% 50%;
     position: relative;
+    object-fit: cover;
     z-index: 99;
 }
 
@@ -6347,7 +6356,7 @@ body .carousel {
 	margin: 10px 4px 0 4px;
 	opacity: 0.5;
 	border-radius: 50%;
-	background: #aaa;
+	background: #006aff;
 	transition: all 0.2s;
 	transform: 3d(0,0,0);
 }
@@ -11850,7 +11859,7 @@ body .daterangepicker .drp-buttons button.cancelBtn {
 	.fs-content {  overflow: visible; }
 	.fs-container #map-container { height: 440px; }
 
-	#top-bar .left-side { width: 70%; }
+	#top-bar .left-side { width: 100%; }
 	#top-bar .right-side { width: 30%; }
 
 	#top-bar .right-side .social-icons { float: right; }
