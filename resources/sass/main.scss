@@ -2173,7 +2173,9 @@ h3.search-title {
 
 h4.search-title {
 	margin: 10px 0 34px 0;
-	font-size: 24px;
+    font-size: 24px;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 
 .search-title i {
@@ -2255,7 +2257,8 @@ h4.search-title {
 
 .more-search-options-trigger {
 	font-size: 15px;
-	margin: 5px 0 2px 0;
+    margin: 5px 0 2px 0;
+    cursor: pointer;
 	display: inline-block;
 }
 
@@ -2938,8 +2941,8 @@ body #compare-list li div:last-child .clp-title,
 	width: 100%;
 	height: 100%;
 	z-index: 101;
-	background-color: #333;
-	opacity: 0.4;
+	background-color: #fff;
+	opacity: 0.6;
 }
 
 .parallax-content {
@@ -3315,9 +3318,17 @@ button.fs-map-btn.button {
 	top: 10px;
 }
 
+.leaflet-top {
+    bottom: 0 !important;
+    top: unset !important;
+    margin-bottom: 10px !important;
+}
+
 .showing-results {
-	color: #888;
-	margin: 5px 0 25px 0;
+	color: #222;
+    margin: 5px 0 25px 0;
+    font-family: 'Playfair display', serif;
+    font-weight: 700;
 }
 
 
@@ -3456,7 +3467,9 @@ button.fs-map-btn.button {
 	content: "";
 	z-index: 9;
 }
-
+.listing-carousel.owl-carousel {
+    z-index: auto !important;
+}
 .listing-img-container:before {
 	opacity: 0.9;
 	background: linear-gradient(to bottom, transparent 65%, #2f2f2f);
@@ -3764,7 +3777,8 @@ ul.listing-details li {
 	font-size: 20px;
 	line-height: 38px;
 	text-align: center;
-	transition: all 0.3s;
+    transition: all 0.3s;
+    margin: 0px 3px;
 }
 
 .layout-switcher a.active,
@@ -5073,7 +5087,7 @@ a.button.preview i { margin-left: 5px; }
 	border-radius: 3px;
     margin: 15px 0;
 
-    .post-content{ 
+    .post-content{
         h3 {
             margin: 0;
             line-height: 34px;
@@ -5933,6 +5947,10 @@ body .comment-content p { padding: 5px 0; }
 	z-index: 990;
 }
 
+.cursor-pointer {
+	cursor: pointer;
+}
+
 #map-container {
 	position: relative;
 	top: 0;
@@ -6135,11 +6153,11 @@ body .carousel {
 }
 
 .owl-theme .owl-controls .owl-buttons .owl-next:before {
-	content: "\f105"
+	content: "\f105" !important;
 }
 
 .owl-theme .owl-controls .owl-buttons .owl-prev:after {
-	content: "\f104"
+	content: "\f104" !important;
 }
 
 .owl-theme .owl-controls .owl-buttons {
@@ -6182,7 +6200,10 @@ body .carousel {
 	width: 100%;
 	height: 100px;
 	transform: translate(0,-50%);
-	z-index: 99;
+    z-index: 99;
+    span {
+        display: none;
+    }
 }
 
 .listing-carousel.owl-theme .owl-controls .owl-buttons div:hover,
@@ -6199,9 +6220,9 @@ body .carousel {
 	width: 38px;
 	text-align: center;
 	line-height: 37px;
-	padding: 0;
+    padding: 0;
+    border: none;
 }
-
 .list-layout .listing-carousel.owl-theme .owl-controls .owl-buttons div:hover,
 .list-layout .listing-carousel.owl-theme .owl-controls .owl-buttons div {
 	font-size: 19px;
@@ -6209,7 +6230,6 @@ body .carousel {
 	width: 32px;
 	line-height: 31px;
 }
-
 
 .listing-carousel.owl-theme .owl-controls .owl-prev:before,
 .listing-carousel.owl-theme .owl-controls .owl-next:after {
@@ -6356,7 +6376,7 @@ body .carousel {
 	margin: 10px 4px 0 4px;
 	opacity: 0.5;
 	border-radius: 50%;
-	background: #006aff;
+	background: #aaa;
 	transition: all 0.2s;
 	transform: 3d(0,0,0);
 }
@@ -6419,14 +6439,6 @@ body .carousel {
 .owl-controls .owl-page,
 .owl-controls .owl-buttons div{
 	cursor: pointer;
-}
-.owl-controls {
-	-webkit-user-select: none;
-	-khtml-user-select: none;
-	-moz-user-select: none;
-	-ms-user-select: none;
-	user-select: none;
-	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 .grabbing {
     cursor:url(/pre/css/grabbing.html) 8 8, move;
@@ -9726,11 +9738,11 @@ body .notification strong { border: none; }
 
 @font-face {
   font-family: 'fontello';
-  src: url('/fonts/fontello.eot');
-  src: url('/fonts/fontello.eot') format('embedded-opentype'),
-	   url('/fonts/fontello.woff') format('woff'),
-	   url('/fonts/fontello.ttf') format('truetype'),
-	   url('/fonts/fontello.svg') format('svg');
+  src: url('/pre/fonts/fontello.eot');
+  src: url('/pre/fonts/fontello.eot') format('embedded-opentype'),
+	   url('/pre/fonts/fontello.woff') format('woff'),
+	   url('/pre/fonts/fontello.ttf') format('truetype'),
+	   url('/pre/fonts/fontello.svg') format('svg');
   font-weight: normal;
   font-style: normal;
 }

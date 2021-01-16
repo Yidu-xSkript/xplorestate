@@ -1,9 +1,10 @@
 <template>
-  <div>
+  <div id="wrapper">
     <compare-property />
     <header-layout />
     <slot />
     <footer-layout />
+    <div id="backtotop"><a href="#"></a></div>
   </div>
 </template>
 

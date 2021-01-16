@@ -1,11 +1,11 @@
 <template>
   <div class="compare-slide-menu">
-    <div class="csm-trigger"></div>
+    <div class="csm-trigger" @click="triggerCompare"></div>
 
     <div class="csm-content">
       <h4>
         Compare Properties
-        <div class="csm-mobile-trigger"></div>
+        <div class="csm-mobile-trigger" @click="triggerMobileCompare"></div>
       </h4>
 
       <div class="csm-properties">
@@ -64,7 +64,16 @@
 </template>
 
 <script>
-export default {};
+export default {
+  methods: {
+    triggerCompare: function (e) {
+      $(".compare-slide-menu").toggleClass("active");
+    },
+    triggerMobileCompare: function(e) {
+		$('.compare-slide-menu').removeClass('active');
+    }
+  },
+};
 </script>
 
 <style>

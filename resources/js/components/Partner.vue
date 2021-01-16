@@ -15,7 +15,19 @@
           </h3>
         </div>
         <div class="col-md-12">
-          <div class="logo-carousel dot-navigation">
+          <logo-carousel
+            :classes="[
+              'owl-carousel',
+              'owl-theme',
+              'logo-carousel',
+              'dot-navigation',
+            ]"
+            :items="5"
+            :itemsDesktop="[1239, 4]"
+            :itemsTablet="[991, 3]"
+            :itemsMobile="[767, 1]"
+            :fluidSpeed="600"
+          >
             <div class="item">
               <img src="images/logo-01.png" alt="" />
             </div>
@@ -37,7 +49,7 @@
             <div class="item">
               <img src="images/logo-07.png" alt="" />
             </div>
-          </div>
+          </logo-carousel>
         </div>
       </div>
     </div>
@@ -45,7 +57,10 @@
 </template>
 
 <script>
-export default {};
+import LogoCarousel from "./Carousel/Index.vue";
+export default {
+  components: { LogoCarousel },
+};
 </script>
 
 <style>

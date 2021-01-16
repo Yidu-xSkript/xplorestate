@@ -3,7 +3,7 @@
     <div class="container">
       <div class="row">
         <div class="col-md-5 col-sm-6">
-          <img class="footer-logo" src="images/logo.png" alt="" />
+          <img class="footer-logo" src="/images/logo.png" alt="" />
           <br /><br />
           <p>
             Xplorestate is an Ethiopian online real estate marketplace founded in 2021. The leading and modern real estate marketplace with world reknown technology. Search millions of for-sale and rental listings, compare Xestimate home values and connect with local professionals.

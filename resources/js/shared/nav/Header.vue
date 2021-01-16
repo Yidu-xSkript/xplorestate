@@ -4,7 +4,9 @@
       <div class="container">
         <div class="left-side">
           <div id="logo">
-            <a href="index.html"><img src="images/logo.png" alt="" /></a>
+            <inertia-link :href="route('home')"
+              ><img src="/images/logo.png" alt=""
+            /></inertia-link>
           </div>
           <div class="mmenu-trigger">
             <button class="hamburger hamburger--collapse" type="button">
@@ -161,7 +163,47 @@
 </template>
 
 <script>
-export default {};
+export default {
+  mounted() {
+    $("#header")
+      .not("#header-container.header-style-2 #header")
+      .clone(true)
+      .addClass("cloned unsticky")
+      .insertAfter("#header");
+    $("#navigation.style-2")
+      .clone(true)
+      .addClass("cloned unsticky")
+      .insertAfter("#navigation.style-2");
+
+    $("#logo .sticky-logo")
+      .clone(true)
+      .prependTo("#navigation.style-2.cloned ul#responsive");
+  },
+  created() {
+    window.addEventListener("scroll", this.handleScroll);
+  },
+  unmounted() {
+    window.removeEventListener("scroll", this.handleScroll);
+  },
+  methods: {
+    handleScroll: function () {
+      this.$nextTick(() => {
+        var headerOffset = $("#header-container").height() * 2;
+        if ($(window).scrollTop() >= headerOffset) {
+          $("#header.cloned").addClass("sticky").removeClass("unsticky");
+          $("#navigation.style-2.cloned")
+            .addClass("sticky")
+            .removeClass("unsticky");
+        } else {
+          $("#header.cloned").addClass("unsticky").removeClass("sticky");
+          $("#navigation.style-2.cloned")
+            .addClass("unsticky")
+            .removeClass("sticky");
+        }
+      });
+    },
+  },
+};
 </script>
 
 <style>

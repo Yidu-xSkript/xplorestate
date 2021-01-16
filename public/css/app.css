@@ -16867,6 +16867,8 @@ h3.search-title {
 h4.search-title {
   margin: 10px 0 34px 0;
   font-size: 24px;
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
 }
 
 .search-title i {
@@ -16952,6 +16954,7 @@ h4.search-title {
 .more-search-options-trigger {
   font-size: 15px;
   margin: 5px 0 2px 0;
+  cursor: pointer;
   display: inline-block;
 }
 
@@ -17715,8 +17718,8 @@ body #compare-list li div:last-child .clp-title,
   width: 100%;
   height: 100%;
   z-index: 101;
-  background-color: #333;
-  opacity: 0.4;
+  background-color: #fff;
+  opacity: 0.6;
 }
 
 .parallax-content {
@@ -18151,9 +18154,17 @@ button.fs-map-btn.button {
   top: 10px;
 }
 
+.leaflet-top {
+  bottom: 0 !important;
+  top: unset !important;
+  margin-bottom: 10px !important;
+}
+
 .showing-results {
-  color: #888;
+  color: #222;
   margin: 5px 0 25px 0;
+  font-family: "Playfair display", serif;
+  font-weight: 700;
 }
 
 .listings-container.fs-listings {
@@ -18351,6 +18362,10 @@ button.fs-map-btn.button {
   left: 0;
   content: "";
   z-index: 9;
+}
+
+.listing-carousel.owl-carousel {
+  z-index: auto !important;
 }
 
 .listing-img-container:before {
@@ -18694,6 +18709,7 @@ ul.listing-details li {
   line-height: 38px;
   text-align: center;
   transition: all 0.3s;
+  margin: 0px 3px;
 }
 
 .layout-switcher a.active,
@@ -21133,6 +21149,10 @@ body .comment-content p {
   z-index: 990;
 }
 
+.cursor-pointer {
+  cursor: pointer;
+}
+
 #map-container {
   position: relative;
   top: 0;
@@ -21347,11 +21367,11 @@ body .carousel {
 }
 
 .owl-theme .owl-controls .owl-buttons .owl-next:before {
-  content: "";
+  content: "" !important;
 }
 
 .owl-theme .owl-controls .owl-buttons .owl-prev:after {
-  content: "";
+  content: "" !important;
 }
 
 .owl-theme .owl-controls .owl-buttons {
@@ -21414,6 +21434,9 @@ body .carousel {
   transform: translate(0, -50%);
   z-index: 99;
 }
+.listing-carousel.owl-theme .owl-controls .owl-buttons span {
+  display: none;
+}
 
 .listing-carousel.owl-theme .owl-controls .owl-buttons div:hover,
 .listing-carousel.owl-theme .owl-controls .owl-buttons div {
@@ -21430,6 +21453,7 @@ body .carousel {
   text-align: center;
   line-height: 37px;
   padding: 0;
+  border: none;
 }
 
 .list-layout .listing-carousel.owl-theme .owl-controls .owl-buttons div:hover,
@@ -21588,7 +21612,7 @@ body .carousel {
   margin: 10px 4px 0 4px;
   opacity: 0.5;
   border-radius: 50%;
-  background: #006aff;
+  background: #aaa;
   transition: all 0.2s;
   transform: 3d 0, 0, 0;
 }
@@ -21651,14 +21675,6 @@ body .carousel {
 .owl-controls .owl-page,
 .owl-controls .owl-buttons div {
   cursor: pointer;
-}
-
-.owl-controls {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .grabbing {
@@ -25639,8 +25655,8 @@ body .notification strong {
 
 @font-face {
   font-family: "fontello";
-  src: url("/fonts/fontello.eot");
-  src: url("/fonts/fontello.eot") format("embedded-opentype"), url("/fonts/fontello.woff") format("woff"), url("/fonts/fontello.ttf") format("truetype"), url("/fonts/fontello.svg") format("svg");
+  src: url("/pre/fonts/fontello.eot");
+  src: url("/pre/fonts/fontello.eot") format("embedded-opentype"), url("/pre/fonts/fontello.woff") format("woff"), url("/pre/fonts/fontello.ttf") format("truetype"), url("/pre/fonts/fontello.svg") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -29098,23 +29114,15 @@ body .pac-container {
     height: 200px;
   }
 }
-#backtotop a,
-#top-bar,
-.csm-content h4,
-.csm-trigger {
+#backtotop a, #top-bar, .csm-content h4, .csm-trigger {
   background-color: #006aff;
 }
 
-.custom-zoom-in:hover:before,
-.custom-zoom-out:hover:before,
-.infoBox-close:hover {
+.custom-zoom-in:hover:before, .custom-zoom-out:hover:before, .infoBox-close:hover {
   -webkit-text-stroke: 1px #006aff;
 }
 
-.list-1 li:before,
-.list-2 li:before,
-.list-3 li:before,
-.list-4 li:before {
+.list-1 li:before, .list-2 li:before, .list-3 li:before, .list-4 li:before {
   color: #006aff;
 }
 
@@ -29128,55 +29136,11 @@ body .pac-container {
   background-color: #006aff;
 }
 
-.change-photo-btn:hover,
-mark.color,
-table.manage-table th {
+.change-photo-btn:hover, mark.color, table.manage-table th {
   background-color: #006aff;
 }
 
-#footer .social-icons li a:hover i,
-#navigation.style-1 .current,
-#posts-nav li a:hover,
-#top-bar .social-icons li a:hover i,
-.agent .social-icons li a:hover i,
-.agent-contact-details li a:hover,
-.agent-page .agent-name h4,
-.footer-links li a:hover,
-.header-style-2 .header-widget li i,
-.header-widget .sign-in:hover,
-.home-slider-desc .read-more i,
-.info-box,
-.info-box h4,
-.listing-title h4 a:hover,
-.map-box h4 a:hover,
-.my-account-nav li a.current,
-.my-account-nav li a:hover,
-.plan-price .value,
-.plan.featured .listing-badges .featured,
-.post-content a.read-more,
-.post-content h3 a:hover,
-.post-meta li a:hover,
-.property-pricing,
-.style-2 .trigger a:hover,
-.style-2 .trigger.active a,
-.style-2 .ui-accordion .ui-accordion-header-active,
-.style-2 .ui-accordion .ui-accordion-header-active:hover,
-.style-2 .ui-accordion .ui-accordion-header:hover,
-.tabs-nav li a:hover,
-.tabs-nav li.active a,
-.testimonial-author h4,
-.user-menu ul li a:hover,
-.user-menu.active .user-name,
-.user-menu.active .user-name:after,
-.user-menu:hover .user-name,
-.user-menu:hover .user-name:after,
-.widget-button:hover,
-.widget-text h5 a:hover,
-a,
-a.button.border,
-a.button.border.white:hover,
-table.manage-table .title-container .title h4 a:hover,
-table.manage-table td.action a:hover {
+#footer .social-icons li a:hover i, #navigation.style-1 .current, #posts-nav li a:hover, #top-bar .social-icons li a:hover i, .agent .social-icons li a:hover i, .agent-contact-details li a:hover, .agent-page .agent-name h4, .footer-links li a:hover, .header-style-2 .header-widget li i, .header-widget .sign-in:hover, .home-slider-desc .read-more i, .info-box, .info-box h4, .listing-title h4 a:hover, .map-box h4 a:hover, .my-account-nav li a.current, .my-account-nav li a:hover, .plan-price .value, .plan.featured .listing-badges .featured, .post-content a.read-more, .post-content h3 a:hover, .post-meta li a:hover, .property-pricing, .style-2 .trigger a:hover, .style-2 .trigger.active a, .style-2 .ui-accordion .ui-accordion-header-active, .style-2 .ui-accordion .ui-accordion-header-active:hover, .style-2 .ui-accordion .ui-accordion-header:hover, .tabs-nav li a:hover, .tabs-nav li.active a, .testimonial-author h4, .user-menu ul li a:hover, .user-menu.active .user-name, .user-menu.active .user-name:after, .user-menu:hover .user-name, .user-menu:hover .user-name:after, .widget-button:hover, .widget-text h5 a:hover, a, a.button.border, a.button.border.white:hover, table.manage-table .title-container .title h4 a:hover, table.manage-table td.action a:hover {
   color: #006aff;
 }
 
@@ -29186,6 +29150,7 @@ table.manage-table td.action a:hover {
 
 #navigation.style-1 .current {
   background-color: transparent;
+  border: 1px solid #006aff;
 }
 
 #navigation.style-1 ul li:hover {
@@ -29201,10 +29166,7 @@ table.manage-table td.action a:hover {
   background-color: #006aff;
 }
 
-.checkboxes input[type=checkbox]:checked + label:before,
-.range-slider .ui-widget-header,
-.search-type label.active,
-.search-type label:hover {
+.checkboxes input[type=checkbox]:checked + label:before, .range-slider .ui-widget-header, .search-type label.active, .search-type label:hover {
   background-color: #006aff;
 }
 
@@ -29233,24 +29195,11 @@ table.manage-table td.action a:hover {
   background: linear-gradient(to bottom, transparent 55%, #006aff);
 }
 
-#titlebar.property-titlebar span.property-badge,
-.back-to-listings:hover,
-.home-slider-price,
-.img-box:hover:before,
-.layout-switcher a.active,
-.layout-switcher a:hover,
-.listing-hidden-content,
-.office-address h3:after,
-.pagination .current,
-.pagination ul li a.current-page,
-.pagination ul li a:hover,
-.pagination-next-prev ul li a:hover,
-.property-features.checkboxes li:before {
+#titlebar.property-titlebar span.property-badge, .back-to-listings:hover, .home-slider-price, .img-box:hover:before, .layout-switcher a.active, .layout-switcher a:hover, .listing-hidden-content, .office-address h3:after, .pagination .current, .pagination ul li a.current-page, .pagination ul li a:hover, .pagination-next-prev ul li a:hover, .property-features.checkboxes li:before {
   background-color: #006aff;
 }
 
-.post-img:after,
-.tip {
+.post-img:after, .tip {
   background: #006aff;
 }
 
@@ -29262,8 +29211,7 @@ table.manage-table td.action a:hover {
   background: linear-gradient(to bottom, transparent 40%, #006aff);
 }
 
-.comment-by a.reply:hover,
-.post-img:before {
+.comment-by a.reply:hover, .post-img:before {
   background-color: #006aff;
 }
 
@@ -29271,21 +29219,7 @@ table.manage-table td.action a:hover {
   background: linear-gradient(to bottom, transparent 50%, #006aff);
 }
 
-#geoLocation:hover,
-#mapnav-buttons a:hover,
-#scrollEnabling.enabled,
-#scrollEnabling:hover,
-#streetView:hover,
-.cluster div,
-.custom-zoom-in:hover,
-.custom-zoom-out:hover,
-.infoBox-close:hover,
-.listing-carousel.owl-theme .owl-controls .owl-next:after,
-.listing-carousel.owl-theme .owl-controls .owl-prev:before,
-.listing-carousel.owl-theme.outer .owl-controls .owl-next:hover::after,
-.listing-carousel.owl-theme.outer .owl-controls .owl-prev:hover::before,
-.slick-next:after,
-.slick-prev:after {
+#geoLocation:hover, #mapnav-buttons a:hover, #scrollEnabling.enabled, #scrollEnabling:hover, #streetView:hover, .cluster div, .custom-zoom-in:hover, .custom-zoom-out:hover, .infoBox-close:hover, .listing-carousel.owl-theme .owl-controls .owl-next:after, .listing-carousel.owl-theme .owl-controls .owl-prev:before, .listing-carousel.owl-theme.outer .owl-controls .owl-next:hover::after, .listing-carousel.owl-theme.outer .owl-controls .owl-prev:hover::before, .slick-next:after, .slick-prev:after {
   background-color: #006aff;
 }
 
@@ -29307,20 +29241,11 @@ table.manage-table td.action a:hover {
   background-color: #006aff;
 }
 
-.chosen-container .chosen-results li.highlighted,
-.chosen-container-multi .chosen-choices li.search-choice,
-.select-options li:hover,
-a.button,
-a.button.border:hover,
-button.button,
-input[type=button],
-input[type=submit] {
+.chosen-container .chosen-results li.highlighted, .chosen-container-multi .chosen-choices li.search-choice, .select-options li:hover, a.button, a.button.border:hover, button.button, input[type=button], input[type=submit] {
   background-color: #006aff;
 }
 
-.dropzone:hover .dz-message,
-.sort-by .chosen-container-single .chosen-default,
-.sort-by .chosen-container-single .chosen-single div b:after {
+.dropzone:hover .dz-message, .sort-by .chosen-container-single .chosen-default, .sort-by .chosen-container-single .chosen-single div b:after {
   color: #006aff;
 }
 
@@ -29333,28 +29258,21 @@ a.button.border {
   background-color: #006aff;
 }
 
-.fp-accordion .accordion h3.ui-accordion-header-active,
-.trigger.active a,
-.ui-accordion .ui-accordion-header-active,
-.ui-accordion .ui-accordion-header-active:hover {
+.fp-accordion .accordion h3.ui-accordion-header-active, .trigger.active a, .ui-accordion .ui-accordion-header-active, .ui-accordion .ui-accordion-header-active:hover {
   background-color: #006aff;
   border-color: #006aff;
 }
 
-.tabs-nav li a:hover,
-.tabs-nav li.active a {
+.tabs-nav li a:hover, .tabs-nav li.active a {
   border-color: #006aff;
 }
 
-.style-3 .tabs-nav li a:hover,
-.style-3 .tabs-nav li.active a {
+.style-3 .tabs-nav li a:hover, .style-3 .tabs-nav li.active a {
   border-color: #006aff;
   background-color: #006aff;
 }
 
-.style-4 .tabs-nav li.active a,
-.style-5 .tabs-nav li.active a,
-table.basic-table th {
+.style-4 .tabs-nav li.active a, .style-5 .tabs-nav li.active a, table.basic-table th {
   background-color: #006aff;
 }
 
@@ -29377,8 +29295,7 @@ table.basic-table th {
   background-color: #006aff;
 }
 
-.daterangepicker td.available:hover,
-.daterangepicker th.available:hover {
+.daterangepicker td.available:hover, .daterangepicker th.available:hover {
   background-color: #006aff;
 }
 
@@ -29387,13 +29304,11 @@ table.basic-table th {
   color: #006aff;
 }
 
-.daterangepicker td.active,
-.daterangepicker td.active:hover {
+.daterangepicker td.active, .daterangepicker td.active:hover {
   background-color: #006aff;
 }
 
-.daterangepicker .drp-buttons button.applyBtn,
-.daterangepicker .drp-buttons button.cancelBtn {
+.daterangepicker .drp-buttons button.applyBtn, .daterangepicker .drp-buttons button.cancelBtn {
   background-color: #006aff;
 }
 

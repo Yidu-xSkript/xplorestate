@@ -1,11 +1,6 @@
 <template>
-  <div
-    class="parallax"
-    data-background="images/home-parallax.jpg"
-    data-color="#fff"
-    data-color-opacity="0.6"
-    data-img-width="2500"
-    data-img-height="1600"
+  <parallax
+    :image="'https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'"
   >
     <div class="parallax-content">
       <div class="container">
@@ -75,8 +70,8 @@
                     </div>
                   </div>
                   <a
-                    href="#"
                     class="more-search-options-trigger"
+                    @click="$triggerMoreOptions"
                     data-open-title="More Options"
                     data-close-title="Less Options"
                   ></a>
@@ -168,7 +163,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </parallax>
   <section class="margin-top-0 margin-bottom-0">
     <h3
       class="text-center margin-top-40 margin-bottom-30"
@@ -182,11 +177,11 @@
       Whether you’re buying, selling or renting, <br />we can help you move
       forward.
     </h3>
-    <hr style="margin-left: 45%; margin-right: 45%;border-color:#006aff;" />
+    <hr style="margin-left: 45%; margin-right: 45%; border-color: #006aff" />
     <div class="container">
       <div class="row">
         <div class="col-md-4">
-          <inertia-link class="home-card--">
+          <inertia-link :href="route('estate.index')" class="home-card--">
             <div class="home-card-img--">
               <img
                 src="https://www.zillowstatic.com/s3/homepage/static/Buy_a_home.png"
@@ -200,13 +195,13 @@
                 experience. we have listings you won't find anywhere else.
               </p>
               <div class="text-center">
-                <a href="#" class="button border read-more">Search Homes</a>
+                <a class="button border read-more">Search Homes</a>
               </div>
             </div>
           </inertia-link>
         </div>
         <div class="col-md-4">
-          <inertia-link class="home-card--">
+          <inertia-link :href="route('estate.index')" class="home-card--">
             <div class="home-card-img--">
               <img
                 src="https://www.zillowstatic.com/s3/homepage/static/Sell_a_home.png"
@@ -220,13 +215,13 @@
                 quick & successful sale
               </p>
               <div class="text-center">
-                <a href="#" class="button border read-more">See your options</a>
+                <a class="button border read-more">See your options</a>
               </div>
             </div>
           </inertia-link>
         </div>
         <div class="col-md-4">
-          <inertia-link class="home-card--">
+          <inertia-link :href="route('estate.index')" class="home-card--">
             <div class="home-card-img--">
               <img
                 src="https://www.zillowstatic.com/s3/homepage/static/Rent_a_home.png"
@@ -240,7 +235,7 @@
                 for you. you'll find what you desire.
               </p>
               <div class="text-center">
-                <a href="#" class="button border read-more">Find Rentals</a>
+                <a class="button border read-more">Find Rentals</a>
               </div>
             </div>
           </inertia-link>
@@ -254,9 +249,42 @@
 <script>
 import Layout from "../../shared/Layout.vue";
 import Partner from "../../components/Partner.vue";
+import Parallax from "../../components/Parallax/Index.vue";
+import { onMount } from "../../supplemental.js";
 export default {
   layout: (h, page) => h(Layout, [page]),
-  components: { Partner },
+  components: { Partner, Parallax },
+  mounted() {
+    this.$nextTick(() => {
+      onMount();
+      this.searchTypeButtons();
+    });
+  },
+  methods: {
+    searchTypeButtons() {
+      $('.search-type label.active input[type="radio"]').prop("checked", true);
+      var buttonWidth = $(".search-type label.active").width();
+      var arrowDist = $(".search-type label.active").position().left;
+      $(".search-type-arrow").css("left", arrowDist + buttonWidth / 2);
+
+      $(".search-type label").on("change", function () {
+        $('.search-type input[type="radio"]')
+          .parent("label")
+          .removeClass("active");
+        $('.search-type input[type="radio"]:checked')
+          .parent("label")
+          .addClass("active");
+
+        var buttonWidth = $(".search-type label.active").width();
+        var arrowDist = $(".search-type label.active").position().left;
+
+        $(".search-type-arrow").css({
+          left: arrowDist + buttonWidth / 2,
+          transition: "left 0.4s cubic-bezier(.87,-.41,.19,1.44)",
+        });
+      });
+    },
+  },
 };
 </script>
 

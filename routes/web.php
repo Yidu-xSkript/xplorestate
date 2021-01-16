@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\HomeEstateListController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,3 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/map', [HomeEstateListController::class, 'index'])->name('estate.index');
+Route::get('/map/estate', [HomeEstateListController::class, 'indexDetail'])->name('estate.detail.index');

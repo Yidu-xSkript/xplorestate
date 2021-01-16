@@ -13,7 +13,7 @@
         "@vue/compiler-sfc": "^3.0.5",
         "axios": "^0.21",
         "bootstrap": "^4.0.0",
-        "jquery": "^3.2",
+        "jquery": "^3.5.1",
         "laravel-mix": "^6.0.6",
         "lodash": "^4.17.19",
         "popper.js": "^1.12",
@@ -31,8 +31,14 @@
         "@inertiajs/inertia-vue": "^0.5.4",
         "@inertiajs/inertia-vue3": "^0.3.4",
         "@inertiajs/progress": "^0.2.4",
+        "@vue-leaflet/vue-leaflet": "^0.5.0",
         "@vueform/slider": "^1.0.3",
+        "chosen-js": "^1.8.7",
+        "leaflet": "^1.7.1",
+        "owl-carousel": "^1.0.0",
+        "owl.carousel": "^2.3.4",
         "portal-vue": "^2.1.7",
-        "vue-meta": "^2.4.0"
+        "vue-meta": "^2.4.0",
+        "vue-slick": "^1.1.15"
     }
 }

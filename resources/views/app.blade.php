@@ -14,20 +14,16 @@
     <script src="{{ mix('/js/app.js') }}" defer></script>
     <link href="{{ asset('images/favicon.png') }}" sizes="128x128" rel="shortcut icon" type="image/x-icon" />
     <link href="{{ asset('images/favicon.png') }}" sizes="128x128" rel="shortcut icon" />
+    @routes
 </head>
 
 <body>
-    <div id="wrapper">
-        <div class="preloader"></div>
-        @inertia
-        <div id="backtotop"><a href="#"></a></div>
-    </div>
+
+    @inertia
 
     <script type="text/javascript" src="{{ asset('pre/scripts/jquery-3.4.1.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('pre/scripts/jquery-migrate-3.1.0.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('pre/scripts/chosen.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('pre/scripts/magnific-popup.min.js') }}"></script>
-    <script type="text/javascript" src="{{ asset('pre/scripts/owl.carousel.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('pre/scripts/sticky-kit.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('pre/scripts/slick.min.js') }}"></script>
     <script type="text/javascript" src="{{ asset('pre/scripts/mmenu.min.js') }}"></script>
