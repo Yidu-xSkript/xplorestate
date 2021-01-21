@@ -13,7 +13,7 @@ export default {
     elementHandle:
       "carousel_" +
       Math.random().toString(36).substring(2, 15) +
-      Math.random().toString(36).substring(2, 15)
+      Math.random().toString(36).substring(2, 15),
   }),
   props: {
     classes: { default: ["owl-carousel", "owl-theme"] },
@@ -21,13 +21,11 @@ export default {
     nav: { default: true },
     autoplay: { default: false },
     fluidSpeed: { default: false },
-    itemsDesktop: { default: [1239,3] },
-    itemsTablet: { default: [991,2] },
-    itemsMobile: { default: [767,1] },
+    itemsDesktop: { default: [1239, 3] },
+    itemsTablet: { default: [991, 2] },
+    itemsMobile: { default: [767, 1] },
     responsive: {
-      default() {
-        return {};
-      },
+      default: {},
     },
   },
   mounted: function () {
@@ -39,7 +37,7 @@ export default {
       itemsDesktop: this.itemsDesktop,
       itemsTablet: this.itemsTablet,
       itemsMobile: this.itemsMobile,
-      navigationText: ["", ""]
+      navigationText: ["", ""],
     });
   },
 };

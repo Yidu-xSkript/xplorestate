@@ -17479,6 +17479,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 /* harmony import */ var _inertiajs_inertia_vue3__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @inertiajs/inertia-vue3 */ "./node_modules/@inertiajs/inertia-vue3/dist/index.js");
 /* provided dependency */ var $ = __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js");
+var _this = undefined;
+
 __webpack_require__(/*! ./bootstrap.js */ "./resources/js/bootstrap.js");
 
 
@@ -17518,10 +17520,157 @@ app.config.globalProperties.$triggerMoreOptions = function () {
   }, 300);
 };
 
-app.config.globalProperties.$owlReload = function () {
-  $(".listing-carousel").each(function () {
-    $(this).data("owlCarousel").reload();
+app.config.globalProperties.$registerToolTip = function (element) {
+  $(element).each(function () {
+    var tipContent = $(this).attr("data-tip-content");
+    $(this).append('<div class="tip-content">' + tipContent + "</div>");
   });
+};
+
+app.config.globalProperties.$toggleLike = function (element) {
+  $(element).on("click", function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+    $(this).toggleClass("liked");
+    $(this).children(".like-icon").toggleClass("liked");
+  });
+};
+
+app.config.globalProperties.$addToCompareStyle = function () {
+  $(".compare-slide-menu").addClass("active");
+};
+
+app.config.globalProperties.$inlineCSS = function (element) {
+  $(element).each(function () {
+    var attrImageBG = $(this).attr("data-background-image");
+    var attrColorBG = $(this).attr("data-background-color");
+
+    if (attrImageBG !== undefined) {
+      $(this).css("background-image", "url(" + attrImageBG + ")");
+    }
+
+    if (attrColorBG !== undefined) {
+      $(this).css("background", "" + attrColorBG + "");
+    }
+  });
+};
+
+app.config.globalProperties.$accordion = function () {
+  var $accor = $(".accordion");
+  $accor.each(function () {
+    $(this).toggleClass("ui-accordion ui-widget ui-helper-reset");
+    $(this).find("h3").addClass("ui-accordion-header ui-helper-reset ui-state-default ui-accordion-icons ui-corner-all");
+    $(this).find("div").addClass("ui-accordion-content ui-helper-reset ui-widget-content ui-corner-bottom");
+    $(this).find("div").hide();
+  });
+  var $trigger = $accor.find("h3");
+  $trigger.on("click", function (e) {
+    var location = $(this).parent();
+
+    if ($(this).next().is(":hidden")) {
+      var $triggerloc = $("h3", location);
+      $triggerloc.removeClass("ui-accordion-header-active ui-state-active ui-corner-top").next().slideUp(300);
+      $triggerloc.find("span").removeClass("ui-accordion-icon-active");
+      $(this).find("span").addClass("ui-accordion-icon-active");
+      $(this).addClass("ui-accordion-header-active ui-state-active ui-corner-top").next().slideDown(300);
+    } else if ($(this).is(":visible")) {
+      var $triggerloc = $("h3", location);
+      $triggerloc.removeClass("ui-accordion-header-active ui-state-active ui-corner-top").next().slideUp(300);
+      $triggerloc.find("span").removeClass("ui-accordion-icon-active");
+    }
+
+    e.preventDefault();
+  });
+};
+
+app.config.globalProperties.$tabs = function () {
+  var $tabsNav = $(".tabs-nav"),
+      $tabsNavLis = $tabsNav.children("li");
+  $tabsNav.each(function () {
+    console.log("something here");
+    var $this = $(this);
+    $this.next().children(".tab-content").stop(true, true).hide().first().show();
+    $this.children("li").first().addClass("active").stop(true, true).show();
+  });
+  $tabsNavLis.on("click", function (e) {
+    var $this = $(this);
+    $this.siblings().removeClass("active").end().addClass("active");
+    $this.parent().next().children(".tab-content").stop(true, true).hide().siblings($this.find("a").attr("href")).fadeIn();
+    e.preventDefault();
+  });
+  var hash = window.location.hash;
+  var anchor = $('.tabs-nav a[href="' + hash + '"]');
+
+  if (anchor.length === 0) {
+    $(".tabs-nav li:first").addClass("active").show();
+    $(".tab-content:first").show();
+  } else {
+    console.log(anchor);
+    anchor.parent("li").click();
+  }
+};
+
+app.config.globalProperties.$layoutInit = function (resizeObjects) {
+  var winWidth = $(window).width();
+
+  if (winWidth < 768) {
+    if ($(_this.listingsContainer).is(".list-layout")) {
+      $(".listing-item").each(function () {
+        $(this).find(resizeObjects).css("height", "auto");
+      });
+    }
+  }
+
+  if (winWidth < 1366) {
+    if ($(".fs-listings").is(".list-layout")) {
+      $(".listing-item").each(function () {
+        $(this).find(resizeObjects).css("height", "auto");
+      });
+    }
+  }
+};
+
+app.config.globalProperties.$ezecute = function (listingsContainer, gridClear) {
+  if ($(listingsContainer).is(".list-layout")) {
+    $(".layout-switcher a.grid").removeClass("active");
+    $(".layout-switcher a.list").addClass("active");
+  }
+
+  if ($(listingsContainer).is(".grid-layout")) {
+    $(".layout-switcher a.grid").addClass("active");
+    $(".layout-switcher a.list").removeClass("active");
+    gridClear;
+  }
+};
+
+app.config.globalProperties.$gridClear = function (gridColumns, listingsContainer) {
+  $(listingsContainer).find(".clearfix").remove();
+  $(".listings-container > .listing-item:nth-child(" + gridColumns + "n)").after("<div class='clearfix'></div>");
+};
+
+app.config.globalProperties.$listLayout = function (listingsContainer, resizeObjects) {
+  if ($(".layout-switcher a").is(".list.active")) {
+    $(listingsContainer).each(function () {
+      $(this).removeClass("grid-layout");
+      $(this).addClass("list-layout");
+    });
+    $(".listing-item").each(function () {
+      var listingContent = $(this).find(".listing-content").height();
+      $(this).find(resizeObjects).css("height", "" + listingContent + "");
+    });
+  }
+};
+
+app.config.globalProperties.$gridLayout = function (listingsContainer, resizeObjects) {
+  if ($(".layout-switcher a").is(".grid.active")) {
+    $(listingsContainer).each(function () {
+      $(this).removeClass("list-layout");
+      $(this).addClass("grid-layout");
+    });
+    $(".listing-item").each(function () {
+      $(this).find(resizeObjects).css("height", "auto");
+    });
+  }
 };
 
 app.mount(el);
@@ -29327,6 +29476,70 @@ function compileToFunction(template, options) {
 /***/ ((module, __unused_webpack_exports, __webpack_require__) => {
 
 var map = {
+	"./Agency/Detail": [
+		"./resources/js/Pages/Agency/Detail.vue",
+		"resources_js_Pages_Agency_Detail_vue"
+	],
+	"./Agency/Detail.vue": [
+		"./resources/js/Pages/Agency/Detail.vue",
+		"resources_js_Pages_Agency_Detail_vue"
+	],
+	"./Agency/Index": [
+		"./resources/js/Pages/Agency/Index.vue",
+		"resources_js_Pages_Agency_Index_vue"
+	],
+	"./Agency/Index.vue": [
+		"./resources/js/Pages/Agency/Index.vue",
+		"resources_js_Pages_Agency_Index_vue"
+	],
+	"./Agent/Detail": [
+		"./resources/js/Pages/Agent/Detail.vue",
+		"resources_js_Pages_Agent_Detail_vue"
+	],
+	"./Agent/Detail.vue": [
+		"./resources/js/Pages/Agent/Detail.vue",
+		"resources_js_Pages_Agent_Detail_vue"
+	],
+	"./Agent/Index": [
+		"./resources/js/Pages/Agent/Index.vue",
+		"resources_js_Pages_Agent_Index_vue"
+	],
+	"./Agent/Index.vue": [
+		"./resources/js/Pages/Agent/Index.vue",
+		"resources_js_Pages_Agent_Index_vue"
+	],
+	"./Blog/Detail": [
+		"./resources/js/Pages/Blog/Detail.vue",
+		"resources_js_Pages_Blog_Detail_vue"
+	],
+	"./Blog/Detail.vue": [
+		"./resources/js/Pages/Blog/Detail.vue",
+		"resources_js_Pages_Blog_Detail_vue"
+	],
+	"./Blog/Index": [
+		"./resources/js/Pages/Blog/Index.vue",
+		"resources_js_Pages_Blog_Index_vue"
+	],
+	"./Blog/Index.vue": [
+		"./resources/js/Pages/Blog/Index.vue",
+		"resources_js_Pages_Blog_Index_vue"
+	],
+	"./Contact/Index": [
+		"./resources/js/Pages/Contact/Index.vue",
+		"resources_js_Pages_Contact_Index_vue"
+	],
+	"./Contact/Index.vue": [
+		"./resources/js/Pages/Contact/Index.vue",
+		"resources_js_Pages_Contact_Index_vue"
+	],
+	"./Estate/Detail/Index": [
+		"./resources/js/Pages/Estate/Detail/Index.vue",
+		"resources_js_Pages_Estate_Detail_Index_vue"
+	],
+	"./Estate/Detail/Index.vue": [
+		"./resources/js/Pages/Estate/Detail/Index.vue",
+		"resources_js_Pages_Estate_Detail_Index_vue"
+	],
 	"./Estate/Estate/Index": [
 		"./resources/js/Pages/Estate/Estate/Index.vue",
 		"resources_js_Pages_Estate_Estate_Index_vue"
@@ -29334,14 +29547,6 @@ var map = {
 	"./Estate/Estate/Index.vue": [
 		"./resources/js/Pages/Estate/Estate/Index.vue",
 		"resources_js_Pages_Estate_Estate_Index_vue"
-	],
-	"./Estate/EstateDetail/Index": [
-		"./resources/js/Pages/Estate/EstateDetail/Index.vue",
-		"resources_js_Pages_Estate_EstateDetail_Index_vue"
-	],
-	"./Estate/EstateDetail/Index.vue": [
-		"./resources/js/Pages/Estate/EstateDetail/Index.vue",
-		"resources_js_Pages_Estate_EstateDetail_Index_vue"
 	],
 	"./Home/Index": [
 		"./resources/js/Pages/Home/Index.vue",
@@ -29446,7 +29651,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_Estate_Estate_Index_vue":"1f4d4f03ef950eab8b80","resources_js_Pages_Estate_EstateDetail_Index_vue":"2c224766f44c7e2e2700","resources_js_Pages_Home_Index_vue":"ec7053beae87a9bf049d"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_Agency_Detail_vue":"b2b684867d48d1319604","resources_js_Pages_Agency_Index_vue":"8e55329a4ed3c9e35f8e","resources_js_Pages_Agent_Detail_vue":"fbf5980a4619152aa263","resources_js_Pages_Agent_Index_vue":"d1cbe18dd89e3529449f","resources_js_Pages_Blog_Detail_vue":"8a89593b8b1b78290842","resources_js_Pages_Blog_Index_vue":"71bb6bf35945887e1702","resources_js_Pages_Contact_Index_vue":"30206d9375e6911d3ec0","resources_js_Pages_Estate_Detail_Index_vue":"e56d93f5c071aa821dc5","resources_js_Pages_Estate_Estate_Index_vue":"7b55c5a99b8ee704421d","resources_js_Pages_Home_Index_vue":"f550c2b9c3848aecd83c"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

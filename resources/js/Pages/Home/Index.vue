@@ -1,4 +1,7 @@
 <template>
+  <teleport to="head">
+    <title>Xplorestate | Real Estate, Apartments & Home Values</title>
+  </teleport>
   <parallax
     :image="'https://images.pexels.com/photos/373965/pexels-photo-373965.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'"
   >

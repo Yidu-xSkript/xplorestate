@@ -53,8 +53,6 @@ export default {
   data() {
     return {
       zoom: 14,
-      iconWidth: 25,
-      iconHeight: 40,
     };
   },
   computed: {
@@ -63,13 +61,7 @@ export default {
         this.$refs.map.innerWidth;
       },
       get: () => null,
-    },
-    iconUrl() {
-      return `https://placekitten.com/${this.iconWidth}/${this.iconHeight}`;
-    },
-    iconSize() {
-      return [this.iconWidth, this.iconHeight];
-    },
+    }
   },
 };
 </script>

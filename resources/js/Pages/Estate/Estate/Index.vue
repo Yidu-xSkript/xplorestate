@@ -1,4 +1,7 @@
 <template>
+  <teleport to="head">
+    <title>Find your Home | Xplorestate</title>
+  </teleport>
   <div class="fs-container">
     <map-estate></map-estate>
     <div class="fs-inner-container">
@@ -29,7 +32,7 @@
             class="listing-item"
           >
             <inertia-link
-              :href="route('estate.detail.index')"
+              :href="route('detail.index')"
               class="listing-img-container"
             >
               <div class="listing-badges">
@@ -55,6 +58,7 @@
                 ></span>
                 <span
                   class="compare-button with-tip"
+                  @click.prevent="addToCompare"
                   data-tip-content="Add to Compare"
                 ></span>
               </div>
@@ -78,7 +82,7 @@
             <div class="listing-content">
               <div class="listing-title">
                 <h4>
-                  <a href="single-property-page-1.html">{{ property.title }}</a>
+                  <inertia-link :href="route('detail.index')">{{ property.title }}</inertia-link>
                 </h4>
                 <a
                   href="https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&amp;hl=en&amp;t=v&amp;hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom"
@@ -88,10 +92,10 @@
                   {{ property.address }}
                 </a>
 
-                <a
-                  href="single-property-page-1.html"
+                <inertia-link
+                  :href="route('detail.index')"
                   class="details button border"
-                  >Details</a
+                  >Details</inertia-link
                 >
               </div>
 
@@ -261,7 +265,7 @@ export default {
     );
     this.$nextTick(() => {
       $(".owl-buttons").each(() => {
-        $('.owl-buttons').on("click", function (e) {
+        $(".owl-buttons").on("click", function (e) {
           if ($(e.target).is(".owl-next") || $(e.target).is(".owl-prev")) {
             e.preventDefault();
             e.stopPropagation();
@@ -270,10 +274,15 @@ export default {
       });
       onMount();
       this.listingsContainer = $(".listings-container");
-      this.execute();
-      this.listLayout();
-      this.gridLayout();
-      this.$owlReload();
+      this.$ezecute(
+        this.listingsContainer,
+        this.$gridClear(2, this.listingsContainer)
+      );
+      this.$listLayout(this.listingsContainer, this.resizeObjects);
+      this.$gridLayout(this.listingsContainer, this.resizeObjects);
+      this.owlReload();
+      this.$registerToolTip(".compare-button.with-tip, .like-icon.with-tip");
+      this.$toggleLike(".like-icon");
     });
   },
   created() {
@@ -282,69 +291,18 @@ export default {
       this.mapHeight = `${$(window).height() - headerHeight}px`;
       $(".fs-container").css("height", this.mapHeight);
 
-      var that = this;
-      var winWidth = $(window).width();
-      if (winWidth < 768) {
-        if ($(this.listingsContainer).is(".list-layout")) {
-          $(".listing-item").each(function () {
-            $(this).find(that.resizeObjects).css("height", "auto");
-          });
-        }
-      }
-      if (winWidth < 1366) {
-        if ($(".fs-listings").is(".list-layout")) {
-          $(".listing-item").each(function () {
-            $(this).find(that.resizeObjects).css("height", "auto");
-          });
-        }
-      }
+      this.$layoutInit(this.resizeObjects);
     });
   },
   methods: {
-    execute: function () {
-      if ($(this.listingsContainer).is(".list-layout")) {
-        $(".layout-switcher a.grid").removeClass("active");
-        $(".layout-switcher a.list").addClass("active");
-      }
-
-      if ($(this.listingsContainer).is(".grid-layout")) {
-        $(".layout-switcher a.grid").addClass("active");
-        $(".layout-switcher a.list").removeClass("active");
-        this.gridClear(2);
-      }
+    addToCompare: function (e) {
+      e.stopPropagation();
+      this.$addToCompareStyle();
     },
-    listLayout() {
-      if ($(".layout-switcher a").is(".list.active")) {
-        $(this.listingsContainer).each(function () {
-          $(this).removeClass("grid-layout");
-          $(this).addClass("list-layout");
-        });
-        var that = this;
-        $(".listing-item").each(function () {
-          var listingContent = $(this).find(".listing-content").height();
-          $(this)
-            .find(that.resizeObjects)
-            .css("height", "" + listingContent + "");
-        });
-      }
-    },
-    gridClear(gridColumns) {
-      $(this.listingsContainer).find(".clearfix").remove();
-      $(
-        ".listings-container > .listing-item:nth-child(" + gridColumns + "n)"
-      ).after("<div class='clearfix'></div>");
-    },
-    gridLayout() {
-      if ($(".layout-switcher a").is(".grid.active")) {
-        $(this.listingsContainer).each(function () {
-          $(this).removeClass("list-layout");
-          $(this).addClass("grid-layout");
-        });
-        var that = this;
-        $(".listing-item").each(function () {
-          $(this).find(that.resizeObjects).css("height", "auto");
-        });
-      }
+    owlReload: function () {
+      $(".listing-carousel").each(function () {
+        $(this).data("owlCarousel").reload();
+      });
     },
     switchClicked: function (type) {
       this.$nextTick(() => {
@@ -352,14 +310,14 @@ export default {
         if (type == "grid") {
           $(".layout-switcher a.grid").addClass("active");
           $(".layout-switcher a.list").removeClass("active");
-          this.gridLayout();
-          this.gridClear(2);
+          this.$gridLayout(this.listingsContainer, this.resizeObjects);
+          this.$gridClear(2, this.listingsContainer);
         } else {
           $(".layout-switcher a.list").addClass("active");
           $(".layout-switcher a.grid").removeClass("active");
-          this.listLayout();
+          this.$listLayout(this.listingsContainer, this.resizeObjects);
         }
-        this.$owlReload();
+        this.owlReload();
       });
     },
   },

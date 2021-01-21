@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\AgencyController;
+use App\Http\Controllers\AgentController;
+use App\Http\Controllers\BlogController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HomeEstateListController;
 use Illuminate\Support\Facades\Route;
@@ -17,4 +21,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/map', [HomeEstateListController::class, 'index'])->name('estate.index');
-Route::get('/map/estate', [HomeEstateListController::class, 'indexDetail'])->name('estate.detail.index');
+Route::get('/estate', [HomeEstateListController::class, 'detail'])->name('detail.index');
+Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
+Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
+Route::get('/blog/detail', [BlogController::class, 'detail'])->name('blog.detail');
+Route::get('/agencies', [AgencyController::class, 'index'])->name('agency.index');
+Route::get('/agency/detail', [AgencyController::class, 'detail'])->name('agency.detail');
+Route::get('/agents', [AgentController::class, 'index'])->name('agent.index');
+Route::get('/agent/detail', [AgentController::class, 'detail'])->name('agent.detail');

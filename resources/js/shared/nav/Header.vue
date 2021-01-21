@@ -1,6 +1,8 @@
 <template>
+  <auth-modal :show="show" @closeModal="closeAuthModal"></auth-modal>
   <header id="header-container">
-    <div id="header">
+    <div style="padding: 30px 0px"></div>
+    <div id="header" class="cloned">
       <div class="container">
         <div class="left-side">
           <div id="logo">
@@ -18,10 +20,15 @@
           <nav id="navigation" class="style-1">
             <ul id="responsive">
               <li>
-                <inertia-link class="current" href="#">Buy</inertia-link>
+                <inertia-link
+                  :class="[{ current: activeLink === 'map' }]"
+                  :href="route('estate.index')"
+                  >Buy</inertia-link
+                >
                 <ul>
                   <li>
                     <inertia-link
+                      class="current"
                       href="listings-grid-standard-with-sidebar.html"
                       >All Homes</inertia-link
                     >
@@ -99,42 +106,63 @@
                 </ul>
               </li>
               <li>
-                <a href="#">Agents & Agencies</a>
+                <a
+                  :class="[
+                    'cursor-pointer',
+                    {
+                      current:
+                        activeLink === 'agencies' || activeLink === 'agents' || activeLink === 'agent/detail' || activeLink === 'agency/detail',
+                    },
+                  ]"
+                  >Agents & Agencies</a
+                >
                 <ul>
                   <li>
-                    <a href="#">Real Estates</a>
+                    <inertia-link
+                      :class="[{ current: activeLink === 'agencies' }]"
+                      :href="route('agency.index')"
+                      >Real Estates</inertia-link
+                    >
                   </li>
                   <li>
-                    <a href="#">Real Estate Agents</a>
-                  </li>
-                  <li>
-                    <a href="#">Real Estate Photographers</a>
+                    <inertia-link
+                      :href="route('agent.index')"
+                      :class="[{ current: activeLink === 'agents' }]"
+                      >Real Estate Agents</inertia-link
+                    >
                   </li>
                   <li>
                     <a href="#">Property Managers</a>
                   </li>
-                  <li>
-                    <a href="#">Home Builders</a>
-                  </li>
-                  <li>
-                    <a href="#">Interior Designers</a>
-                  </li>
                 </ul>
               </li>
               <li>
-                <inertia-link href="#">more</inertia-link>
+                <inertia-link
+                  :class="[
+                    {
+                      current:
+                        activeLink === 'blog' || activeLink === 'blog/detail' || activeLink === 'contact',
+                    },
+                  ]"
+                  href=""
+                  >more</inertia-link
+                >
                 <ul>
                   <li>
-                    <a href="#">Blog</a>
+                    <inertia-link :href="route('blog.index')"
+                      >Blog</inertia-link
+                    >
                   </li>
                   <li>
-                    <a href="#">Contact Us</a>
+                    <inertia-link :href="route('contact.index')"
+                      >Contact Us</inertia-link
+                    >
                   </li>
                   <li>
                     <a href="#">Help</a>
                   </li>
                   <li>
-                    <a href="#">Advertise</a>
+                    <a href="#">Affiliate Program</a>
                   </li>
                   <li>
                     <a href="#">FAQ</a>
@@ -145,7 +173,7 @@
                 </ul>
               </li>
               <li>
-                <inertia-link href="#">Sign In</inertia-link>
+                <a class="cursor-pointer" @click="openAuthModal">Sign In</a>
               </li>
               <li>
                 <inertia-link href="#" class="button border"
@@ -163,21 +191,16 @@
 </template>
 
 <script>
+import AuthModal from "../../components/Auth/modal/AuthModal.vue";
 export default {
+  components: { AuthModal },
+  data: () => ({ activeLink: null, show: false }),
   mounted() {
-    $("#header")
-      .not("#header-container.header-style-2 #header")
-      .clone(true)
-      .addClass("cloned unsticky")
-      .insertAfter("#header");
-    $("#navigation.style-2")
-      .clone(true)
-      .addClass("cloned unsticky")
-      .insertAfter("#navigation.style-2");
-
-    $("#logo .sticky-logo")
-      .clone(true)
-      .prependTo("#navigation.style-2.cloned ul#responsive");
+    this.setActiveLink(this.$inertia.page.url, "inertia");
+    axios.interceptors.response.use((response) => {
+      this.setActiveLink(response?.config?.url, "axios");
+      return response;
+    });
   },
   created() {
     window.addEventListener("scroll", this.handleScroll);
@@ -186,19 +209,28 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
+    openAuthModal() {
+      this.show = true;
+      document.querySelector("body").style.overflowY = "hidden";
+    },
+    closeAuthModal() {
+      this.show = false;
+      document.querySelector("body").style.overflowY = "auto";
+    },
+    setActiveLink(url, type) {
+      if (type == "axios") {
+        var _url = new URL(url);
+        this.activeLink = (_url.pathname || "").replace("/", "").split("?")[0];
+      } else {
+        this.activeLink = (url || "").replace("/", "").split("?")[0];
+      }
+    },
     handleScroll: function () {
       this.$nextTick(() => {
         var headerOffset = $("#header-container").height() * 2;
         if ($(window).scrollTop() >= headerOffset) {
-          $("#header.cloned").addClass("sticky").removeClass("unsticky");
-          $("#navigation.style-2.cloned")
-            .addClass("sticky")
-            .removeClass("unsticky");
-        } else {
-          $("#header.cloned").addClass("unsticky").removeClass("sticky");
-          $("#navigation.style-2.cloned")
-            .addClass("unsticky")
-            .removeClass("sticky");
+          $("#header").addClass("sticky").removeClass("unsticky");
+          $("#navigation.style-2").addClass("sticky").removeClass("unsticky");
         }
       });
     },

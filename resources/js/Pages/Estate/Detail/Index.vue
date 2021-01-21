@@ -1,12 +1,14 @@
 <template>
+  <teleport to="head">
+    <title>Selway Apartments | For Sale | Xplorestate</title>
+  </teleport>
   <div id="titlebar" class="property-titlebar margin-bottom-0">
     <div class="container">
       <div class="row">
         <div class="col-md-12">
-          <a
-            href="listings-list-with-sidebar.html"
-            class="back-to-listings"
-          ></a>
+          <inertia-link :href="route('estate.index')" class="back-to-listings"
+            ><span></span
+          ></inertia-link>
           <div class="property-title">
             <h2>
               Selway Apartments <span class="property-badge">For Sale</span>
@@ -28,9 +30,25 @@
     </div>
   </div>
 
-  <vue-slick-carousel
-    v-bind="slick_settings"
-    class="fullwidth-property-slider margin-bottom-50"
+  <slick
+    :centerMode="true"
+    :centerPadding="`20%`"
+    :slidesToShow="1"
+    :responsive="[
+      {
+        breakpoint: 1367,
+        settings: {
+          centerPadding: '15%',
+        },
+      },
+      {
+        breakpoint: 993,
+        settings: {
+          centerPadding: '0',
+        },
+      },
+    ]"
+    :classes="[`fullwidth-property-slider`, `margin-bottom-50`]"
   >
     <a
       href="/images/single-property-01.jpg"
@@ -62,7 +80,7 @@
       data-background-image="/images/single-property-06.jpg"
       class="item mfp-gallery"
     ></a>
-  </vue-slick-carousel>
+  </slick>
 
   <div class="container">
     <div class="row">
@@ -120,9 +138,20 @@
               lectus non nibh vulputate efficitur quis at arcu.
             </p>
 
-            <a href="#" class="show-more-button"
+            <a
+              @click="showMoreDescriptionVisible()"
+              v-if="!show"
+              class="show-more-button cursor-pointer"
               >Show More <i class="fa fa-angle-down"></i
             ></a>
+            <div class="text-center">
+              <a
+                @click="showMoreDescriptionHide()"
+                v-if="show"
+                class="show-less-button cursor-pointer"
+                >Show Less <i class="fa fa-angle-up"></i
+              ></a>
+            </div>
           </div>
 
           <h3 class="desc-headline">Details</h3>
@@ -160,9 +189,12 @@
               <div>
                 <a
                   class="floor-pic mfp-image"
-                  href="https://i.imgur.com/kChy7IU.jpg"
+                  href="https://www.roomsketcher.com/wp-content/uploads/2017/11/RoomSketcher-Order-Floor-Plans-2D-Floor-Plan.jpg"
                 >
-                  <img src="https://i.imgur.com/kChy7IU.jpg" alt="" />
+                  <img
+                    src="https://www.roomsketcher.com/wp-content/uploads/2017/11/RoomSketcher-Order-Floor-Plans-2D-Floor-Plan.jpg"
+                    alt=""
+                  />
                 </a>
                 <p>
                   Mauris mauris ante, blandit et, ultrices a, susceros. Nam mi.
@@ -179,9 +211,12 @@
               <div>
                 <a
                   class="floor-pic mfp-image"
-                  href="https://i.imgur.com/l2VNlwu.jpg"
+                  href="https://www.sruinsulation.co.uk/image/data/systems/cinema/1.jpg"
                 >
-                  <img src="https://i.imgur.com/l2VNlwu.jpg" alt="" />
+                  <img
+                    src="https://www.sruinsulation.co.uk/image/data/systems/cinema/1.jpg"
+                    alt=""
+                  />
                 </a>
                 <p>
                   Sed non urna. Donec et ante. Phasellus eu ligula. Vestibulum
@@ -198,33 +233,73 @@
               <div>
                 <a
                   class="floor-pic mfp-image"
-                  href="https://i.imgur.com/0zJYERy.jpg"
+                  href="https://www.sruinsulation.co.uk/image/data/systems/cinema/1.jpg"
                 >
-                  <img src="https://i.imgur.com/0zJYERy.jpg" alt="" />
+                  <img
+                    src="https://www.sruinsulation.co.uk/image/data/systems/cinema/1.jpg"
+                    alt=""
+                  />
                 </a>
               </div>
             </div>
           </div>
 
-          <h3 class="desc-headline no-border">Video</h3>
-          <div class="responsive-iframe">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube-nocookie.com/embed/DUd1qH4p84I?rel=0&amp;showinfo=0"
-              frameborder="0"
-              allowfullscreen
-            ></iframe>
-          </div>
+          <hr />
 
-          <h3 class="desc-headline no-border" id="location">Location</h3>
-          <div id="propertyMap-container">
-            <div
-              id="propertyMap"
-              data-latitude="40.7427837"
-              data-longitude="-73.11445617675781"
-            ></div>
-            <a href="#" id="streetView">Street View</a>
+          <div class="style-2">
+            <ul class="tabs-nav">
+              <li class="active">
+                <a href="#tab1a"><i class="fa fa-video-camera"></i> Video</a>
+              </li>
+              <li>
+                <a href="#tab2a"
+                  ><i class="im im-icon-Rotate-Gesture"></i> Virtual Tour</a
+                >
+              </li>
+              <li>
+                <a href="#tab3a"
+                  ><i class="sl sl-icon-location"></i> Location</a
+                >
+              </li>
+            </ul>
+
+            <div class="tabs-container">
+              <div class="tab-content" id="tab1a">
+                <div class="responsive-iframe">
+                  <iframe
+                    width="560"
+                    height="315"
+                    src="https://www.youtube-nocookie.com/embed/DUd1qH4p84I?rel=0&amp;showinfo=0"
+                    frameborder="0"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
+
+              <div class="tab-content" id="tab2a">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!4v1570442623074!6m8!1m7!1sCAoSLEFGMVFpcE15Rk5zWUpDQ2k2LWh1SzJpSGpZa1lRaDROa1lDQk9hR1RCSld2!2m2!1d34.0002865633972!2d-84.58304914834946!3f143.72763481287652!4f-5.418296856668931!5f0.7820865974627469"
+                  width="100%"
+                  height="450"
+                  frameborder="0"
+                  style="border: 0"
+                  allowfullscreen=""
+                ></iframe>
+              </div>
+
+              <div class="tab-content" id="tab3a">
+                <div id="propertyMap-container">
+                  <div id="propertyMap">
+                    <l-map v-model:zoom="zoom" :center="[9.0144768, 38.8]">
+                      <l-tile-layer
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                      ></l-tile-layer>
+                      <l-marker :lat-lng="[9.0144768, 38.8]"> </l-marker>
+                    </l-map>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
 
           <h3 class="desc-headline no-border margin-bottom-35 margin-top-60">
@@ -243,7 +318,7 @@
 
                 <div class="listing-img-content">
                   <span class="listing-price">$1700 <i>monthly</i></span>
-                  <span class="like-icon"></span>
+                  <span class="like-icon" @click="toggleLike"></span>
                 </div>
 
                 <img src="/images/listing-03.jpg" alt="" />
@@ -287,7 +362,7 @@
                   <span class="listing-price"
                     >$420,000 <i>$770 / sq ft</i></span
                   >
-                  <span class="like-icon"></span>
+                  <span class="like-icon" @click="toggleLike"></span>
                 </div>
 
                 <div><img src="/images/listing-04.jpg" alt="" /></div>
@@ -331,7 +406,7 @@
                   <span class="listing-price"
                     >$535,000 <i>$640 / sq ft</i></span
                   >
-                  <span class="like-icon"></span>
+                  <span class="like-icon" @click="toggleLike"></span>
                 </div>
 
                 <img src="/images/listing-05.jpg" alt="" />
@@ -376,6 +451,7 @@
             </button>
             <button
               class="widget-button with-tip"
+              @click="saveProperty"
               data-tip-content="Add to Bookmarks"
             >
               <i class="fa fa-star-o"></i>
@@ -383,6 +459,7 @@
             <button
               class="widget-button with-tip compare-widget-button"
               data-tip-content="Add to Compare"
+              @click.prevent="addToCompare"
             >
               <i class="icon-compare"></i>
             </button>
@@ -394,20 +471,21 @@
               id="booking-widget-anchor"
               class="boxed-widget booking-widget margin-top-35"
             >
-              <h3><i class="fa fa-calendar-check-o"></i> Booking</h3>
+              <h3><i class="fa fa-calendar-check-o"></i> Book a Tour</h3>
               <div class="row with-forms margin-top-0">
                 <div class="col-lg-12">
-                  <input
+                  <flat-pickr
                     type="text"
-                    id="date-picker"
-                    placeholder="Date"
-                    readonly="readonly"
+                    :config="config"
+                    placeholder="Select date"
+                    name="date"
+                    v-model="date"
                   />
                 </div>
 
                 <div class="col-lg-12">
                   <div class="panel-dropdown">
-                    <a href="#"
+                    <a @click="openDropdown"
                       >Guests <span class="qtyTotal" name="qtyTotal">1</span></a
                     >
                     <div class="panel-dropdown-content">
@@ -612,27 +690,152 @@ I'm interested in this property [ID 123456] and I'd like to know more details.</
 
 <script>
 import layout from "../../../shared/Layout.vue";
-import VueSlickCarousel from "vue-slick-carousel";
-import "vue-slick-carousel/dist/vue-slick-carousel-theme.css";
+import Slick from "../../../components/slick/Index.vue";
+import "magnific-popup";
+import {
+  LMap,
+  LTileLayer,
+  LMarker,
+} from "@vue-leaflet/vue-leaflet/dist/vue-leaflet.cjs";
+import "leaflet/dist/leaflet.css";
+import flatPickr from "vue-flatpickr-component";
+import "flatpickr/dist/flatpickr.css";
 export default {
   layout: (h, page) => h(layout, [page]),
+  components: { Slick, LMap, LTileLayer, LMarker, flatPickr },
   data: () => ({
-    slick_settings: {
-      dots: true,
-      dotsClass: "slick-dots custom-dot-class",
-      edgeFriction: 0.35,
-      infinite: false,
-      speed: 500,
-      slidesToShow: 1,
-      slidesToScroll: 1,
+    show: false,
+    zoom: 16,
+    date: new Date(),
+    intervalHandle: 0,
+    config: {
+      altFormat: "M j, Y H:i K",
+      altInput: true,
+      enableTime: true,
+      dateFormat: "Y-m-d H:i",
+      minDate: new Date(),
+      maxDate: new Date().fp_incr(7),
     },
   }),
+  unmounted() {
+    clearInterval(this.intervalHandle);
+  },
   mounted() {
     this.$nextTick(() => {
-      this.$owlReload();
+      var resizeObjects = $(
+        ".listings-container .listing-img-container img, .listings-container .listing-img-container"
+      );
+      this.$inlineCSS(".fullwidth-property-slider .item");
+      $("body").magnificPopup({
+        type: "image",
+        delegate: "a.mfp-gallery",
+        fixedContentPos: true,
+        fixedBgPos: true,
+        overflowY: "auto",
+        closeBtnInside: false,
+        preloader: true,
+        removalDelay: 0,
+        mainClass: "mfp-fade",
+        gallery: { enabled: true },
+      });
+      $(".mfp-image").magnificPopup({
+        type: "image",
+        closeOnContentClick: true,
+        mainClass: "mfp-fade",
+        image: {
+          verticalFit: true,
+        },
+      });
+      this.$accordion();
+      this.$tabs();
+      $(".listing-item").each(function () {
+        $(this).find(resizeObjects).css("height", "auto");
+      });
+      var panelTrigger = $(".booking-widget .panel-dropdown a");
+      $(".booking-widget .panel-dropdown .panel-dropdown-content").css({
+        width: panelTrigger.outerWidth(),
+      });
+
+      if ($(".qtyButtons").length > 0) {
+        function qtySum() {
+          var arr = document.getElementsByName("qtyInput");
+          var tot = 0;
+          for (var i = 0; i < arr.length; i++) {
+            if (parseInt(arr[i].value)) tot += parseInt(arr[i].value);
+          }
+
+          var cardQty = document.querySelector(".qtyTotal");
+          cardQty.innerHTML = tot;
+        }
+        qtySum();
+
+        $(function () {
+          $(".qtyButtons input").after('<div class="qtyInc"></div>');
+          $(".qtyButtons input").before('<div class="qtyDec"></div>');
+
+          $(".qtyDec, .qtyInc").on("click", function () {
+            var $button = $(this);
+            var oldValue = $button.parent().find("input").val();
+
+            if ($button.hasClass("qtyInc")) {
+              var newVal = parseFloat(oldValue) + 1;
+            } else {
+              if (oldValue > 0) {
+                var newVal = parseFloat(oldValue) - 1;
+              } else {
+                newVal = 0;
+              }
+            }
+
+            $button.parent().find("input").val(newVal);
+            qtySum();
+            $(".qtyTotal").addClass("rotate-x");
+          });
+          function removeAnimation() {
+            $(".qtyTotal").removeClass("rotate-x");
+          }
+          const counter = document.querySelector(".qtyTotal");
+          counter.addEventListener("animationend", removeAnimation);
+        });
+      }
+      this.intervalHandle = setInterval(() => {
+        this.date = new Date();
+      }, 7500);
+      this.$registerToolTip(
+        ".compare-button.with-tip, .like-icon.with-tip, .widget-button.with-tip"
+      );
+      this.$toggleLike(".widget-button, .like-icon");
     });
   },
-  components: { VueSlickCarousel },
+  methods: {
+    addToCompare: function (e) {
+      this.$addToCompareStyle();
+    },
+    showMoreDescriptionVisible() {
+      $(".show-more").toggleClass("visible");
+      this.show = true;
+    },
+    saveProperty() {},
+    showMoreDescriptionHide() {
+      $(".show-more").toggleClass("visible", false);
+      setTimeout(() => {
+        this.show = false;
+      }, 600);
+    },
+    close_panel_dropdown() {
+      $(".panel-dropdown").removeClass("active");
+      $(".fs-inner-container.content").removeClass("faded-out");
+    },
+    openDropdown() {
+      if ($(".panel-dropdown a").parent().is(".active")) {
+        this.close_panel_dropdown();
+      } else {
+        this.close_panel_dropdown();
+        $(".panel-dropdown a").parent().addClass("active");
+        $(".fs-inner-container.content").addClass("faded-out");
+      }
+    },
+  },
 };
 </script>
 
