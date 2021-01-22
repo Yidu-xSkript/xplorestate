@@ -7,6 +7,7 @@ use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HomeEstateListController;
 use Illuminate\Support\Facades\Route;
+use Inertia\Inertia;
 
 /*
 |--------------------------------------------------------------------------
@@ -29,3 +30,6 @@ Route::get('/agencies', [AgencyController::class, 'index'])->name('agency.index'
 Route::get('/agency/detail', [AgencyController::class, 'detail'])->name('agency.detail');
 Route::get('/agents', [AgentController::class, 'index'])->name('agent.index');
 Route::get('/agent/detail', [AgentController::class, 'detail'])->name('agent.detail');
+Route::get('/sell', function() {
+    return Inertia::render('sell/Index');
+})->name('sell.index');

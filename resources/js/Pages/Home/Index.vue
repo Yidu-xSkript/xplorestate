@@ -180,7 +180,7 @@
       Whether you’re buying, selling or renting, <br />we can help you move
       forward.
     </h3>
-    <hr style="margin-left: 45%; margin-right: 45%; border-color: #006aff" />
+    <hr style="margin:20px 45%;border:2px solid #006aff" />
     <div class="container">
       <div class="row">
         <div class="col-md-4">
@@ -204,7 +204,7 @@
           </inertia-link>
         </div>
         <div class="col-md-4">
-          <inertia-link :href="route('estate.index')" class="home-card--">
+          <inertia-link :href="route('sell.index')" class="home-card--">
             <div class="home-card-img--">
               <img
                 src="https://www.zillowstatic.com/s3/homepage/static/Sell_a_home.png"

@@ -1,4 +1,7 @@
 <template>
+<teleport to="head">
+    <title>Real estate Agents | Xplorestate</title>
+</teleport>
   <div id="titlebar">
     <div class="container">
       <div class="row">

@@ -1,8 +1,8 @@
 <template>
   <auth-modal :show="show" @closeModal="closeAuthModal"></auth-modal>
   <header id="header-container">
-    <div style="padding: 30px 0px"></div>
-    <div id="header" class="cloned">
+    <div class="mobile-trigger" style="padding: 30px 0px"></div>
+    <div id="header">
       <div class="container">
         <div class="left-side">
           <div id="logo">
@@ -10,7 +10,7 @@
               ><img src="/images/logo.png" alt=""
             /></inertia-link>
           </div>
-          <div class="mmenu-trigger">
+          <div class="mmenu-trigger" @click.prevent="openNavPanel">
             <button class="hamburger hamburger--collapse" type="button">
               <span class="hamburger-box">
                 <span class="hamburger-inner"></span>
@@ -48,8 +48,17 @@
                 </ul>
               </li>
               <li>
-                <inertia-link href="#">Sell</inertia-link>
+                <inertia-link
+                  :class="[{ current: activeLink === 'sell' }]"
+                  :href="route('sell.index')"
+                  >Sell</inertia-link
+                >
                 <ul>
+                  <li>
+                    <inertia-link :href="route('sell.index')"
+                      >See your options</inertia-link
+                    >
+                  </li>
                   <li>
                     <inertia-link
                       href="listings-grid-standard-with-sidebar.html"
@@ -71,7 +80,7 @@
                 </ul>
               </li>
               <li>
-                <inertia-link href="#">Rent</inertia-link>
+                <inertia-link :href="route('estate.index')">Rent</inertia-link>
                 <ul>
                   <li>
                     <inertia-link
@@ -111,7 +120,10 @@
                     'cursor-pointer',
                     {
                       current:
-                        activeLink === 'agencies' || activeLink === 'agents' || activeLink === 'agent/detail' || activeLink === 'agency/detail',
+                        activeLink === 'agencies' ||
+                        activeLink === 'agents' ||
+                        activeLink === 'agent/detail' ||
+                        activeLink === 'agency/detail',
                     },
                   ]"
                   >Agents & Agencies</a
@@ -137,16 +149,19 @@
                 </ul>
               </li>
               <li>
-                <inertia-link
+                <a
                   :class="[
+                    'cursor-pointer',
                     {
                       current:
-                        activeLink === 'blog' || activeLink === 'blog/detail' || activeLink === 'contact',
+                        activeLink === 'blog' ||
+                        activeLink === 'blog/detail' ||
+                        activeLink === 'contact',
                     },
                   ]"
-                  href=""
-                  >more</inertia-link
                 >
+                  more
+                </a>
                 <ul>
                   <li>
                     <inertia-link :href="route('blog.index')"
@@ -175,11 +190,6 @@
               <li>
                 <a class="cursor-pointer" @click="openAuthModal">Sign In</a>
               </li>
-              <li>
-                <inertia-link href="#" class="button border"
-                  >List your Property</inertia-link
-                >
-              </li>
             </ul>
           </nav>
           <div class="clearfix"></div>
@@ -192,13 +202,20 @@
 
 <script>
 import AuthModal from "../../components/Auth/modal/AuthModal.vue";
+import "../../Partial/mmenu.min.js";
 export default {
   components: { AuthModal },
-  data: () => ({ activeLink: null, show: false }),
+  data: () => ({ activeLink: null, show: false, mmenuAPI: null }),
   mounted() {
+    if (window.innerWidth >= 1240) {
+      $("#header").addClass("cloned");
+      $(".mobile-trigger").css("display", "block");
+    } else $(".mobile-trigger").css("display", "none");
     this.setActiveLink(this.$inertia.page.url, "inertia");
+    this.mmenuInit();
     axios.interceptors.response.use((response) => {
       this.setActiveLink(response?.config?.url, "axios");
+      if (this.mmenuAPI !== null) this.mmenuAPI.close()
       return response;
     });
   },
@@ -212,6 +229,46 @@ export default {
     openAuthModal() {
       this.show = true;
       document.querySelector("body").style.overflowY = "hidden";
+    },
+    mmenuInit() {
+      var wi = $(window).width();
+      if (wi <= "992") {
+        $(".mmenu-init").remove();
+        $("#navigation")
+          .addClass("mmenu-init")
+          .insertBefore("#navigation")
+          .removeAttr("id")
+          .removeClass("style-1")
+          .find("ul")
+          .removeAttr("id");
+        $(".mmenu-init").find(".container").removeClass("container");
+
+        $(".mmenu-init").mmenu(
+          { counters: true },
+          {
+            offCanvas: {
+              pageNodetype: "#app",
+            },
+          }
+        );
+        this.mmenuAPI = $(".mmenu-init").data("mmenu");
+        var $icon = $(".hamburger");
+
+        this.mmenuAPI.bind("open:finish", function () {
+          setTimeout(function () {
+            $icon.addClass("is-active");
+          });
+        });
+        this.mmenuAPI.bind("close:finish", function () {
+          setTimeout(function () {
+            $icon.removeClass("is-active");
+          });
+        });
+      }
+      $(".mm-next").addClass("mm-fullsubopen");
+    },
+    openNavPanel() {
+      if (this.mmenuAPI !== null) this.mmenuAPI.open();
     },
     closeAuthModal() {
       this.show = false;

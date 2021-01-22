@@ -1,4 +1,7 @@
 <template>
+  <teleport to="head">
+    <title>Jennie Wilson | Real Estate Agent | Xplorestate</title>
+  </teleport>
   <div id="titlebar">
     <div class="container">
       <div class="row">
@@ -8,7 +11,7 @@
 
           <nav id="breadcrumbs">
             <ul>
-              <li><a href="#">Home</a></li>
+              <li><inertia-link :href="route('home')">Home</inertia-link></li>
               <li>Listings</li>
             </ul>
           </nav>

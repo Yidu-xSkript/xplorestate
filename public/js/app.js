@@ -29555,6 +29555,30 @@ var map = {
 	"./Home/Index.vue": [
 		"./resources/js/Pages/Home/Index.vue",
 		"resources_js_Pages_Home_Index_vue"
+	],
+	"./ListProperty/Index": [
+		"./resources/js/Pages/ListProperty/Index.vue",
+		"resources_js_Pages_ListProperty_Index_vue"
+	],
+	"./ListProperty/Index.vue": [
+		"./resources/js/Pages/ListProperty/Index.vue",
+		"resources_js_Pages_ListProperty_Index_vue"
+	],
+	"./Terms/Index": [
+		"./resources/js/Pages/Terms/Index.vue",
+		"resources_js_Pages_Terms_Index_vue"
+	],
+	"./Terms/Index.vue": [
+		"./resources/js/Pages/Terms/Index.vue",
+		"resources_js_Pages_Terms_Index_vue"
+	],
+	"./sell/Index": [
+		"./resources/js/Pages/sell/Index.vue",
+		"resources_js_Pages_sell_Index_vue"
+	],
+	"./sell/Index.vue": [
+		"./resources/js/Pages/sell/Index.vue",
+		"resources_js_Pages_sell_Index_vue"
 	]
 };
 function webpackAsyncContext(req) {
@@ -29651,7 +29675,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_Agency_Detail_vue":"b2b684867d48d1319604","resources_js_Pages_Agency_Index_vue":"8e55329a4ed3c9e35f8e","resources_js_Pages_Agent_Detail_vue":"fbf5980a4619152aa263","resources_js_Pages_Agent_Index_vue":"d1cbe18dd89e3529449f","resources_js_Pages_Blog_Detail_vue":"8a89593b8b1b78290842","resources_js_Pages_Blog_Index_vue":"71bb6bf35945887e1702","resources_js_Pages_Contact_Index_vue":"30206d9375e6911d3ec0","resources_js_Pages_Estate_Detail_Index_vue":"e56d93f5c071aa821dc5","resources_js_Pages_Estate_Estate_Index_vue":"7b55c5a99b8ee704421d","resources_js_Pages_Home_Index_vue":"f550c2b9c3848aecd83c"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + {"resources_js_Pages_Agency_Detail_vue":"f435408af844c63d1bfd","resources_js_Pages_Agency_Index_vue":"3ea18ee4477526a47135","resources_js_Pages_Agent_Detail_vue":"902e41e706f759b24c76","resources_js_Pages_Agent_Index_vue":"2e929f7bc4de1f1e3302","resources_js_Pages_Blog_Detail_vue":"aafd03afc0eb98382f9c","resources_js_Pages_Blog_Index_vue":"b53aec5152cdaf915f89","resources_js_Pages_Contact_Index_vue":"0d7ab0b90734f809ca53","resources_js_Pages_Estate_Detail_Index_vue":"5eb672454244d9f98fb5","resources_js_Pages_Estate_Estate_Index_vue":"6b6bf28ebbec5320b584","resources_js_Pages_Home_Index_vue":"9473686715be25796d3d","resources_js_Pages_ListProperty_Index_vue":"20d57229a801f081ed72","resources_js_Pages_Terms_Index_vue":"260ab9a6bc299bc134b9","resources_js_Pages_sell_Index_vue":"8af93d85a9d1b630b3c9"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

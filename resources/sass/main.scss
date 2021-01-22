@@ -1426,6 +1426,7 @@ li.mm-vertical.mm-opened > .mm-panel {
     top: 0;
     left: 0;
     right: 0;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
 }
 
 .mm-navbar > * {
@@ -1442,6 +1443,8 @@ li.mm-vertical.mm-opened > .mm-panel {
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
+    font-family: 'Playfair Display', serif;
+    font-weight: 700;
 }
 
 .mm-navbar .mm-btn:first-child {
@@ -1459,7 +1462,7 @@ li.mm-vertical.mm-opened > .mm-panel {
 
 .mm-panel.mm-hasnavbar .mm-navbar {
     display: block;
-    background-color: #262626;
+    background-color: #fff;
 }
 
 .mm-listview,
@@ -1493,7 +1496,7 @@ li.mm-vertical.mm-opened > .mm-panel {
 }
 
 .mm-listview > li {
-    border-bottom: 1px solid #404040;
+    border-bottom: 1px solid #c2c2c2;
 }
 
 .mm-listview > li > a,
@@ -1574,26 +1577,24 @@ li.mm-vertical.mm-opened > .mm-panel {
 }
 
 .mm-menu {
-    background: #2a2a2a;
+    background: #fff;
     border-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
+    color: #000;
 }
 
 .mm-menu .mm-navbar a,
 .mm-menu .mm-navbar > * {
-    color: #fff;
+    color: #000;
     text-transform: uppercase;
-    font-weight: 400;
-    font-size: 13px;
 }
 
 .mm-menu .mm-btn:after,
 .mm-menu .mm-btn:before {
-    border-color: rgba(255, 255, 255, 0.8);
+    border-color: rgba(0, 0, 0, 0.8);
 }
 
 .mm-menu .mm-listview {
-    border-color: #2a2a2a;
+    border-color: #cccccc;
 }
 
 .mm-menu .mm-listview > li .mm-next:after {
@@ -1800,7 +1801,7 @@ em.mm-counter + a.mm-fullsubopen + span {
     display: none;
     position: relative;
     margin: 0 0 23px 0;
-    background-color: #eee;
+    background-color: #fff;
     border-radius: 4px;
     cursor: pointer;
 }
@@ -14691,5 +14692,49 @@ body .pac-container {
     .property-slider .item,
     .property-slider.default .item {
         height: 200px;
+    }
+    .sell-component {
+        display: block !important;
+    }
+}
+.sell {
+    margin-top: 70px;
+    h1 {
+        font-family:'Playfair Display',serif;
+        font-weight:700;
+        font-size:50px;
+        margin-bottom:30px;
+    }
+    h2 {
+        font-family:'Playfair Display',serif;
+        font-weight:700;
+        margin-bottom:30px;
+    }
+    p {
+        font-size:20px;
+        font-weight:700;
+        margin-bottom:30px;
+    }
+}
+.sell-component {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 3px;
+    &.without-image {
+        justify-content: center;
+    }
+    .sell-content {
+        flex: 3;
+        h2 {font-family:'Playfair Display',serif;font-weight:700;margin-bottom:10px;}
+        h3 {font-family:'Playfair Display',serif;font-weight:700;margin-bottom:10px;font-size:20px;}
+        p {margin-bottom:10px}
+    }
+    .sell-img {
+        flex: 1.5;
+        width: 100%;
+        height: auto;
     }
 }

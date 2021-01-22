@@ -484,6 +484,36 @@
                 </div>
 
                 <div class="col-lg-12">
+                  <input
+                    type="text"
+                    class="ico-01"
+                    id="autocomplete-input"
+                    placeholder="Full Name"
+                    value=""
+                  />
+                </div>
+
+                <div class="col-lg-12">
+                  <input
+                    type="email"
+                    class="ico-01"
+                    id="autocomplete-input"
+                    placeholder="Email"
+                    value=""
+                  />
+                </div>
+
+                <div class="col-lg-12">
+                  <input
+                    type="text"
+                    class="ico-01"
+                    id="autocomplete-input"
+                    placeholder="Phone number"
+                    value=""
+                  />
+                </div>
+
+                <div class="col-lg-12">
                   <div class="panel-dropdown">
                     <a @click="openDropdown"
                       >Guests <span class="qtyTotal" name="qtyTotal">1</span></a
@@ -714,7 +744,7 @@ export default {
       enableTime: true,
       dateFormat: "Y-m-d H:i",
       minDate: new Date(),
-      maxDate: new Date().fp_incr(7),
+      maxDate: new Date().fp_incr(14),
     },
   }),
   unmounted() {
