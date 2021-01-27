@@ -29,6 +29,7 @@ export default {
     },
   },
   mounted: function () {
+    //   requires mobile view adjustment
     const owl = $("#" + this.elementHandle).owlCarousel({
       autoPlay: this.autoplay,
       items: this.items,

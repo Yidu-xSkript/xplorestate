@@ -1,28 +1,29 @@
 <template>
-  <transition name="fade">
-    <teleport to="#modals" v-if="showModal">
-      <div class="modal">
-        <div class="modal__backdrop" @click="closeModal()" />
+  <teleport to="#modals" v-if="showModal">
+    <div class="modal">
+      <div class="modal__backdrop" @click="closeModal()" />
 
-        <div class="modal__dialog">
-          <div class="modal__header">
-            <slot name="header" />
-            <a class="modal__close">
-              <i @click="closeModal()" class="cursor-pointer sl sl-icon-close"></i>
-            </a>
-          </div>
+      <div class="modal__dialog" :style="`width: ${width}`">
+        <div class="modal__header">
+          <slot name="header" />
+          <a class="modal__close">
+            <i
+              @click="closeModal()"
+              class="cursor-pointer sl sl-icon-close"
+            ></i>
+          </a>
+        </div>
 
-          <div class="modal__body">
-            <slot name="body" />
-          </div>
+        <div class="modal__body">
+          <slot name="body" />
+        </div>
 
-          <div class="modal__footer">
-            <slot name="footer" />
-          </div>
+        <div class="modal__footer">
+          <slot name="footer" />
         </div>
       </div>
-    </teleport>
-  </transition>
+    </div>
+  </teleport>
 </template>
 
 <script>
@@ -33,11 +34,21 @@ export default {
       type: Boolean,
       default: false,
     },
+    width: {
+      type: String,
+      default: "600px",
+    }
   },
-  emits: ['close'],
+  emits: ["close"],
   methods: {
     closeModal() {
-      this.$emit('close')
+      this.$emit("close");
+      document.querySelector("body").style.overflowY = "auto";
+    },
+  },
+  watch: {
+    showModal(val) {
+      if (val) document.querySelector("body").style.overflowY = "hidden";
     },
   },
 };
@@ -65,14 +76,13 @@ export default {
   &__dialog {
     background-color: #ffffff;
     position: relative;
-    width: 600px;
     margin: 50px auto;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
     z-index: 2;
     @media screen and (max-width: 992px) {
-      width: 90%;
+      width: 90% !important;
     }
   }
   &__close {
@@ -80,8 +90,8 @@ export default {
     height: 30px;
     text-align: right;
     i {
-        font-size: 25px;
-        font-weight: 700;
+      font-size: 25px;
+      font-weight: 700;
     }
   }
   &__header {
@@ -100,13 +110,5 @@ export default {
   &__footer {
     padding: 10px 20px 20px;
   }
-}
-.fade-enter-active,
-.fade-leave-active {
-  transition: opacity 0.2s;
-}
-.fade-enter,
-.fade-leave-to {
-  opacity: 0;
 }
 </style>

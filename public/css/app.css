@@ -14787,6 +14787,10 @@ header.fullwidth .container {
     padding-top: 15px;
   }
 
+  .wizard-card .wizard-navigation {
+    display: none;
+  }
+
   .mm-menu .sign-in i.fa.fa-user:before {
     font-size: 15px;
     position: relative;
@@ -15299,7 +15303,7 @@ button.widget-button {
 
 #navigation ul ul li {
   float: none;
-  width: 238px;
+  width: 240px;
 }
 
 #navigation ul ul ul {
@@ -24657,14 +24661,14 @@ table.basic-table {
   color: #5f9025;
 }
 
-.notification.error {
+.notification.error .alert.error {
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2), transparent);
   background-color: #ffe9e9;
 }
 
 .notification.error,
 .notification.error a,
-.notification.error strong {
+.notification.error strong, .alert.error {
   color: #de5959;
 }
 
@@ -29316,6 +29320,320 @@ body .pac-container {
   flex: 1.5;
   width: 100%;
   height: auto;
+}
+
+/* wizard */
+.wizard-container .wizard-card .wizard-header {
+  text-align: center;
+  margin-bottom: 10px;
+}
+.wizard-container .wizard-card .wizard-header .wizard-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+.wizard-container .wizard-card .wizard-footer {
+  margin-top: 30px;
+}
+.wizard-container .wizard-card .tab-content > .tab-pane {
+  display: none;
+}
+.wizard-container .wizard-card .tab-content > .active {
+  display: block;
+}
+.wizard-container .wizard-card .tab-content {
+  padding: 0;
+}
+.wizard-container .wizard-card .info-text {
+  font-weight: 700;
+  font-family: "Playfair Display", serif;
+  text-align: center;
+  padding-bottom: 18px;
+  padding-top: 12px;
+}
+.wizard-container .wizard-card .choice {
+  text-align: center;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.wizard-container .wizard-card .choice.active .card-checkboxes {
+  color: #fff;
+  background: #006aff;
+}
+.wizard-container .wizard-card .choice i {
+  font-size: 32px;
+  line-height: 55px;
+}
+.wizard-container .wizard-card .choice .icon {
+  text-align: center;
+  vertical-align: middle;
+  height: 116px;
+  width: 116px;
+  border-radius: 50%;
+  background-color: #999999;
+  color: #FFFFFF;
+  margin: 0 auto 20px;
+  border: 4px solid #CCCCCC;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+}
+.wizard-container .wizard-card .description {
+  color: #999999;
+  font-size: 14px;
+}
+.wizard-container .wizard-card .icon-circle i {
+  position: absolute;
+  z-index: 1;
+  left: 1px;
+  right: 0px;
+  top: 23px;
+}
+.wizard-container .wizard-card .icon-circle {
+  font-size: 20px;
+  border: 3px solid #F3F2EE;
+  text-align: center;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.2);
+  font-weight: 600;
+  width: 70px;
+  height: 70px;
+  background-color: #FFFFFF;
+  margin: 0 auto;
+  position: relative;
+  top: -2px;
+}
+.wizard-container .wizard-card .wizard-navigation {
+  text-align: center;
+  margin-top: 40px;
+}
+.wizard-container .wizard-card .wizard-navigation .progress-with-circle {
+  position: relative;
+  top: 4px;
+  z-index: 0;
+  height: 4px;
+  background-color: #F3F2EE;
+}
+.wizard-container .wizard-card .wizard-navigation .progress-with-circle .progress-bar {
+  height: 4px;
+  background-color: #006aff;
+  box-shadow: none;
+  transition: width 0.3s ease;
+}
+.wizard-container .wizard-card .wizard-navigation .nav-pills {
+  display: flex;
+  justify-content: space-around;
+}
+.wizard-container .wizard-card .wizard-navigation .nav-pills .icon-circle.checked {
+  border-color: #006aff;
+}
+.wizard-container .wizard-card .wizard-navigation .nav-pills li {
+  list-style-type: none;
+  z-index: 0;
+}
+.wizard-container .wizard-card .wizard-navigation .nav-pills li a {
+  color: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  position: relative;
+  top: -32px;
+  z-index: 100;
+}
+.wizard-container .wizard-card .wizard-navigation .nav-pills li a:hover, .wizard-container .wizard-card .wizard-navigation .nav-pills li a:focus {
+  background-color: transparent;
+  color: rgba(0, 0, 0, 0.2);
+  outline: 0 !important;
+  cursor: pointer;
+}
+.wizard-container .wizard-card .wizard-navigation .nav-pills li.active a {
+  background-color: transparent;
+  font-size: 15px;
+  transition: font-size 0.2s linear;
+  color: #006aff;
+}
+.wizard-container .wizard-card .wizard-navigation .nav-pills li.active a i {
+  color: #006aff;
+  font-size: 24px;
+  top: 21px;
+  transition: all 0.2s linear;
+}
+
+.wizard-card .choice:hover .icon, .wizard-card .choice.active .icon {
+  border-color: #2ca8ff;
+}
+
+.wizard-card .choice input[type=radio],
+.wizard-card .choice input[type=checkbox] {
+  position: absolute;
+  left: -10000px;
+  z-index: -1;
+}
+
+.card {
+  border-radius: 6px;
+  box-shadow: 0 2px 2px rgba(204, 197, 185, 0.5);
+  background-color: #FFFFFF;
+  color: #252422;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  position: relative;
+  z-index: 1;
+}
+.card.card-checkboxes {
+  color: rgba(0, 0, 0, 0.8);
+}
+.card.card-hover-effect {
+  transition: transform 300ms cubic-bezier(0.34, 2, 0.6, 1), box-shadow 200ms ease;
+}
+.card.card-hover-effect:hover {
+  box-shadow: 0px 12px 17px -7px rgba(0, 0, 0, 0.3);
+  -webkit-transform: translateY(-10px);
+  -moz-transform: translateY(-10px);
+  -o-transition: translateY(-10px);
+  transform: translateY(-10px);
+}
+
+._card {
+  background-color: #fff;
+  border-radius: 0.5rem;
+  position: relative;
+}
+._card:hover {
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.radio {
+  font-size: inherit;
+  margin: 0;
+  position: absolute;
+  right: calc(1em + 2px);
+  top: calc(1em + 2px);
+}
+
+@supports (-webkit-appearance: none) or (-moz-appearance: none) {
+  .radio {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: #fff;
+    border: 2px solid #006aff20;
+    border-radius: 50%;
+    cursor: pointer;
+    height: 1.5em;
+    outline: none;
+    transition: background 0.2s ease-out, border-color 0.2s ease-out;
+    width: 1.5em;
+  }
+  .radio::after {
+    border: 2px solid #fff;
+    border-top: 0;
+    border-left: 0;
+    content: "";
+    display: block;
+    height: 0.75rem;
+    left: 33%;
+    position: absolute;
+    top: 50%;
+    transform: rotate(45deg) translate(-50%, -50%);
+    width: 0.375rem;
+  }
+  .radio:checked {
+    background: #006aff;
+    border-color: #006aff;
+  }
+
+  .card:hover .radio {
+    border-color: #006aff;
+  }
+  .card:hover .radio:checked {
+    border-color: #006aff;
+  }
+}
+.plan-details {
+  border: 2px solid #e2ebf6;
+  border-radius: 0.5em;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  transition: border-color 0.2s ease-out;
+}
+
+.card:hover .plan-details {
+  border-color: #006aff;
+}
+
+.radio:checked ~ .plan-details {
+  border-color: #006aff;
+}
+
+.radio:focus ~ .plan-details {
+  box-shadow: 0 0 0 2px #006aff;
+}
+
+.radio:disabled ~ .plan-details {
+  color: #006aff;
+  cursor: default;
+}
+
+.radio:disabled ~ .plan-details .plan-type {
+  color: #006aff;
+}
+
+.card:hover .radio:disabled ~ .plan-details {
+  border-color: #e2ebf6;
+  box-shadow: none;
+}
+
+.card:hover .radio:disabled {
+  border-color: #e2ebf6;
+}
+
+.plan-type {
+  color: #006aff;
+  font-size: 3.5rem;
+  font-weight: bold;
+  line-height: 1em;
+}
+
+.plan-cost {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem 0;
+}
+
+.leaflet-container {
+  background: #006aff03 !important;
+  font-family: "Varela Round", sans-serif !important;
+}
+
+.affordibility h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 25px;
+}
+.affordibility h3 {
+  font-weight: 700;
+}
+.affordibility .affordibility-container {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.affordibility .result {
+  box-shadow: 0 2px 5px rgba(204, 197, 185, 0.5);
+  background-color: #FFFFFF;
+  color: #252422;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in, box-shadow 0.25s ease-in-out;
+}
+.affordibility .result:hover {
+  border-radius: 6px;
+  box-shadow: 0 5px 12px #006aff30;
+  background: #006aff;
+  color: #fff;
+}
+.affordibility .result:hover h3 {
+  color: #fff;
 }
 
 #backtotop a, #top-bar, .csm-content h4, .csm-trigger {

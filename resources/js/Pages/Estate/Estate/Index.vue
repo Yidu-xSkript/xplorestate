@@ -32,7 +32,7 @@
             class="listing-item"
           >
             <inertia-link
-              :href="route('detail.index')"
+              :href="route('estate.detail')"
               class="listing-img-container"
             >
               <div class="listing-badges">
@@ -82,7 +82,7 @@
             <div class="listing-content">
               <div class="listing-title">
                 <h4>
-                  <inertia-link :href="route('detail.index')">{{ property.title }}</inertia-link>
+                  <inertia-link :href="route('estate.detail')">{{ property.title }}</inertia-link>
                 </h4>
                 <a
                   href="https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&amp;hl=en&amp;t=v&amp;hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom"
@@ -93,7 +93,7 @@
                 </a>
 
                 <inertia-link
-                  :href="route('detail.index')"
+                  :href="route('estate.detail')"
                   class="details button border"
                   >Details</inertia-link
                 >

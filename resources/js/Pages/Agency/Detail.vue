@@ -130,7 +130,7 @@
                   class="listing-item"
                 >
                   <inertia-link
-                    :href="route('detail.index')"
+                    :href="route('estate.detail')"
                     class="listing-img-container"
                   >
                     <div class="listing-badges">
@@ -181,7 +181,7 @@
                   <div class="listing-content">
                     <div class="listing-title">
                       <h4>
-                        <inertia-link :href="route('detail.index')">{{
+                        <inertia-link :href="route('estate.detail')">{{
                           property.title
                         }}</inertia-link>
                       </h4>
@@ -194,7 +194,7 @@
                       </a>
 
                       <inertia-link
-                        :href="route('detail.index')"
+                        :href="route('estate.detail')"
                         class="details button border"
                         >Details</inertia-link
                       >

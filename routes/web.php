@@ -22,7 +22,7 @@ use Inertia\Inertia;
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('/map', [HomeEstateListController::class, 'index'])->name('estate.index');
-Route::get('/estate', [HomeEstateListController::class, 'detail'])->name('detail.index');
+Route::get('/estate', [HomeEstateListController::class, 'detail'])->name('estate.detail');
 Route::get('/contact', [ContactController::class, 'index'])->name('contact.index');
 Route::get('/blog', [BlogController::class, 'index'])->name('blog.index');
 Route::get('/blog/detail', [BlogController::class, 'detail'])->name('blog.detail');
@@ -33,3 +33,6 @@ Route::get('/agent/detail', [AgentController::class, 'detail'])->name('agent.det
 Route::get('/sell', function() {
     return Inertia::render('sell/Index');
 })->name('sell.index');
+Route::get('/affordibility-calculator', function() {
+    return Inertia::render('RentAffordibility/Index');
+})->name('rent.calculator.index');

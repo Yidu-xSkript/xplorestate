@@ -2,6 +2,8 @@ require("./bootstrap.js");
 import { InertiaProgress } from "@inertiajs/progress/src";
 import { createApp, h } from "vue";
 import { App, plugin } from "@inertiajs/inertia-vue3";
+import "leaflet/dist/leaflet.css";
+import ListPropertyWizard from "./Pages/ListProperty/Index.vue";
 
 const el = document.getElementById("app");
 
@@ -21,6 +23,7 @@ let app = createApp({
         }),
 });
 app.use(plugin);
+app.component('ListPropertyWizard', ListPropertyWizard);
 app.mixin({ methods: { route } });
 app.config.globalProperties.$triggerMoreOptions = () => {
     $(".more-search-options, .more-search-options-trigger").toggleClass(
@@ -112,11 +115,16 @@ app.config.globalProperties.$accordion = () => {
         e.preventDefault();
     });
 };
-app.config.globalProperties.$tabs = () => {
+app.config.globalProperties.$tip = () => {
+    $(".tip").each(function() {
+        var tipContent = $(this).attr('data-tip-content');
+        $(this).append('<div class="tip-content">'+ tipContent + '</div>');
+    })
+};
+app.config.globalProperties.$tabs = (mapReload) => {
     var $tabsNav = $(".tabs-nav"),
         $tabsNavLis = $tabsNav.children("li");
     $tabsNav.each(function () {
-        console.log("something here");
         var $this = $(this);
         $this
             .next()
@@ -139,6 +147,9 @@ app.config.globalProperties.$tabs = () => {
             .siblings($this.find("a").attr("href"))
             .fadeIn();
         e.preventDefault();
+        if (typeof mapReload !== typeof undefined) {
+            mapReload
+        }
     });
     var hash = window.location.hash;
     var anchor = $('.tabs-nav a[href="' + hash + '"]');

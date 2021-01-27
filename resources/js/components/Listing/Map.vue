@@ -40,8 +40,7 @@ import {
   LMarker,
   LTooltip,
   LPopup,
-} from "@vue-leaflet/vue-leaflet/dist/vue-leaflet.cjs";
-import "leaflet/dist/leaflet.css";
+} from "@vue-leaflet/vue-leaflet/dist/vue-leaflet.esm";
 export default {
   components: {
     LMap,

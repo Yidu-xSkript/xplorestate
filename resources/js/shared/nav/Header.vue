@@ -1,5 +1,10 @@
 <template>
-  <auth-modal :show="show" @closeModal="closeAuthModal"></auth-modal>
+  <auth-modal :show="show" @closeModal="show = false"></auth-modal>
+  <list-property-wizard
+    :propertystate="`sale`"
+    :show="showWizard"
+    @closeModal="showWizard = false"
+  ></list-property-wizard>
   <header id="header-container">
     <div class="mobile-trigger" style="padding: 30px 0px"></div>
     <div id="header">
@@ -60,21 +65,19 @@
                     >
                   </li>
                   <li>
-                    <inertia-link
-                      href="listings-grid-standard-with-sidebar.html"
-                      >Post for sale</inertia-link
+                    <a class="cursor-pointer" @click="showWizard = true"
+                      >Post for sale</a
+                    >
+                  </li>
+                  <li>
+                    <inertia-link :href="route('agent.index')"
+                      >Find an agent</inertia-link
                     >
                   </li>
                   <li>
                     <inertia-link
                       href="listings-grid-standard-with-sidebar.html"
                       >See your home's estimate</inertia-link
-                    >
-                  </li>
-                  <li>
-                    <inertia-link
-                      href="listings-grid-standard-with-sidebar.html"
-                      >Sellers guide</inertia-link
                     >
                   </li>
                 </ul>
@@ -96,6 +99,12 @@
                   </li>
                   <li>
                     <inertia-link
+                      :href="route('rent.calculator.index')"
+                      >Rent Affordibilty Calculator</inertia-link
+                    >
+                  </li>
+                  <li>
+                    <inertia-link
                       href="listings-grid-standard-with-sidebar.html"
                       >Houses for Rent</inertia-link
                     >
@@ -104,12 +113,6 @@
                     <inertia-link
                       href="listings-grid-standard-with-sidebar.html"
                       >All rental listings</inertia-link
-                    >
-                  </li>
-                  <li>
-                    <inertia-link
-                      href="listings-grid-standard-with-sidebar.html"
-                      >All rental buildings</inertia-link
                     >
                   </li>
                 </ul>
@@ -188,7 +191,7 @@
                 </ul>
               </li>
               <li>
-                <a class="cursor-pointer" @click="openAuthModal">Sign In</a>
+                <a class="cursor-pointer" @click="show = true">Sign In</a>
               </li>
             </ul>
           </nav>
@@ -205,7 +208,12 @@ import AuthModal from "../../components/Auth/modal/AuthModal.vue";
 import "../../Partial/mmenu.min.js";
 export default {
   components: { AuthModal },
-  data: () => ({ activeLink: null, show: false, mmenuAPI: null }),
+  data: () => ({
+    activeLink: null,
+    show: false,
+    mmenuAPI: null,
+    showWizard: false,
+  }),
   mounted() {
     if (window.innerWidth >= 1240) {
       $("#header").addClass("cloned");
@@ -215,7 +223,7 @@ export default {
     this.mmenuInit();
     axios.interceptors.response.use((response) => {
       this.setActiveLink(response?.config?.url, "axios");
-      if (this.mmenuAPI !== null) this.mmenuAPI.close()
+      if (this.mmenuAPI !== null) this.mmenuAPI.close();
       return response;
     });
   },
@@ -226,10 +234,6 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
-    openAuthModal() {
-      this.show = true;
-      document.querySelector("body").style.overflowY = "hidden";
-    },
     mmenuInit() {
       var wi = $(window).width();
       if (wi <= "992") {
@@ -269,10 +273,6 @@ export default {
     },
     openNavPanel() {
       if (this.mmenuAPI !== null) this.mmenuAPI.open();
-    },
-    closeAuthModal() {
-      this.show = false;
-      document.querySelector("body").style.overflowY = "auto";
     },
     setActiveLink(url, type) {
       if (type == "axios") {

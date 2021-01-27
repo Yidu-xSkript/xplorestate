@@ -290,7 +290,7 @@
               <div class="tab-content" id="tab3a">
                 <div id="propertyMap-container">
                   <div id="propertyMap">
-                    <l-map v-model:zoom="zoom" :center="[9.0144768, 38.8]">
+                    <l-map style="height: 100%; width: 100%" ref="estate_map" v-model:zoom="zoom" :center="[9.0144768, 38.8]">
                       <l-tile-layer
                         url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                       ></l-tile-layer>
@@ -726,8 +726,7 @@ import {
   LMap,
   LTileLayer,
   LMarker,
-} from "@vue-leaflet/vue-leaflet/dist/vue-leaflet.cjs";
-import "leaflet/dist/leaflet.css";
+} from "@vue-leaflet/vue-leaflet/dist/vue-leaflet.esm";
 import flatPickr from "vue-flatpickr-component";
 import "flatpickr/dist/flatpickr.css";
 export default {
@@ -735,7 +734,7 @@ export default {
   components: { Slick, LMap, LTileLayer, LMarker, flatPickr },
   data: () => ({
     show: false,
-    zoom: 16,
+    zoom: 15,
     date: new Date(),
     intervalHandle: 0,
     config: {
@@ -751,7 +750,7 @@ export default {
     clearInterval(this.intervalHandle);
   },
   mounted() {
-    this.$nextTick(() => {
+    this.$nextTick(() => { 
       var resizeObjects = $(
         ".listings-container .listing-img-container img, .listings-container .listing-img-container"
       );
@@ -777,7 +776,9 @@ export default {
         },
       });
       this.$accordion();
-      this.$tabs();
+      setTimeout(() => {        
+        this.$tabs(this.$refs.estate_map.leafletObject.invalidateSize(true));
+      }, 700)
       $(".listing-item").each(function () {
         $(this).find(resizeObjects).css("height", "auto");
       });
@@ -864,7 +865,7 @@ export default {
         $(".panel-dropdown a").parent().addClass("active");
         $(".fs-inner-container.content").addClass("faded-out");
       }
-    },
+    }
   },
 };
 </script>
