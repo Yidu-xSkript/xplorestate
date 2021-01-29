@@ -51,10 +51,9 @@
             <option>Select your category</option>
             <option>Real Estate Agent / Broker</option>
             <option>Photographer</option>
-            <option>Home Builder</option>
             <option>Landlord</option>
             <option>Property Manager</option>
-            <option>Interior Designer</option>
+            <option>Home Improvement Services</option>
           </select>
         </div>
         <div class="col-md-6">
@@ -133,9 +132,12 @@ export default {
     professional: false,
   }),
   watch: {
-    // professional(val) {
-    //   if (val) onMount();
-    // }
+    professional(val) {
+      if (val) 
+        this.$nextTick(() => {
+          onMount()
+        });
+    }
   }
 };
 </script>

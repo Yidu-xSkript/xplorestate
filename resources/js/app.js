@@ -4,6 +4,7 @@ import { createApp, h } from "vue";
 import { App, plugin } from "@inertiajs/inertia-vue3";
 import "leaflet/dist/leaflet.css";
 import ListPropertyWizard from "./Pages/ListProperty/Index.vue";
+import Layout from './shared/Layout'
 
 const el = document.getElementById("app");
 
@@ -19,7 +20,10 @@ let app = createApp({
         h(App, {
             initialPage: JSON.parse(el.dataset.page),
             resolveComponent: (name) =>
-                import(`./Pages/${name}`).then((module) => module.default),
+                import(`./Pages/${name}`).then(({default: page}) => {
+                    page.layout = page.layout === undefined ? Layout : page.layout
+                    return page;
+                }),
         }),
 });
 app.use(plugin);

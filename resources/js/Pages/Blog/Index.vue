@@ -75,10 +75,8 @@
 </template>
 
 <script>
-import Layout from "../../shared/Layout.vue";
 import SideBar from "../../components/Blog/Sidebar.vue";
 export default {
-  layout: (h, page) => h(Layout, [page]),
   components: {
     SideBar,
   },

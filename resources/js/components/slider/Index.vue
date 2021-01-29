@@ -296,10 +296,6 @@ export default {
     },
     moving(e) {
       if (!this.flag || !this.draggable) return false;
-      this.$emit(
-        "moving",
-        this.data ? this.data[this.currentValue] : this.currentValue
-      );
       e.preventDefault();
       if (e.targetTouches && e.targetTouches[0]) e = e.targetTouches[0];
       this.setValueOnPos(this.getPos(e), true);
@@ -334,6 +330,10 @@ export default {
         this.setCurrentValue(valueRange[1]);
         if (this.currentSlider === 0) this.currentSlider = 1;
       }
+      this.$emit(
+        "moving",
+        this.data ? this.data[this.currentValue] : this.currentValue
+      );
     },
     isDiff(a, b) {
       if (

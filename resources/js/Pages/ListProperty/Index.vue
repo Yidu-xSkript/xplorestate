@@ -127,7 +127,7 @@
             <input class="search-field" type="text" placeholder="The year building / house was built" value=""/>
           </div>
           <div class="col-md-4 col-sm-offset-2">
-            <h5>Youtube video ID <span>(optional)</span></h5>
+            <h5>Youtube video ID | Video Walkthrough <span>(optional)</span></h5>
             <input class="search-field" type="text" placeholder="no of bedrooms" value=""/>
           </div>
           <div class="col-md-4">
@@ -142,7 +142,7 @@
               ref="map"
               style="`width: ${width}; height: 300px;`"
             >
-              <l-map ref="_map" v-model:zoom="zoom" :center="[9.0144768, 38.7579904]">
+              <l-map ref="listMap" v-model:zoom="zoom" :center="[9.0144768, 38.7579904]">
                 <l-tile-layer
                   url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
                 ></l-tile-layer>
@@ -273,7 +273,7 @@ export default {
       },
       {
         tab_name: "Location",
-        id: "location",
+        id: "listlocation",
         tab_icon: "sl sl-icon-location",
         info_text: "",
       },
@@ -298,8 +298,7 @@ export default {
     onWizardTabShow(i) {
       this.$nextTick(() => {
         if ($("#wizard-list-estate").length == 1 && i === 4) {
-          console.log('vdvd')
-          this.$refs._map.leafletObject.invalidateSize(true);
+          this.$refs.listMap.leafletObject.invalidateSize(true);
           this.tabs[4].info_text = `Where is the location of your property? (${this.model.propertyType})`
         }
       })

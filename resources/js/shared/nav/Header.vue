@@ -98,8 +98,7 @@
                     >
                   </li>
                   <li>
-                    <inertia-link
-                      :href="route('rent.calculator.index')"
+                    <inertia-link :href="route('rent.calculator.index')"
                       >Rent Affordibilty Calculator</inertia-link
                     >
                   </li>
@@ -145,6 +144,12 @@
                       :class="[{ current: activeLink === 'agents' }]"
                       >Real Estate Agents</inertia-link
                     >
+                  </li>
+                  <li>
+                    <a href="#">Home Improvement Service Providers</a>
+                  </li>
+                  <li>
+                    <a href="#">Photographers</a>
                   </li>
                   <li>
                     <a href="#">Property Managers</a>
@@ -197,6 +202,37 @@
           </nav>
           <div class="clearfix"></div>
         </div>
+        <div class="right-side">
+          <div class="header-widget">
+            <div class="user-menu">
+              <div class="user-name">
+                <span><img src="images/agent-03.jpg" alt="" /></span>Hi, John!
+              </div>
+              <ul>
+                <li>
+                  <inertia-link :href="route('profile.index')"
+                    ><i class="sl sl-icon-user"></i> My Profile</inertia-link
+                  >
+                </li>
+                <li>
+                  <a href="my-bookmarks.html"
+                    ><i class="sl sl-icon-star"></i> Bookmarks</a
+                  >
+                </li>
+                <li>
+                  <a href="my-properties.html"
+                    ><i class="sl sl-icon-docs"></i> My Properties</a
+                  >
+                </li>
+                <li>
+                  <a @click="logout" class="cursor-pointer"
+                    ><i class="sl sl-icon-power"></i> Log Out</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </header>
@@ -215,12 +251,17 @@ export default {
     showWizard: false,
   }),
   mounted() {
-    if (window.innerWidth >= 1240) {
-      $("#header").addClass("cloned");
-      $(".mobile-trigger").css("display", "block");
-    } else $(".mobile-trigger").css("display", "none");
+    this.$nextTick(() => {
+      $(".user-menu").on("click", function () {
+        $(this).toggleClass("active");
+      });
+      if (window.innerWidth >= 1240) {
+        $("#header").addClass("cloned");
+        $(".mobile-trigger").css("display", "block");
+      } else $(".mobile-trigger").css("display", "none");
+      this.mmenuInit();
+    });
     this.setActiveLink(this.$inertia.page.url, "inertia");
-    this.mmenuInit();
     axios.interceptors.response.use((response) => {
       this.setActiveLink(response?.config?.url, "axios");
       if (this.mmenuAPI !== null) this.mmenuAPI.close();
@@ -234,6 +275,9 @@ export default {
     window.removeEventListener("scroll", this.handleScroll);
   },
   methods: {
+    logout() {
+        this.$inertia.get('/')
+    },
     mmenuInit() {
       var wi = $(window).width();
       if (wi <= "992") {

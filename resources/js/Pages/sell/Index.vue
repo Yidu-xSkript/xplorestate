@@ -2,6 +2,12 @@
   <teleport to="head">
     <title>Sell a house with confidence | Xplorestate</title>
   </teleport>
+  <list-property
+    :propertystate="`sale`"
+    :show="showWizard"
+    @closeModal="showWizard = false"
+  >
+  </list-property>
   <div class="sell container">
     <div class="row">
       <div class="col-md-12 text-center">
@@ -38,15 +44,15 @@
         </div>
       </div>
       <div class="col-md-5">
-        <div class="sell-component without-image">
+        <div class="sell-component">
           <div class="sell-content">
             <h2>Sell It Yourself</h2>
             <p>
               Reach the largest audience of shoppers with a free Xplrestate listing.
               Start by learning <a href="#" target="_blank">how to "sell for sale by owner."</a>
             </p>
-            <inertia-link class="button border" :href="route('home')"
-              >Create a Listing</inertia-link
+            <a class="button border" @click="showWizard = true"
+              >Create a Listing</a
             >
           </div>
         </div>
@@ -99,9 +105,12 @@
 </template>
 
 <script>
-import Layout from "../../shared/Layout.vue";
+import ListProperty from "../ListProperty/Index.vue";
 export default {
-  layout: (h, page) => h(Layout, [page]),
+  components: { ListProperty },
+  data: () => ({
+    showWizard: false
+  }),
   mounted() {
     if ($(".sell-img img").height() < $(".agent-content").innerHeight()) {
       $(".agent-page").addClass("long-content");

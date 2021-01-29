@@ -122,9 +122,7 @@
 </template>
 
 <script>
-import Layout from "../../shared/Layout.vue";
 export default {
-  layout: (h, page) => h(Layout, [page]),
   data: () => ({
     agents: [
       {

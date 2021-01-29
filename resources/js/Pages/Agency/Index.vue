@@ -92,9 +92,7 @@
 </template>
 
 <script>
-import Layout from "../../shared/Layout.vue";
 export default {
-  layout: (h, page) => h(Layout, [page]),
   mounted() {
     if ($(".agent-avatar img").height() < $(".agent-content").innerHeight()) {
       $(".agent-page").addClass("long-content");

@@ -14729,17 +14729,13 @@ body .pac-container {
     box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
     background-color: #fff;
     border-radius: 3px;
-    &.without-image {
-        justify-content: center;
-    }
+    justify-content: space-around;
     .sell-content {
-        flex: 3;
         h2 {font-family:'Playfair Display',serif;font-weight:700;margin-bottom:10px;}
         h3 {font-family:'Playfair Display',serif;font-weight:700;margin-bottom:10px;font-size:20px;}
         p {margin-bottom:10px}
     }
     .sell-img {
-        flex: 1.5;
         width: 100%;
         height: auto;
     }

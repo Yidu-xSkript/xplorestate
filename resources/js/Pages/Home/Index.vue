@@ -250,12 +250,10 @@
 </template>
 
 <script>
-import Layout from "../../shared/Layout.vue";
 import Partner from "../../components/Partner.vue";
 import Parallax from "../../components/Parallax/Index.vue";
 import { onMount } from "../../supplemental.js";
 export default {
-  layout: (h, page) => h(Layout, [page]),
   components: { Partner, Parallax },
   mounted() {
     this.$nextTick(() => {

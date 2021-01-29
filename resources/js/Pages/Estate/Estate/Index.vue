@@ -148,7 +148,6 @@
 </template>
 
 <script>
-import layout from "../../../shared/Layout";
 import MapEstate from "../../../components/Listing/Map.vue";
 import ListingSearch from "../../../components/Listing/Search.vue";
 import Carousel from "../../../components/Carousel/Index.vue";
@@ -257,7 +256,6 @@ export default {
     resizeObjects: null,
     listingsContainer: null,
   }),
-  layout: (h, page) => h(layout, [page]),
   mounted() {
     document.body.classList.add("overflow-hidden");
     this.resizeObjects = $(

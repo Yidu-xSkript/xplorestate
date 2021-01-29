@@ -100,7 +100,7 @@
               <div class="clearfix"></div>
             </div>
           </div>
-          
+
           <ul id="posts-nav" class="margin-top-0 margin-bottom-40">
             <li class="next-post">
               <a href="#"><span>Next Post</span> Tips For Newbie Hitchhiker</a>
@@ -166,10 +166,8 @@
 </template>
 
 <script>
-import Layout from "../../shared/Layout.vue";
 import SideBar from "../../components/Blog/Sidebar.vue";
 export default {
-  layout: (h, page) => h(Layout, [page]),
   components: {
     SideBar,
   },

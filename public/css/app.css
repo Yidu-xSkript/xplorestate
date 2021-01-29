@@ -29295,12 +29295,7 @@ body .pac-container {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
   background-color: #fff;
   border-radius: 3px;
-}
-.sell-component.without-image {
-  justify-content: center;
-}
-.sell-component .sell-content {
-  flex: 3;
+  justify-content: space-around;
 }
 .sell-component .sell-content h2 {
   font-family: "Playfair Display", serif;
@@ -29317,7 +29312,6 @@ body .pac-container {
   margin-bottom: 10px;
 }
 .sell-component .sell-img {
-  flex: 1.5;
   width: 100%;
   height: auto;
 }

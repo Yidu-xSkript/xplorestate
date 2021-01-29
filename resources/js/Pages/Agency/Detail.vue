@@ -345,12 +345,10 @@
 </template>
 
 <script>
-import Layout from "../../shared/Layout.vue";
 import { onMount } from "../../supplemental";
 import Carousel from "../../components/Carousel/Index.vue";
 export default {
   components: { Carousel },
-  layout: (h, page) => h(Layout, [page]),
   data: () => ({
     resizeObjects: null,
     listingsContainer: null,

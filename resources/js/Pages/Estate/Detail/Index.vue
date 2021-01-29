@@ -719,7 +719,6 @@ I'm interested in this property [ID 123456] and I'd like to know more details.</
 </template>
 
 <script>
-import layout from "../../../shared/Layout.vue";
 import Slick from "../../../components/slick/Index.vue";
 import "magnific-popup";
 import {
@@ -730,7 +729,6 @@ import {
 import flatPickr from "vue-flatpickr-component";
 import "flatpickr/dist/flatpickr.css";
 export default {
-  layout: (h, page) => h(layout, [page]),
   components: { Slick, LMap, LTileLayer, LMarker, flatPickr },
   data: () => ({
     show: false,
@@ -750,7 +748,7 @@ export default {
     clearInterval(this.intervalHandle);
   },
   mounted() {
-    this.$nextTick(() => { 
+    this.$nextTick(() => {
       var resizeObjects = $(
         ".listings-container .listing-img-container img, .listings-container .listing-img-container"
       );
@@ -776,7 +774,7 @@ export default {
         },
       });
       this.$accordion();
-      setTimeout(() => {        
+      setTimeout(() => {
         this.$tabs(this.$refs.estate_map.leafletObject.invalidateSize(true));
       }, 700)
       $(".listing-item").each(function () {

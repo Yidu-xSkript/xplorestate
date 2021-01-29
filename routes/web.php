@@ -36,3 +36,6 @@ Route::get('/sell', function() {
 Route::get('/affordibility-calculator', function() {
     return Inertia::render('RentAffordibility/Index');
 })->name('rent.calculator.index');
+Route::get('/profile', function() {
+    return Inertia::render('Profile/Index');
+})->name('profile.index');

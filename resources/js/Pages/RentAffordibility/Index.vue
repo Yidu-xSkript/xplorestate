@@ -173,7 +173,6 @@
                 color: 'black',
                 'box-shadow': '0px 2px 10px rgba(0,0,0,0.08)',
               }"
-              @callbackRange="callbackRange"
               tooltipNote="of gross income"
               tooltipSuffix="%"
               @moving="moving"
@@ -221,10 +220,8 @@
 </template>
 
 <script>
-import Layout from "../../shared/Layout.vue";
 import Slider from "../../components/slider/Index";
 export default {
-  layout: (h, page) => h(Layout, [page]),
   components: { Slider },
   data: () => ({
     model: {
@@ -273,9 +270,6 @@ export default {
         parseInt(grossIncome);
       this.spendingLeft = limit;
     },
-    callbackRange(val) {
-      this.rangeLabel = val;
-    },
     moving(val) {
       this.sliderVal = val;
       this.grossIncome = this.initGrossCalculation(this.model.net_income);
@@ -288,11 +282,15 @@ export default {
       );
     },
     calculate() {
-      this.calculateIsClicked = true;
-      this.grossIncome = this.initGrossCalculation(this.model.net_income);
-      this.$nextTick(() => {
-        this.$tip();
-      });
+      if (parseInt(this.model.net_income) > 0 && !isNaN(parseInt(this.model.net_income))) {
+        this.calculateIsClicked = true;
+        this.grossIncome = this.initGrossCalculation(this.model.net_income);
+        this.$nextTick(() => {
+          setTimeout(() => {
+            this.$tip();
+          }, 200)
+        });
+      }
     },
   },
   watch: {

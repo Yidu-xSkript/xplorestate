@@ -4,11 +4,14 @@
   </teleport>
   <div class="contact-map margin-bottom-55">
     <div class="google-map-container">
-      <div
-        id="propertyMap"
-        data-latitude="40.7427837"
-        data-longitude="-73.11445617675781"
-      ></div>
+      <l-map ref="contactMap" v-model:zoom="zoom" :center="[9.0144768, 38.7579904]">
+        <l-tile-layer
+          url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+        ></l-tile-layer>
+        <l-marker :lat-lng="[9.0144768, 38.7579904]">
+          <l-tooltip> Megenagna, DHL, cobblestone, 1st door </l-tooltip>
+        </l-marker>
+      </l-map>
     </div>
 
     <div class="address-box-container">
@@ -140,9 +143,18 @@
 </template>
 
 <script>
-import Layout from "../../shared/Layout.vue";
+import {
+  LMap,
+  LTileLayer,
+  LMarker,
+  LTooltip,
+  LPopup,
+} from "@vue-leaflet/vue-leaflet/dist/vue-leaflet.esm";
 export default {
-  layout: (h, page) => h(Layout, [page]),
+  components: { LMap, LTileLayer, LMarker, LTooltip, LPopup },
+  data: () => ({
+    zoom: 16
+  })
 };
 </script>
 
