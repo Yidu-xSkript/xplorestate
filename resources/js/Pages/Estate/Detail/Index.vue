@@ -249,7 +249,7 @@
           <div class="style-2">
             <ul class="tabs-nav">
               <li class="active">
-                <a href="#tab1a"><i class="fa fa-video-camera"></i> Video</a>
+                <a href="#tab1a"><i class="fa fa-video-camera"></i> Video Walkthrough</a>
               </li>
               <li>
                 <a href="#tab2a"

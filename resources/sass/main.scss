@@ -169,7 +169,7 @@ header.fullwidth .container {
 }
 .left-side {
     float: left;
-    width: 100%;
+    width: 90%;
     display: inline-block;
     .button {
         color: #006aff !important;
@@ -180,7 +180,7 @@ header.fullwidth .container {
 }
 .right-side {
     float: right;
-    width: 0%;
+    width: 10%;
     display: inline-block;
 }
 #logo {
@@ -5085,7 +5085,9 @@ section.fullwidth.border-bottom {
 
 .my-account-nav-container {
     border-radius: 3px;
-    background: #f9f9f9;
+    background: #fdfdfd;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.08);
+    border: 1px solid #e8e8e8;
     padding: 30px 0;
     margin: 0 0 40px 0;
 }
@@ -5212,8 +5214,10 @@ table.manage-table th {
     padding: 17px 20px;
     color: #fff;
     vertical-align: top;
-    font-weight: 500;
-    font-size: 16px;
+    box-shadow: 0 2px 5px #006aff;
+    font-weight: 700;
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
     position: relative;
     z-index: 9;
     line-height: 22px;
@@ -5222,7 +5226,7 @@ table.manage-table th {
 
 table.manage-table th i {
     margin-right: 3px;
-    font-size: 14px;
+    font-size: 18px;
 }
 
 table.manage-table th i.fa-calendar {
@@ -5246,6 +5250,7 @@ table.manage-table .title-container img {
     border-radius: 3px;
     flex: 1.1;
     margin-right: 26px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
 
 table.manage-table .title-container .title {
@@ -15061,5 +15066,13 @@ body .pac-container {
             background: #006aff;
             color: #fff;
         }
+    }
+}
+.logged-sidebar {
+    &.sticky {
+        // position: fixed;
+        // top: 100px;
+        background: #fff;
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
     }
 }

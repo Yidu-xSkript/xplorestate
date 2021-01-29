@@ -37,5 +37,11 @@ Route::get('/affordibility-calculator', function() {
     return Inertia::render('RentAffordibility/Index');
 })->name('rent.calculator.index');
 Route::get('/profile', function() {
-    return Inertia::render('Profile/Index');
+    return Inertia::render('logged/Pages/Profile/Index');
 })->name('profile.index');
+Route::get('/bookmark', function() {
+    return Inertia::render('logged/Pages/Bookmark/Index');
+})->name('bookmark.index');
+Route::get('/my-property', function() {
+    return Inertia::render('logged/Pages/Property/Index');
+})->name('property.index');

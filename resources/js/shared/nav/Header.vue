@@ -145,14 +145,17 @@
                       >Real Estate Agents</inertia-link
                     >
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="#">Home Improvement Service Providers</a>
-                  </li>
-                  <li>
+                  </li> -->
+                 <!--  <li>
                     <a href="#">Photographers</a>
-                  </li>
+                  </li> -->
                   <li>
                     <a href="#">Property Managers</a>
+                  </li>
+                  <li>
+                    <a href="#">Landlords</a>
                   </li>
                 </ul>
               </li>
@@ -184,9 +187,9 @@
                   <li>
                     <a href="#">Help</a>
                   </li>
-                  <li>
+                  <!-- <li>
                     <a href="#">Affiliate Program</a>
-                  </li>
+                  </li> -->
                   <li>
                     <a href="#">FAQ</a>
                   </li>
@@ -220,8 +223,8 @@
                   >
                 </li>
                 <li>
-                  <a href="my-properties.html"
-                    ><i class="sl sl-icon-docs"></i> My Properties</a
+                  <inertia-link :href="route('property.index')"
+                    ><i class="sl sl-icon-docs"></i> My Properties</inertia-link
                   >
                 </li>
                 <li>

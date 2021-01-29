@@ -463,7 +463,7 @@ var _hoisted_37 = {
   "class": "style-2"
 };
 
-var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<ul class=\"tabs-nav\"><li class=\"active\"><a href=\"#tab1a\"><i class=\"fa fa-video-camera\"></i> Video</a></li><li><a href=\"#tab2a\"><i class=\"im im-icon-Rotate-Gesture\"></i> Virtual Tour</a></li><li><a href=\"#tab3a\"><i class=\"sl sl-icon-location\"></i> Location</a></li></ul>", 1);
+var _hoisted_38 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<ul class=\"tabs-nav\"><li class=\"active\"><a href=\"#tab1a\"><i class=\"fa fa-video-camera\"></i> Video Walkthrough</a></li><li><a href=\"#tab2a\"><i class=\"im im-icon-Rotate-Gesture\"></i> Virtual Tour</a></li><li><a href=\"#tab3a\"><i class=\"sl sl-icon-location\"></i> Location</a></li></ul>", 1);
 
 var _hoisted_39 = {
   "class": "tabs-container"

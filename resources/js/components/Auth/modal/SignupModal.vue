@@ -50,10 +50,10 @@
           >
             <option>Select your category</option>
             <option>Real Estate Agent / Broker</option>
-            <option>Photographer</option>
+            <!-- <option>Photographer</option> -->
             <option>Landlord</option>
             <option>Property Manager</option>
-            <option>Home Improvement Services</option>
+            <!-- <option>Home Improvement Services</option> -->
           </select>
         </div>
         <div class="col-md-6">
