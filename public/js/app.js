@@ -20318,12 +20318,11 @@ __webpack_require__.r(__webpack_exports__);
 
       _this.mmenuInit();
     });
-    this.setActiveLink(this.$inertia.page.url, "inertia");
+    this.activeLink = this.$setActiveLink(this.$inertia.page.url, "inertia");
     axios.interceptors.response.use(function (response) {
       var _response$config;
 
-      _this.setActiveLink(response === null || response === void 0 ? void 0 : (_response$config = response.config) === null || _response$config === void 0 ? void 0 : _response$config.url, "axios");
-
+      _this.activeLink = _this.$setActiveLink(response === null || response === void 0 ? void 0 : (_response$config = response.config) === null || _response$config === void 0 ? void 0 : _response$config.url, "axios");
       if (_this.mmenuAPI !== null) _this.mmenuAPI.close();
       return response;
     });
@@ -20370,15 +20369,6 @@ __webpack_require__.r(__webpack_exports__);
     },
     openNavPanel: function openNavPanel() {
       if (this.mmenuAPI !== null) this.mmenuAPI.open();
-    },
-    setActiveLink: function setActiveLink(url, type) {
-      if (type == "axios") {
-        var _url = new URL(url);
-
-        this.activeLink = (_url.pathname || "").replace("/", "").split("?")[0];
-      } else {
-        this.activeLink = (url || "").replace("/", "").split("?")[0];
-      }
     },
     handleScroll: function handleScroll() {
       this.$nextTick(function () {
@@ -25054,6 +25044,20 @@ app.config.globalProperties.$inlineCSS = function (element) {
       $(this).css("background", "" + attrColorBG + "");
     }
   });
+};
+
+app.config.globalProperties.$setActiveLink = function (url, type) {
+  var activeLink = null;
+
+  if (type == "axios") {
+    var _url = new URL(url);
+
+    activeLink = (_url.pathname || "").replace("/", "").split("?")[0];
+  } else {
+    activeLink = (url || "").replace("/", "").split("?")[0];
+  }
+
+  return activeLink;
 };
 
 app.config.globalProperties.$accordion = function () {
@@ -39907,7 +39911,7 @@ module.exports = webpackAsyncContext;
 /******/ 		// This function allow to reference async chunks
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template
-/******/ 			return "js/" + chunkId + ".js?id=" + {"node_modules_leaflet_dist_images_marker-icon-2x_png":"5e58c858b975694bb8a1","node_modules_leaflet_dist_images_marker-shadow_png":"d26145d48d9761312d54","node_modules_leaflet_dist_leaflet-src_esm_js":"b7127adef829a2f375a0","resources_js_Pages_Agency_Detail_vue":"f2928dce2b458e55a5e7","resources_js_Pages_Agency_Index_vue":"67be49aed2ab049de992","resources_js_Pages_Agent_Detail_vue":"7a16e8f62ed6be4ebc8f","resources_js_Pages_Agent_Index_vue":"a18807d6593c966b33e6","resources_js_Pages_Blog_Detail_vue":"2bfa6877845ebca90812","resources_js_Pages_Blog_Index_vue":"412746928a71d5429b99","resources_js_Pages_Contact_Index_vue":"2d961c4ce4b0bdb9c643","resources_js_Pages_Estate_Detail_Index_vue":"4e4d53df4e0a45609714","resources_js_Pages_Estate_Estate_Index_vue":"44e4c0f48a3056d3dc7b","resources_js_Pages_Home_Index_vue":"5546206c5e1ce89c072c","resources_js_Pages_RentAffordibility_Index_vue":"0e908dc0a8038834afaa","resources_js_Pages_Terms_Index_vue":"15991d66ca9ab05c58ef","resources_js_Pages_logged_Pages_Bookmark_Index_vue":"f565ffa7a44c80b4c7b8","resources_js_Pages_logged_Pages_Profile_Index_vue":"3838b8f7098ee89328dc","resources_js_Pages_logged_Pages_Property_Index_vue":"ae3559c207f0477d174c","resources_js_Pages_logged_Shared_Index_vue":"a2ce521a9e6b3a14628b","resources_js_Pages_logged_Shared_Sidebar_vue":"fe01e700895b5b54f3e5","resources_js_Pages_sell_Index_vue":"3ca11a984e1142c470fd"}[chunkId] + "";
+/******/ 			return "js/" + chunkId + ".js?id=" + {"node_modules_leaflet_dist_images_marker-icon-2x_png":"5e58c858b975694bb8a1","node_modules_leaflet_dist_images_marker-shadow_png":"d26145d48d9761312d54","node_modules_leaflet_dist_leaflet-src_esm_js":"b7127adef829a2f375a0","resources_js_Pages_Agency_Detail_vue":"f2928dce2b458e55a5e7","resources_js_Pages_Agency_Index_vue":"67be49aed2ab049de992","resources_js_Pages_Agent_Detail_vue":"7a16e8f62ed6be4ebc8f","resources_js_Pages_Agent_Index_vue":"a18807d6593c966b33e6","resources_js_Pages_Blog_Detail_vue":"2bfa6877845ebca90812","resources_js_Pages_Blog_Index_vue":"412746928a71d5429b99","resources_js_Pages_Contact_Index_vue":"2d961c4ce4b0bdb9c643","resources_js_Pages_Estate_Detail_Index_vue":"d021b1c154d50b79f497","resources_js_Pages_Estate_Estate_Index_vue":"44e4c0f48a3056d3dc7b","resources_js_Pages_Home_Index_vue":"5546206c5e1ce89c072c","resources_js_Pages_RentAffordibility_Index_vue":"0e908dc0a8038834afaa","resources_js_Pages_Terms_Index_vue":"15991d66ca9ab05c58ef","resources_js_Pages_logged_Pages_Bookmark_Index_vue":"1f1445515c6518e25036","resources_js_Pages_logged_Pages_Profile_Index_vue":"a397d237798ac32d71ea","resources_js_Pages_logged_Pages_Property_Index_vue":"77bd22ba03f9e6d5b998","resources_js_Pages_logged_Shared_Index_vue":"640a399900ef4db7e3ed","resources_js_Pages_logged_Shared_Sidebar_vue":"8620938364ebb3d34878","resources_js_Pages_sell_Index_vue":"3ca11a984e1142c470fd"}[chunkId] + "";
 /******/ 		};
 /******/ 	})();
 /******/ 	

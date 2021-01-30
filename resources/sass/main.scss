@@ -4327,7 +4327,7 @@ ul.listing-details li {
 .layout-switcher {
     text-align: right;
 }
-.details.button.border {
+.details.button.border, .remove.button.border {
     padding: 8px 16px;
     position: absolute;
     top: 50%;
@@ -4339,14 +4339,14 @@ ul.listing-details li {
     display: none;
 }
 
-.list-layout .details.button.border {
+.list-layout .details.button.border, .list-layout .remove.button.border {
     display: block;
 }
-.details.button.border:hover {
+.details.button.border:hover, .remove.button.border:hover {
     padding-right: 32px;
 }
 
-.details.button.border:after {
+.details.button.border:after, .remove.button.border:after{
     content: "\f105";
     font-family: "FontAwesome";
     font-size: 18px;
@@ -4356,8 +4356,11 @@ ul.listing-details li {
     transition: all 0.25s;
     right: 5px;
 }
+.remove.button.border:after {
+    content: "\f1f8" !important;
+}
 
-.details.button.border:hover:after {
+.details.button.border:hover:after, .remove.button.border:hover:after {
     opacity: 1;
     right: 15px;
 }
@@ -5108,7 +5111,7 @@ section.fullwidth.border-bottom {
 
 .my-account-nav li {
     list-style: none;
-    padding: 1px 0 2px 0;
+    padding: 3px 0 2px 0;
     margin: 0;
 }
 
@@ -5212,9 +5215,9 @@ table.manage-table th {
     background-color: #66676b;
     text-align: left;
     padding: 17px 20px;
-    color: #fff;
+    color: #000;
     vertical-align: top;
-    box-shadow: 0 2px 5px #006aff;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.1);
     font-weight: 700;
     font-family: 'Playfair Display', serif;
     font-size: 20px;

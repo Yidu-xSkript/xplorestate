@@ -264,9 +264,9 @@ export default {
       } else $(".mobile-trigger").css("display", "none");
       this.mmenuInit();
     });
-    this.setActiveLink(this.$inertia.page.url, "inertia");
+    this.activeLink = this.$setActiveLink(this.$inertia.page.url, "inertia");
     axios.interceptors.response.use((response) => {
-      this.setActiveLink(response?.config?.url, "axios");
+      this.activeLink = this.$setActiveLink(response?.config?.url, "axios");
       if (this.mmenuAPI !== null) this.mmenuAPI.close();
       return response;
     });
@@ -320,14 +320,6 @@ export default {
     },
     openNavPanel() {
       if (this.mmenuAPI !== null) this.mmenuAPI.open();
-    },
-    setActiveLink(url, type) {
-      if (type == "axios") {
-        var _url = new URL(url);
-        this.activeLink = (_url.pathname || "").replace("/", "").split("?")[0];
-      } else {
-        this.activeLink = (url || "").replace("/", "").split("?")[0];
-      }
     },
     handleScroll: function () {
       this.$nextTick(() => {

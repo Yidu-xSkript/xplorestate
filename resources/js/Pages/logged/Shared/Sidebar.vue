@@ -4,20 +4,20 @@
       <ul class="my-account-nav">
         <li class="sub-nav-title">Analytics</li>
         <li>
-          <inertia-link :href="route('profile.index')" class="current"
-            ><i class="fa fa-dashboard"></i> Dashboard</inertia-link
+          <inertia-link :class="[{current:activeLink === 'dashboard'}]" :href="route('profile.index')"
+            ><i class="sl sl-icon-speedometer"></i> Dashboard</inertia-link
           >
         </li>
       </ul>
       <ul class="my-account-nav">
         <li class="sub-nav-title">Manage Listings</li>
         <li>
-          <inertia-link :href="route('property.index')"
+          <inertia-link :class="[{current:activeLink === 'my-property'}]" :href="route('property.index')"
             ><i class="sl sl-icon-docs"></i> My Properties</inertia-link
           >
         </li>
         <li>
-          <inertia-link :href="route('bookmark.index')"
+          <inertia-link :class="[{current:activeLink === 'bookmark'}]" :href="route('bookmark.index')"
             ><i class="sl sl-icon-star"></i> Bookmarked Listings</inertia-link
           >
         </li>
@@ -35,7 +35,7 @@
       <ul class="my-account-nav">
         <li class="sub-nav-title">Manage Account</li>
         <li>
-          <inertia-link :href="route('profile.index')" class="current"
+          <inertia-link :class="[{current:activeLink === 'profile'}]" :href="route('profile.index')"
             ><i class="sl sl-icon-user"></i> My Profile</inertia-link
           >
         </li>
@@ -60,7 +60,8 @@ export default {
     footerContainer: null,
     loggedContainer: null,
     sidebar: null,
-    sidebarOffset: null
+    sidebarOffset: null,
+    activeLink: null,
   }),
   mounted() {
     this.$nextTick(() => {
@@ -71,6 +72,11 @@ export default {
         this.sidebarOffset = this.sidebar.offset();
         window.addEventListener('scroll', this.createStickySidebar)
       }
+      this.activeLink = this.$setActiveLink(this.$inertia.page.url, "inertia");
+      axios.interceptors.response.use((response) => {
+        this.activeLink = this.$setActiveLink(response?.config?.url, "axios");
+        return response;
+      });
     });
   },
   unmounted() {
@@ -81,7 +87,7 @@ export default {
   methods: {
     createStickySidebar() {
       var cont = this.loggedContainer.innerHeight() - this.footerContainer.innerHeight()
-      if ($(window).scrollTop() > this.sidebarOffset.top - 100 && cont * 1.28 >= window.scrollY) {
+      if ($(window).scrollTop() > this.sidebarOffset.top - 100 && cont * 1.27 >= window.scrollY) {
         this.sidebar.addClass('sticky');
         this.sidebar.stop().animate({ 
           marginTop: $(window).scrollTop() - this.sidebarOffset.top + 100

@@ -306,9 +306,6 @@
             Similar Properties
           </h3>
 
-          <div class="layout-switcher hidden">
-            <a href="#" class="list"><i class="fa fa-th-list"></i></a>
-          </div>
           <div class="listings-container list-layout">
             <div class="listing-item">
               <a href="#" class="listing-img-container">
@@ -753,6 +750,7 @@ export default {
         ".listings-container .listing-img-container img, .listings-container .listing-img-container"
       );
       this.$inlineCSS(".fullwidth-property-slider .item");
+      this.$accordion();
       $("body").magnificPopup({
         type: "image",
         delegate: "a.mfp-gallery",
@@ -773,7 +771,6 @@ export default {
           verticalFit: true,
         },
       });
-      this.$accordion();
       setTimeout(() => {
         this.$tabs(this.$refs.estate_map.leafletObject.invalidateSize(true));
       }, 700)

@@ -67,7 +67,8 @@ __webpack_require__.r(__webpack_exports__);
       footerContainer: null,
       loggedContainer: null,
       sidebar: null,
-      sidebarOffset: null
+      sidebarOffset: null,
+      activeLink: null
     };
   },
   mounted: function mounted() {
@@ -81,6 +82,14 @@ __webpack_require__.r(__webpack_exports__);
         _this.sidebarOffset = _this.sidebar.offset();
         window.addEventListener('scroll', _this.createStickySidebar);
       }
+
+      _this.activeLink = _this.$setActiveLink(_this.$inertia.page.url, "inertia");
+      axios.interceptors.response.use(function (response) {
+        var _response$config;
+
+        _this.activeLink = _this.$setActiveLink(response === null || response === void 0 ? void 0 : (_response$config = response.config) === null || _response$config === void 0 ? void 0 : _response$config.url, "axios");
+        return response;
+      });
     });
   },
   unmounted: function unmounted() {
@@ -92,7 +101,7 @@ __webpack_require__.r(__webpack_exports__);
     createStickySidebar: function createStickySidebar() {
       var cont = this.loggedContainer.innerHeight() - this.footerContainer.innerHeight();
 
-      if ($(window).scrollTop() > this.sidebarOffset.top - 100 && cont * 1.28 >= window.scrollY) {
+      if ($(window).scrollTop() > this.sidebarOffset.top - 100 && cont * 1.27 >= window.scrollY) {
         this.sidebar.addClass('sticky');
         this.sidebar.stop().animate({
           marginTop: $(window).scrollTop() - this.sidebarOffset.top + 100
@@ -123,7 +132,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! vue */ "./node_modules/vue/dist/vue.esm-bundler.js");
 
 
-var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("title", null, "{Name} | Bookmarks - Xplorestate", -1
+var _hoisted_1 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("title", null, "{Name} | My Properties - Xplorestate", -1
 /* HOISTED */
 );
 
@@ -379,7 +388,7 @@ var _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("
 );
 
 var _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
-  "class": "fa fa-dashboard"
+  "class": "sl sl-icon-speedometer"
 }, null, -1
 /* HOISTED */
 );
@@ -468,8 +477,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_inertia_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("inertia-link");
 
   return (0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_2, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", _hoisted_3, [_hoisted_4, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
-    href: _ctx.route('profile.index'),
-    "class": "current"
+    "class": [{
+      current: _ctx.activeLink === 'dashboard'
+    }],
+    href: _ctx.route('profile.index')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_5, _hoisted_6];
@@ -479,7 +490,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+  , ["class", "href"])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", _hoisted_7, [_hoisted_8, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    "class": [{
+      current: _ctx.activeLink === 'my-property'
+    }],
     href: _ctx.route('property.index')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -490,7 +504,10 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+  , ["class", "href"])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    "class": [{
+      current: _ctx.activeLink === 'bookmark'
+    }],
     href: _ctx.route('bookmark.index')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
@@ -501,9 +518,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href"])]), _hoisted_13, _hoisted_14]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
-    href: _ctx.route('profile.index'),
-    "class": "current"
+  , ["class", "href"])]), _hoisted_13, _hoisted_14]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("ul", _hoisted_15, [_hoisted_16, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("li", null, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_inertia_link, {
+    "class": [{
+      current: _ctx.activeLink === 'profile'
+    }],
+    href: _ctx.route('profile.index')
   }, {
     "default": (0,vue__WEBPACK_IMPORTED_MODULE_0__.withCtx)(function () {
       return [_hoisted_17, _hoisted_18];
@@ -513,7 +532,7 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["href"])]), _hoisted_19]), _hoisted_20])]);
+  , ["class", "href"])]), _hoisted_19]), _hoisted_20])]);
 }
 
 /***/ }),

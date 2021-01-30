@@ -59,6 +59,8 @@ __webpack_require__.r(__webpack_exports__);
 
       _this.$inlineCSS(".fullwidth-property-slider .item");
 
+      _this.$accordion();
+
       $("body").magnificPopup({
         type: "image",
         delegate: "a.mfp-gallery",
@@ -81,9 +83,6 @@ __webpack_require__.r(__webpack_exports__);
           verticalFit: true
         }
       });
-
-      _this.$accordion();
-
       setTimeout(function () {
         _this.$tabs(_this.$refs.estate_map.leafletObject.invalidateSize(true));
       }, 700);
@@ -517,130 +516,119 @@ var _hoisted_45 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 /* HOISTED */
 );
 
-var _hoisted_46 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
-  "class": "layout-switcher hidden"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
-  href: "#",
-  "class": "list"
-}, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
-  "class": "fa fa-th-list"
-})])], -1
-/* HOISTED */
-);
-
-var _hoisted_47 = {
+var _hoisted_46 = {
   "class": "listings-container list-layout"
 };
-var _hoisted_48 = {
+var _hoisted_47 = {
   "class": "listing-item"
 };
-var _hoisted_49 = {
+var _hoisted_48 = {
   href: "#",
   "class": "listing-img-container"
 };
 
-var _hoisted_50 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_49 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "listing-badges"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", null, "For Rent")], -1
 /* HOISTED */
 );
 
-var _hoisted_51 = {
+var _hoisted_50 = {
   "class": "listing-img-content"
 };
 
-var _hoisted_52 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
+var _hoisted_51 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
   "class": "listing-price"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("$1700 "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", null, "monthly")], -1
 /* HOISTED */
 );
 
-var _hoisted_53 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+var _hoisted_52 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   src: "/images/listing-03.jpg",
   alt: ""
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_54 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"listing-content\"><div class=\"listing-title\"><h4><a href=\"#\">Meridian Villas</a></h4><a href=\"https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&amp;hl=en&amp;t=v&amp;hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom\" class=\"listing-address popup-gmaps\"><i class=\"fa fa-map-marker\"></i> 778 Country St. Panama City, FL </a><a href=\"#\" class=\"details button border\">Details</a></div><ul class=\"listing-details\"><li>1450 sq ft</li><li>1 Bedroom</li><li>2 Rooms</li><li>2 Rooms</li></ul><div class=\"listing-footer\"><a href=\"#\"><i class=\"fa fa-user\"></i> Chester Miller</a><span><i class=\"fa fa-calendar-o\"></i> 4 days ago</span></div></div>", 1);
+var _hoisted_53 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"listing-content\"><div class=\"listing-title\"><h4><a href=\"#\">Meridian Villas</a></h4><a href=\"https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&amp;hl=en&amp;t=v&amp;hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom\" class=\"listing-address popup-gmaps\"><i class=\"fa fa-map-marker\"></i> 778 Country St. Panama City, FL </a><a href=\"#\" class=\"details button border\">Details</a></div><ul class=\"listing-details\"><li>1450 sq ft</li><li>1 Bedroom</li><li>2 Rooms</li><li>2 Rooms</li></ul><div class=\"listing-footer\"><a href=\"#\"><i class=\"fa fa-user\"></i> Chester Miller</a><span><i class=\"fa fa-calendar-o\"></i> 4 days ago</span></div></div>", 1);
 
-var _hoisted_55 = {
+var _hoisted_54 = {
   "class": "listing-item"
 };
-var _hoisted_56 = {
+var _hoisted_55 = {
   href: "#",
   "class": "listing-img-container"
 };
 
-var _hoisted_57 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_56 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "listing-badges"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", null, "For Sale")], -1
 /* HOISTED */
 );
 
-var _hoisted_58 = {
+var _hoisted_57 = {
   "class": "listing-img-content"
 };
 
-var _hoisted_59 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
+var _hoisted_58 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
   "class": "listing-price"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("$420,000 "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", null, "$770 / sq ft")], -1
 /* HOISTED */
 );
 
-var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+var _hoisted_59 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   src: "/images/listing-04.jpg",
   alt: ""
 })], -1
 /* HOISTED */
 );
 
-var _hoisted_61 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"listing-content\"><div class=\"listing-title\"><h4><a href=\"#\">Selway Apartments</a></h4><a href=\"https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&amp;hl=en&amp;t=v&amp;hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom\" class=\"listing-address popup-gmaps\"><i class=\"fa fa-map-marker\"></i> 33 William St. Northbrook, IL </a><a href=\"#\" class=\"details button border\">Details</a></div><ul class=\"listing-details\"><li>540 sq ft</li><li>1 Bedroom</li><li>3 Rooms</li><li>2 Bathroom</li></ul><div class=\"listing-footer\"><a href=\"#\"><i class=\"fa fa-user\"></i> Kristen Berry</a><span><i class=\"fa fa-calendar-o\"></i> 3 days ago</span></div></div>", 1);
+var _hoisted_60 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"listing-content\"><div class=\"listing-title\"><h4><a href=\"#\">Selway Apartments</a></h4><a href=\"https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&amp;hl=en&amp;t=v&amp;hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom\" class=\"listing-address popup-gmaps\"><i class=\"fa fa-map-marker\"></i> 33 William St. Northbrook, IL </a><a href=\"#\" class=\"details button border\">Details</a></div><ul class=\"listing-details\"><li>540 sq ft</li><li>1 Bedroom</li><li>3 Rooms</li><li>2 Bathroom</li></ul><div class=\"listing-footer\"><a href=\"#\"><i class=\"fa fa-user\"></i> Kristen Berry</a><span><i class=\"fa fa-calendar-o\"></i> 3 days ago</span></div></div>", 1);
 
-var _hoisted_62 = {
+var _hoisted_61 = {
   "class": "listing-item"
 };
-var _hoisted_63 = {
+var _hoisted_62 = {
   href: "#",
   "class": "listing-img-container"
 };
 
-var _hoisted_64 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_63 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "listing-badges"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", null, "For Sale")], -1
 /* HOISTED */
 );
 
-var _hoisted_65 = {
+var _hoisted_64 = {
   "class": "listing-img-content"
 };
 
-var _hoisted_66 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
+var _hoisted_65 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
   "class": "listing-price"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("$535,000 "), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", null, "$640 / sq ft")], -1
 /* HOISTED */
 );
 
-var _hoisted_67 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
+var _hoisted_66 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("img", {
   src: "/images/listing-05.jpg",
   alt: ""
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_68 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"listing-content\"><div class=\"listing-title\"><h4><a href=\"#\">Oak Tree Villas</a></h4><a href=\"https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&amp;hl=en&amp;t=v&amp;hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom\" class=\"listing-address popup-gmaps\"><i class=\"fa fa-map-marker\"></i> 71 Lower River Dr. Bronx, NY </a><a href=\"#\" class=\"details button border\">Details</a></div><ul class=\"listing-details\"><li>350 sq ft</li><li>1 Bedroom</li><li>2 Rooms</li><li>1 Bathroom</li></ul><div class=\"listing-footer\"><a href=\"#\"><i class=\"fa fa-user\"></i> Mabel Gagnon</a><span><i class=\"fa fa-calendar-o\"></i> 4 days ago</span></div></div>", 1);
+var _hoisted_67 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"listing-content\"><div class=\"listing-title\"><h4><a href=\"#\">Oak Tree Villas</a></h4><a href=\"https://maps.google.com/maps?q=221B+Baker+Street,+London,+United+Kingdom&amp;hl=en&amp;t=v&amp;hnear=221B+Baker+St,+London+NW1+6XE,+United+Kingdom\" class=\"listing-address popup-gmaps\"><i class=\"fa fa-map-marker\"></i> 71 Lower River Dr. Bronx, NY </a><a href=\"#\" class=\"details button border\">Details</a></div><ul class=\"listing-details\"><li>350 sq ft</li><li>1 Bedroom</li><li>2 Rooms</li><li>1 Bathroom</li></ul><div class=\"listing-footer\"><a href=\"#\"><i class=\"fa fa-user\"></i> Mabel Gagnon</a><span><i class=\"fa fa-calendar-o\"></i> 4 days ago</span></div></div>", 1);
 
-var _hoisted_69 = {
+var _hoisted_68 = {
   "class": "col-lg-4 col-md-5"
 };
-var _hoisted_70 = {
+var _hoisted_69 = {
   "class": "sidebar sticky right"
 };
-var _hoisted_71 = {
+var _hoisted_70 = {
   "class": "widget margin-bottom-30"
 };
 
-var _hoisted_72 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+var _hoisted_71 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
   "class": "widget-button with-tip",
   "data-tip-content": "Print"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
@@ -649,75 +637,75 @@ var _hoisted_72 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 /* HOISTED */
 );
 
-var _hoisted_73 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
+var _hoisted_72 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
   "class": "fa fa-star-o"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_74 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
+var _hoisted_73 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
   "class": "icon-compare"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_75 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_74 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "clearfix"
 }, null, -1
 /* HOISTED */
 );
 
-var _hoisted_76 = {
+var _hoisted_75 = {
   "class": "widget"
 };
-var _hoisted_77 = {
+var _hoisted_76 = {
   id: "booking-widget-anchor",
   "class": "boxed-widget booking-widget margin-top-35"
 };
 
-var _hoisted_78 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h3", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
+var _hoisted_77 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h3", null, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("i", {
   "class": "fa fa-calendar-check-o"
 }), /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)(" Book a Tour")], -1
 /* HOISTED */
 );
 
-var _hoisted_79 = {
+var _hoisted_78 = {
   "class": "row with-forms margin-top-0"
 };
-var _hoisted_80 = {
+var _hoisted_79 = {
   "class": "col-lg-12"
 };
 
-var _hoisted_81 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-lg-12\"><input type=\"text\" class=\"ico-01\" id=\"autocomplete-input\" placeholder=\"Full Name\" value=\"\"></div><div class=\"col-lg-12\"><input type=\"email\" class=\"ico-01\" id=\"autocomplete-input\" placeholder=\"Email\" value=\"\"></div><div class=\"col-lg-12\"><input type=\"text\" class=\"ico-01\" id=\"autocomplete-input\" placeholder=\"Phone number\" value=\"\"></div>", 3);
+var _hoisted_80 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"col-lg-12\"><input type=\"text\" class=\"ico-01\" id=\"autocomplete-input\" placeholder=\"Full Name\" value=\"\"></div><div class=\"col-lg-12\"><input type=\"email\" class=\"ico-01\" id=\"autocomplete-input\" placeholder=\"Email\" value=\"\"></div><div class=\"col-lg-12\"><input type=\"text\" class=\"ico-01\" id=\"autocomplete-input\" placeholder=\"Phone number\" value=\"\"></div>", 3);
 
+var _hoisted_83 = {
+  "class": "col-lg-12"
+};
 var _hoisted_84 = {
-  "class": "col-lg-12"
-};
-var _hoisted_85 = {
   "class": "panel-dropdown"
 };
 
-var _hoisted_86 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Guests ");
+var _hoisted_85 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createTextVNode)("Guests ");
 
-var _hoisted_87 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
+var _hoisted_86 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
   "class": "qtyTotal",
   name: "qtyTotal"
 }, "1", -1
 /* HOISTED */
 );
 
-var _hoisted_88 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"panel-dropdown-content\"><div class=\"qtyButtons\"><div class=\"qtyTitle\">Adults</div><input type=\"text\" name=\"qtyInput\" value=\"1\"></div><div class=\"qtyButtons\"><div class=\"qtyTitle\">Childrens</div><input type=\"text\" name=\"qtyInput\" value=\"0\"></div></div>", 1);
+var _hoisted_87 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"panel-dropdown-content\"><div class=\"qtyButtons\"><div class=\"qtyTitle\">Adults</div><input type=\"text\" name=\"qtyInput\" value=\"1\"></div><div class=\"qtyButtons\"><div class=\"qtyTitle\">Childrens</div><input type=\"text\" name=\"qtyInput\" value=\"0\"></div></div>", 1);
 
-var _hoisted_89 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
+var _hoisted_88 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
   href: "#",
   "class": "button book-now fullwidth margin-top-5"
 }, "Request To Book", -1
 /* HOISTED */
 );
 
-var _hoisted_90 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"widget\"><div class=\"agent-widget\"><div class=\"agent-title\"><div class=\"agent-photo\"><img src=\"/images/agent-avatar.jpg\" alt=\"\"></div><div class=\"agent-details\"><h4><a href=\"#\">Jennie Wilson</a></h4><span><i class=\"sl sl-icon-call-in\"></i>(123) 123-456</span></div><div class=\"clearfix\"></div></div><input type=\"text\" placeholder=\"Your Email\" pattern=\"^[A-Za-z0-9](([_\\.\\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\\.\\-]?[a-zA-Z0-9]+)*)\\.([A-Za-z]{2,})$\"><input type=\"text\" placeholder=\"Your Phone\"><textarea> I&#39;m interested in this property [ID 123456] and I&#39;d like to know more details.</textarea><button class=\"button fullwidth margin-top-5\"> Send Message </button></div></div>", 1);
+var _hoisted_89 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"widget\"><div class=\"agent-widget\"><div class=\"agent-title\"><div class=\"agent-photo\"><img src=\"/images/agent-avatar.jpg\" alt=\"\"></div><div class=\"agent-details\"><h4><a href=\"#\">Jennie Wilson</a></h4><span><i class=\"sl sl-icon-call-in\"></i>(123) 123-456</span></div><div class=\"clearfix\"></div></div><input type=\"text\" placeholder=\"Your Email\" pattern=\"^[A-Za-z0-9](([_\\.\\-]?[a-zA-Z0-9]+)*)@([A-Za-z0-9]+)(([\\.\\-]?[a-zA-Z0-9]+)*)\\.([A-Za-z]{2,})$\"><input type=\"text\" placeholder=\"Your Phone\"><textarea> I&#39;m interested in this property [ID 123456] and I&#39;d like to know more details.</textarea><button class=\"button fullwidth margin-top-5\"> Send Message </button></div></div>", 1);
 
-var _hoisted_91 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
+var _hoisted_90 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", {
   "class": "widget"
 }, [/*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("h3", {
   "class": "margin-bottom-30 margin-top-30"
@@ -782,7 +770,7 @@ var _hoisted_91 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(
 /* HOISTED */
 );
 
-var _hoisted_92 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"widget\"><h3 class=\"margin-bottom-35\">Featured Properties</h3><div class=\"listing-carousel outer\"><div class=\"item\"><div class=\"listing-item compact\"><a href=\"#\" class=\"listing-img-container\"><div class=\"listing-badges\"><span class=\"featured\">Featured</span><span>For Sale</span></div><div class=\"listing-img-content\"><span class=\"listing-compact-title\">Eagle Apartments <i>$275,000</i></span><ul class=\"listing-hidden-content\"><li>Area <span>530 sq ft</span></li><li>Rooms <span>3</span></li><li>Beds <span>1</span></li><li>Baths <span>1</span></li></ul></div><img src=\"/images/listing-01.jpg\" alt=\"\"></a></div></div><div class=\"item\"><div class=\"listing-item compact\"><a href=\"#\" class=\"listing-img-container\"><div class=\"listing-badges\"><span class=\"featured\">Featured</span><span>For Sale</span></div><div class=\"listing-img-content\"><span class=\"listing-compact-title\">Selway Apartments <i>$245,000</i></span><ul class=\"listing-hidden-content\"><li>Area <span>530 sq ft</span></li><li>Rooms <span>3</span></li><li>Beds <span>1</span></li><li>Baths <span>1</span></li></ul></div><img src=\"/images/listing-02.jpg\" alt=\"\"></a></div></div><div class=\"item\"><div class=\"listing-item compact\"><a href=\"#\" class=\"listing-img-container\"><div class=\"listing-badges\"><span class=\"featured\">Featured</span><span>For Sale</span></div><div class=\"listing-img-content\"><span class=\"listing-compact-title\">Oak Tree Villas <i>$325,000</i></span><ul class=\"listing-hidden-content\"><li>Area <span>530 sq ft</span></li><li>Rooms <span>3</span></li><li>Beds <span>1</span></li><li>Baths <span>1</span></li></ul></div><img src=\"/images/listing-03.jpg\" alt=\"\"></a></div></div></div></div>", 1);
+var _hoisted_91 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createStaticVNode)("<div class=\"widget\"><h3 class=\"margin-bottom-35\">Featured Properties</h3><div class=\"listing-carousel outer\"><div class=\"item\"><div class=\"listing-item compact\"><a href=\"#\" class=\"listing-img-container\"><div class=\"listing-badges\"><span class=\"featured\">Featured</span><span>For Sale</span></div><div class=\"listing-img-content\"><span class=\"listing-compact-title\">Eagle Apartments <i>$275,000</i></span><ul class=\"listing-hidden-content\"><li>Area <span>530 sq ft</span></li><li>Rooms <span>3</span></li><li>Beds <span>1</span></li><li>Baths <span>1</span></li></ul></div><img src=\"/images/listing-01.jpg\" alt=\"\"></a></div></div><div class=\"item\"><div class=\"listing-item compact\"><a href=\"#\" class=\"listing-img-container\"><div class=\"listing-badges\"><span class=\"featured\">Featured</span><span>For Sale</span></div><div class=\"listing-img-content\"><span class=\"listing-compact-title\">Selway Apartments <i>$245,000</i></span><ul class=\"listing-hidden-content\"><li>Area <span>530 sq ft</span></li><li>Rooms <span>3</span></li><li>Beds <span>1</span></li><li>Baths <span>1</span></li></ul></div><img src=\"/images/listing-02.jpg\" alt=\"\"></a></div></div><div class=\"item\"><div class=\"listing-item compact\"><a href=\"#\" class=\"listing-img-container\"><div class=\"listing-badges\"><span class=\"featured\">Featured</span><span>For Sale</span></div><div class=\"listing-img-content\"><span class=\"listing-compact-title\">Oak Tree Villas <i>$325,000</i></span><ul class=\"listing-hidden-content\"><li>Area <span>530 sq ft</span></li><li>Rooms <span>3</span></li><li>Beds <span>1</span></li><li>Baths <span>1</span></li></ul></div><img src=\"/images/listing-03.jpg\" alt=\"\"></a></div></div></div></div>", 1);
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
   var _component_inertia_link = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("inertia-link");
@@ -872,34 +860,34 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
 
   }, 8
   /* PROPS */
-  , ["zoom", "center"])])])])])]), _hoisted_45, _hoisted_46, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_48, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_49, [_hoisted_50, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_51, [_hoisted_52, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
+  , ["zoom", "center"])])])])])]), _hoisted_45, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_46, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_47, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_48, [_hoisted_49, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_50, [_hoisted_51, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
     "class": "like-icon",
     onClick: _cache[4] || (_cache[4] = function () {
       return _ctx.toggleLike && _ctx.toggleLike.apply(_ctx, arguments);
     })
-  })]), _hoisted_53]), _hoisted_54]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_55, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_56, [_hoisted_57, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_58, [_hoisted_59, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
+  })]), _hoisted_52]), _hoisted_53]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_54, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_55, [_hoisted_56, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_57, [_hoisted_58, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
     "class": "like-icon",
     onClick: _cache[5] || (_cache[5] = function () {
       return _ctx.toggleLike && _ctx.toggleLike.apply(_ctx, arguments);
     })
-  })]), _hoisted_60]), _hoisted_61]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_62, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_63, [_hoisted_64, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_65, [_hoisted_66, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
+  })]), _hoisted_59]), _hoisted_60]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_61, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", _hoisted_62, [_hoisted_63, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_64, [_hoisted_65, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("span", {
     "class": "like-icon",
     onClick: _cache[6] || (_cache[6] = function () {
       return _ctx.toggleLike && _ctx.toggleLike.apply(_ctx, arguments);
     })
-  })]), _hoisted_67]), _hoisted_68])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_69, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_70, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_71, [_hoisted_72, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+  })]), _hoisted_66]), _hoisted_67])])])]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_68, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_69, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_70, [_hoisted_71, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
     "class": "widget-button with-tip",
     onClick: _cache[7] || (_cache[7] = function () {
       return $options.saveProperty && $options.saveProperty.apply($options, arguments);
     }),
     "data-tip-content": "Add to Bookmarks"
-  }, [_hoisted_73]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+  }, [_hoisted_72]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
     "class": "widget-button with-tip compare-widget-button",
     "data-tip-content": "Add to Compare",
     onClick: _cache[8] || (_cache[8] = (0,vue__WEBPACK_IMPORTED_MODULE_0__.withModifiers)(function () {
       return $options.addToCompare && $options.addToCompare.apply($options, arguments);
     }, ["prevent"]))
-  }, [_hoisted_74]), _hoisted_75]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_76, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_77, [_hoisted_78, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_79, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_80, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_flat_pickr, {
+  }, [_hoisted_73]), _hoisted_74]), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_75, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_76, [_hoisted_77, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_78, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_79, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_flat_pickr, {
     type: "text",
     config: _ctx.config,
     placeholder: "Select date",
@@ -910,11 +898,11 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
     })
   }, null, 8
   /* PROPS */
-  , ["config", "modelValue"])]), _hoisted_81, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_84, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_85, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
+  , ["config", "modelValue"])]), _hoisted_80, (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_83, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_84, [(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("a", {
     onClick: _cache[10] || (_cache[10] = function () {
       return $options.openDropdown && $options.openDropdown.apply($options, arguments);
     })
-  }, [_hoisted_86, _hoisted_87]), _hoisted_88])])]), _hoisted_89])]), _hoisted_90, _hoisted_91, _hoisted_92])])])])], 64
+  }, [_hoisted_85, _hoisted_86]), _hoisted_87])])]), _hoisted_88])]), _hoisted_89, _hoisted_90, _hoisted_91])])])])], 64
   /* STABLE_FRAGMENT */
   );
 }

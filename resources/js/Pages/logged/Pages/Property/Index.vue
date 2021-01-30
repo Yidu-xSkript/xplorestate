@@ -1,6 +1,6 @@
 <template>
   <teleport to="head">
-    <title>{Name} | Bookmarks - Xplorestate</title>
+    <title>{Name} | My Properties - Xplorestate</title>
   </teleport>
 
   <Layout routeName="My Properties">

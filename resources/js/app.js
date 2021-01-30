@@ -67,6 +67,16 @@ app.config.globalProperties.$inlineCSS = (element) => {
         }
     });
 };
+app.config.globalProperties.$setActiveLink = (url, type) => {
+    var activeLink = null;
+    if (type == "axios") {
+        var _url = new URL(url);
+        activeLink = (_url.pathname || "").replace("/", "").split("?")[0];
+    } else {
+        activeLink = (url || "").replace("/", "").split("?")[0];
+    }
+    return activeLink;
+}
 app.config.globalProperties.$accordion = () => {
     var $accor = $(".accordion");
 

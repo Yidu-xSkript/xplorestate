@@ -18773,7 +18773,7 @@ ul.listing-details li {
   text-align: right;
 }
 
-.details.button.border {
+.details.button.border, .remove.button.border {
   padding: 8px 16px;
   position: absolute;
   top: 50%;
@@ -18785,15 +18785,15 @@ ul.listing-details li {
   display: none;
 }
 
-.list-layout .details.button.border {
+.list-layout .details.button.border, .list-layout .remove.button.border {
   display: block;
 }
 
-.details.button.border:hover {
+.details.button.border:hover, .remove.button.border:hover {
   padding-right: 32px;
 }
 
-.details.button.border:after {
+.details.button.border:after, .remove.button.border:after {
   content: "";
   font-family: "FontAwesome";
   font-size: 18px;
@@ -18804,7 +18804,11 @@ ul.listing-details li {
   right: 5px;
 }
 
-.details.button.border:hover:after {
+.remove.button.border:after {
+  content: "" !important;
+}
+
+.details.button.border:hover:after, .remove.button.border:hover:after {
   opacity: 1;
   right: 15px;
 }
@@ -19547,7 +19551,7 @@ section.fullwidth.border-bottom {
 
 .my-account-nav li {
   list-style: none;
-  padding: 1px 0 2px 0;
+  padding: 3px 0 2px 0;
   margin: 0;
 }
 
@@ -19652,9 +19656,9 @@ table.manage-table th {
   background-color: #66676b;
   text-align: left;
   padding: 17px 20px;
-  color: #fff;
+  color: #000;
   vertical-align: top;
-  box-shadow: 0 2px 5px #006aff;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
   font-weight: 700;
   font-family: "Playfair Display", serif;
   font-size: 20px;
@@ -29663,11 +29667,15 @@ body .pac-container {
 }
 
 .change-photo-btn:hover, mark.color, table.manage-table th {
-  background-color: #006aff;
+  background-color: #fff;
 }
 
 #footer .social-icons li a:hover i, #navigation.style-1 .current, #posts-nav li a:hover, #top-bar .social-icons li a:hover i, .agent .social-icons li a:hover i, .agent-contact-details li a:hover, .agent-page .agent-name h4, .footer-links li a:hover, .header-style-2 .header-widget li i, .header-widget .sign-in:hover, .home-slider-desc .read-more i, .info-box, .info-box h4, .listing-title h4 a:hover, .map-box h4 a:hover, .my-account-nav li a.current, .my-account-nav li a:hover, .plan-price .value, .plan.featured .listing-badges .featured, .post-content a.read-more, .post-content h3 a:hover, .post-meta li a:hover, .property-pricing, .style-2 .trigger a:hover, .style-2 .trigger.active a, .style-2 .ui-accordion .ui-accordion-header-active, .style-2 .ui-accordion .ui-accordion-header-active:hover, .style-2 .ui-accordion .ui-accordion-header:hover, .tabs-nav li a:hover, .tabs-nav li.active a, .testimonial-author h4, .user-menu ul li a:hover, .user-menu.active .user-name, .user-menu.active .user-name:after, .user-menu:hover .user-name, .user-menu:hover .user-name:after, .widget-button:hover, .widget-text h5 a:hover, a, a.button.border, a.button.border.white:hover, table.manage-table .title-container .title h4 a:hover, table.manage-table td.action a:hover {
   color: #006aff;
+}
+
+a.remove.button.border {
+  color: #AA0000;
 }
 
 #header-container.top-border {
@@ -29772,12 +29780,21 @@ body .pac-container {
   background-color: #006aff;
 }
 
+a.remove.button.border:hover {
+  background-color: #AA0000;
+  color: #fff;
+}
+
 .dropzone:hover .dz-message, .sort-by .chosen-container-single .chosen-default, .sort-by .chosen-container-single .chosen-single div b:after {
   color: #006aff;
 }
 
 a.button.border {
   border: 1px solid #006aff;
+}
+
+a.remove.button.border {
+  border: 1px solid #AA0000;
 }
 
 .plan.featured .plan-price {
